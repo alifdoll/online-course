@@ -33,9 +33,9 @@ namespace Database
                 connection = $"Server={server};Database={database};Uid={username};";
             }
 
-            Connection = new MySqlConnection();
-            Connection.ConnectionString = connection;
-
+            Connection = new MySqlConnection(connection);
+            ConnecTotDB();
+            //Connection.ConnectionString = connection;
         }
 
         public void ConnecTotDB()

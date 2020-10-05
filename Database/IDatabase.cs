@@ -17,5 +17,6 @@ namespace Database
 
         ArrayList QueryData(string criteria = "", string value = "");
 
+        string GeneratePrimaryKey();
     }
 }

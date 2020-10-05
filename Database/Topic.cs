@@ -10,18 +10,27 @@ namespace Database
 {
     public class Topic : IDatabase
     {
+
+        #region data members
         private string id;
         private string name;
+        #endregion
 
+        #region properties
         public string Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
-    
+        #endregion
+
+        #region constructors
         public Topic(string id, string name)
         {
             Id = id;
             Name = name;
         }
 
+        #endregion
+
+        #region methods
         public void Insert()
         {
             string command = $"INSERT INTO Topic(Id, Nama) VALUES('{Id}', {Name.Replace("'", "\\'")}')";
@@ -42,7 +51,7 @@ namespace Database
                 Execute.DML(command);
                 return "1";
             }
-            catch(Exception error)
+            catch (Exception error)
             {
                 return $"{error.Message}, SQL Command : {command}";
             }
@@ -72,5 +81,28 @@ namespace Database
 
             return list;
         }
+
+        public string GeneratePrimaryKey()
+        {
+            string command = "SELECT Max(Id) FROM Topic";
+
+            int pKey;
+
+            MySqlDataReader result = Execute.Query(command);
+
+            if(result.Read() == true)
+            {
+                pKey = result.GetInt32(0) + 1;
+
+            }
+            else
+            {
+                pKey = 1;
+            }
+
+            return pKey.ToString();
+        }
+        #endregion
+
     }
 }
