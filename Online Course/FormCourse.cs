@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Online_Course
 {
-    public partial class Form1 : Form
+    public partial class FormCourse : Form
     {
-        public Form1()
+        public FormCourse()
         {
             InitializeComponent();
         }
