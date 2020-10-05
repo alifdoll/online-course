@@ -34,8 +34,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.0.9, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,14 +61,197 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormAddCourse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormAddCourse.Designer.cs">
+      <DependentUpon>FormAddCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddInstructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddInstructor.Designer.cs">
+      <DependentUpon>FormAddInstructor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddStudent.Designer.cs">
+      <DependentUpon>FormAddStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddTopic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddTopic.Designer.cs">
+      <DependentUpon>FormAddTopic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCourse.Designer.cs">
+      <DependentUpon>FormCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditCourse.Designer.cs">
+      <DependentUpon>FormEditCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditInstructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditInstructor.Designer.cs">
+      <DependentUpon>FormEditInstructor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditStudent.Designer.cs">
+      <DependentUpon>FormEditStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditTopic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditTopic.Designer.cs">
+      <DependentUpon>FormEditTopic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInstructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInstructor.Designer.cs">
+      <DependentUpon>FormInstructor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLoginAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLoginAdmin.Designer.cs">
+      <DependentUpon>FormLoginAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLoginInstructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLoginInstructor.Designer.cs">
+      <DependentUpon>FormLoginInstructor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLoginStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLoginStudent.Designer.cs">
+      <DependentUpon>FormLoginStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRemoveCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRemoveCourse.Designer.cs">
+      <DependentUpon>FormRemoveCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRemoveInstructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRemoveInstructor.Designer.cs">
+      <DependentUpon>FormRemoveInstructor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRemoveStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRemoveStudent.Designer.cs">
+      <DependentUpon>FormRemoveStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRemoveTopic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRemoveTopic.Designer.cs">
+      <DependentUpon>FormRemoveTopic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStudent.Designer.cs">
+      <DependentUpon>FormStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTopic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTopic.Designer.cs">
+      <DependentUpon>FormTopic.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAddCourse.resx">
+      <DependentUpon>FormAddCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddInstructor.resx">
+      <DependentUpon>FormAddInstructor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddStudent.resx">
+      <DependentUpon>FormAddStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddTopic.resx">
+      <DependentUpon>FormAddTopic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCourse.resx">
+      <DependentUpon>FormCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditCourse.resx">
+      <DependentUpon>FormEditCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditInstructor.resx">
+      <DependentUpon>FormEditInstructor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditStudent.resx">
+      <DependentUpon>FormEditStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditTopic.resx">
+      <DependentUpon>FormEditTopic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInstructor.resx">
+      <DependentUpon>FormInstructor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLoginAdmin.resx">
+      <DependentUpon>FormLoginAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLoginInstructor.resx">
+      <DependentUpon>FormLoginInstructor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLoginStudent.resx">
+      <DependentUpon>FormLoginStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRemoveCourse.resx">
+      <DependentUpon>FormRemoveCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRemoveInstructor.resx">
+      <DependentUpon>FormRemoveInstructor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRemoveStudent.resx">
+      <DependentUpon>FormRemoveStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRemoveTopic.resx">
+      <DependentUpon>FormRemoveTopic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStudent.resx">
+      <DependentUpon>FormStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTopic.resx">
+      <DependentUpon>FormTopic.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,7 +260,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
