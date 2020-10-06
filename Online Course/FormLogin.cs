@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace Online_Course
 {
     public partial class FormLogin : Form
     {
+        Session session = Session.Instance;
         public FormLogin()
         {
             InitializeComponent();
@@ -31,9 +33,12 @@ namespace Online_Course
 
         private void guna2ButtonAdmin_Click(object sender, EventArgs e)
         {
-            FormLoginAdmin formAdmin = new FormLoginAdmin();
-            formAdmin.Owner = this;
+            FormLoginAdmin formAdmin = new FormLoginAdmin
+            {
+                Owner = this
+            };
             formAdmin.Show();
+            
         }
 
         private void guna2ButtonInstructor_Click(object sender, EventArgs e)

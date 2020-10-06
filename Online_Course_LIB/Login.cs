@@ -11,7 +11,7 @@ namespace Database
     {
         public static string StudentLogin(string username, string password)
         {
-            _ = new DbConnect("127.0.0.1", "online_course_db", "root", "");
+            _ = new DbConnect("127.0.0.1", "online_course", "root", "");
             string user = "";
 
             string command = $"SELECT * FROM Student WHERE username='{username}' AND password='{password}'";
@@ -35,7 +35,7 @@ namespace Database
 
         public static string InstructorLogin(string username, string password)
         {
-            _ = new DbConnect("127.0.0.1", "online_course_db", "root", "");
+            _ = new DbConnect("127.0.0.1", "online_course", "root", "");
             string instruct = "";
 
             string command = $"SELECT * FROM Instructor WHERE username='{username}' AND password='{password}'";
@@ -54,6 +54,11 @@ namespace Database
                 instruct = "0";
             }
             return instruct;
+        }
+
+        public static void AdminLogin(string username = "root", string password = "")
+        {
+            _ = new DbConnect("127.0.0.1", "online_course", username, password);
         }
 
     }

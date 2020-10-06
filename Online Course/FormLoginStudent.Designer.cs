@@ -146,6 +146,7 @@
             this.guna2ButtonLogin.Size = new System.Drawing.Size(112, 41);
             this.guna2ButtonLogin.TabIndex = 36;
             this.guna2ButtonLogin.Text = "LOGIN";
+            this.guna2ButtonLogin.Click += new System.EventHandler(this.guna2ButtonLogin_Click);
             // 
             // FormLoginStudent
             // 
