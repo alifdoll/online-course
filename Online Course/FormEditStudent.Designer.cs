@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.guna2ButtonClose = new Guna.UI2.WinForms.Guna2Button();
             this.labelEditStudent = new System.Windows.Forms.Label();
             this.guna2TextBoxEditPasswordStudent = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBoxEditUsernameStudent = new Guna.UI2.WinForms.Guna2TextBox();
@@ -41,22 +40,6 @@
             this.labelNameStudent = new System.Windows.Forms.Label();
             this.labelIdStudent = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // guna2ButtonClose
-            // 
-            this.guna2ButtonClose.BorderRadius = 22;
-            this.guna2ButtonClose.CheckedState.Parent = this.guna2ButtonClose;
-            this.guna2ButtonClose.CustomImages.Parent = this.guna2ButtonClose;
-            this.guna2ButtonClose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(211)))), ((int)(((byte)(246)))));
-            this.guna2ButtonClose.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2ButtonClose.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonClose.HoverState.Parent = this.guna2ButtonClose;
-            this.guna2ButtonClose.Location = new System.Drawing.Point(372, 466);
-            this.guna2ButtonClose.Name = "guna2ButtonClose";
-            this.guna2ButtonClose.ShadowDecoration.Parent = this.guna2ButtonClose;
-            this.guna2ButtonClose.Size = new System.Drawing.Size(84, 41);
-            this.guna2ButtonClose.TabIndex = 73;
-            this.guna2ButtonClose.Text = "CLOSE";
             // 
             // labelEditStudent
             // 
@@ -85,7 +68,7 @@
             this.guna2TextBoxEditPasswordStudent.HoverState.Parent = this.guna2TextBoxEditPasswordStudent;
             this.guna2TextBoxEditPasswordStudent.Location = new System.Drawing.Point(129, 318);
             this.guna2TextBoxEditPasswordStudent.Name = "guna2TextBoxEditPasswordStudent";
-            this.guna2TextBoxEditPasswordStudent.PasswordChar = '\0';
+            this.guna2TextBoxEditPasswordStudent.PasswordChar = '*';
             this.guna2TextBoxEditPasswordStudent.PlaceholderText = "";
             this.guna2TextBoxEditPasswordStudent.SelectedText = "";
             this.guna2TextBoxEditPasswordStudent.ShadowDecoration.Parent = this.guna2TextBoxEditPasswordStudent;
@@ -143,12 +126,13 @@
             this.guna2ButtonClear.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2ButtonClear.ForeColor = System.Drawing.Color.White;
             this.guna2ButtonClear.HoverState.Parent = this.guna2ButtonClear;
-            this.guna2ButtonClear.Location = new System.Drawing.Point(251, 466);
+            this.guna2ButtonClear.Location = new System.Drawing.Point(372, 466);
             this.guna2ButtonClear.Name = "guna2ButtonClear";
             this.guna2ButtonClear.ShadowDecoration.Parent = this.guna2ButtonClear;
             this.guna2ButtonClear.Size = new System.Drawing.Size(84, 41);
             this.guna2ButtonClear.TabIndex = 67;
             this.guna2ButtonClear.Text = "CLEAR";
+            this.guna2ButtonClear.Click += new System.EventHandler(this.guna2ButtonClear_Click);
             // 
             // guna2ButtonAdd
             // 
@@ -164,7 +148,8 @@
             this.guna2ButtonAdd.ShadowDecoration.Parent = this.guna2ButtonAdd;
             this.guna2ButtonAdd.Size = new System.Drawing.Size(84, 41);
             this.guna2ButtonAdd.TabIndex = 66;
-            this.guna2ButtonAdd.Text = "ADD";
+            this.guna2ButtonAdd.Text = "EDIT";
+            this.guna2ButtonAdd.Click += new System.EventHandler(this.guna2ButtonAdd_Click);
             // 
             // guna2TextBoxEditNameStudent
             // 
@@ -206,6 +191,7 @@
             this.guna2TextBoxEditIdStudent.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxEditIdStudent.HoverState.Parent = this.guna2TextBoxEditIdStudent;
             this.guna2TextBoxEditIdStudent.Location = new System.Drawing.Point(129, 151);
+            this.guna2TextBoxEditIdStudent.MaxLength = 2;
             this.guna2TextBoxEditIdStudent.Name = "guna2TextBoxEditIdStudent";
             this.guna2TextBoxEditIdStudent.PasswordChar = '\0';
             this.guna2TextBoxEditIdStudent.PlaceholderText = "";
@@ -213,6 +199,7 @@
             this.guna2TextBoxEditIdStudent.ShadowDecoration.Parent = this.guna2TextBoxEditIdStudent;
             this.guna2TextBoxEditIdStudent.Size = new System.Drawing.Size(330, 36);
             this.guna2TextBoxEditIdStudent.TabIndex = 64;
+            this.guna2TextBoxEditIdStudent.TextChanged += new System.EventHandler(this.guna2TextBoxEditIdStudent_TextChanged);
             // 
             // labelNameStudent
             // 
@@ -238,7 +225,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(582, 542);
-            this.Controls.Add(this.guna2ButtonClose);
             this.Controls.Add(this.labelEditStudent);
             this.Controls.Add(this.guna2TextBoxEditPasswordStudent);
             this.Controls.Add(this.guna2TextBoxEditUsernameStudent);
@@ -258,8 +244,6 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2Button guna2ButtonClose;
         private System.Windows.Forms.Label labelEditStudent;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxEditPasswordStudent;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxEditUsernameStudent;

@@ -19,6 +19,8 @@ namespace Database
             Connection = new MySqlConnection();
 
             Connection.ConnectionString = ConfigurationManager.ConnectionStrings["database"].ConnectionString;
+
+            ConnecTotDB();
         }
 
         public DbConnect(string server, string database, string username, string password)
@@ -33,9 +35,12 @@ namespace Database
                 connection = $"Server={server};Database={database};Uid={username};";
             }
 
-            Connection = new MySqlConnection();
-            Connection.ConnectionString = connection;
-
+            Connection = new MySqlConnection
+            {
+                ConnectionString = connection
+            };
+            ConnecTotDB();
+            UpdateAppConfig(connection);
         }
 
         public void ConnecTotDB()

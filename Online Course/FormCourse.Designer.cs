@@ -28,11 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelAddCourse = new System.Windows.Forms.Label();
             this.labelSearch = new System.Windows.Forms.Label();
             this.guna2ComboBoxSearch = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2TextBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.dataGridViewSearch = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nama = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Desc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Language = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Release_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Topic = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TopicName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Instructor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InstructorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSearch)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,6 +80,13 @@
             this.guna2ComboBoxSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.guna2ComboBoxSearch.HoverState.Parent = this.guna2ComboBoxSearch;
             this.guna2ComboBoxSearch.ItemHeight = 30;
+            this.guna2ComboBoxSearch.Items.AddRange(new object[] {
+            "Course Id",
+            "Course Name",
+            "Language",
+            "Price",
+            "Topic Name",
+            "Instructor Name"});
             this.guna2ComboBoxSearch.ItemsAppearance.Parent = this.guna2ComboBoxSearch;
             this.guna2ComboBoxSearch.Location = new System.Drawing.Point(104, 100);
             this.guna2ComboBoxSearch.Name = "guna2ComboBoxSearch";
@@ -99,15 +117,112 @@
             this.guna2TextBoxSearch.ShadowDecoration.Parent = this.guna2TextBoxSearch;
             this.guna2TextBoxSearch.Size = new System.Drawing.Size(272, 36);
             this.guna2TextBoxSearch.TabIndex = 78;
+            this.guna2TextBoxSearch.TextChanged += new System.EventHandler(this.guna2TextBoxSearch_TextChanged);
             // 
             // dataGridViewSearch
             // 
             this.dataGridViewSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.Nama,
+            this.Desc,
+            this.Language,
+            this.Price,
+            this.Release_Date,
+            this.Topic,
+            this.TopicName,
+            this.Instructor,
+            this.InstructorName});
             this.dataGridViewSearch.Location = new System.Drawing.Point(23, 162);
             this.dataGridViewSearch.Name = "dataGridViewSearch";
+            this.dataGridViewSearch.RowHeadersWidth = 51;
             this.dataGridViewSearch.RowTemplate.Height = 24;
             this.dataGridViewSearch.Size = new System.Drawing.Size(534, 310);
             this.dataGridViewSearch.TabIndex = 79;
+            // 
+            // Id
+            // 
+            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Id.HeaderText = "Id";
+            this.Id.MinimumWidth = 6;
+            this.Id.Name = "Id";
+            this.Id.Width = 48;
+            // 
+            // Nama
+            // 
+            this.Nama.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Nama.HeaderText = "Nama";
+            this.Nama.MinimumWidth = 6;
+            this.Nama.Name = "Nama";
+            this.Nama.Width = 74;
+            // 
+            // Desc
+            // 
+            this.Desc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Desc.HeaderText = "Description";
+            this.Desc.MinimumWidth = 6;
+            this.Desc.Name = "Desc";
+            this.Desc.Width = 108;
+            // 
+            // Language
+            // 
+            this.Language.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Language.HeaderText = "Language";
+            this.Language.MinimumWidth = 6;
+            this.Language.Name = "Language";
+            this.Language.Width = 101;
+            // 
+            // Price
+            // 
+            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.Format = "#,###";
+            dataGridViewCellStyle1.NullValue = null;
+            this.Price.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Price.HeaderText = "Price";
+            this.Price.MinimumWidth = 6;
+            this.Price.Name = "Price";
+            this.Price.Width = 69;
+            // 
+            // Release_Date
+            // 
+            this.Release_Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Release_Date.HeaderText = "Release Date";
+            this.Release_Date.MinimumWidth = 6;
+            this.Release_Date.Name = "Release_Date";
+            this.Release_Date.Width = 123;
+            // 
+            // Topic
+            // 
+            this.Topic.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Topic.HeaderText = "Id Topic";
+            this.Topic.MinimumWidth = 6;
+            this.Topic.Name = "Topic";
+            this.Topic.Width = 87;
+            // 
+            // TopicName
+            // 
+            this.TopicName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.TopicName.HeaderText = "Topic Name";
+            this.TopicName.MinimumWidth = 6;
+            this.TopicName.Name = "TopicName";
+            this.TopicName.Width = 113;
+            // 
+            // Instructor
+            // 
+            this.Instructor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Instructor.HeaderText = "Id Instructor";
+            this.Instructor.MinimumWidth = 6;
+            this.Instructor.Name = "Instructor";
+            this.Instructor.Width = 111;
+            // 
+            // InstructorName
+            // 
+            this.InstructorName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.InstructorName.HeaderText = "InstructorName";
+            this.InstructorName.MinimumWidth = 6;
+            this.InstructorName.Name = "InstructorName";
+            this.InstructorName.Width = 133;
             // 
             // FormCourse
             // 
@@ -121,6 +236,7 @@
             this.Controls.Add(this.labelAddCourse);
             this.Name = "FormCourse";
             this.Text = "FormCourse";
+            this.Load += new System.EventHandler(this.FormCourse_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSearch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -134,5 +250,15 @@
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBoxSearch;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxSearch;
         private System.Windows.Forms.DataGridView dataGridViewSearch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nama;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Desc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Language;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Release_Date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Topic;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TopicName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Instructor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn InstructorName;
     }
 }

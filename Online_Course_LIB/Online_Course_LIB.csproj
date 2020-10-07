@@ -33,7 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data">
-      <HintPath>C:\Users\alif\Downloads\Compressed\MysqlConnector\v4.8\MySql.Data.dll</HintPath>
+      <HintPath>.\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -46,12 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Database.cs" />
+    <Compile Include="Course.cs" />
+    <Compile Include="IDatabase.cs" />
     <Compile Include="DbConnect.cs" />
     <Compile Include="Instructor.cs" />
-    <Compile Include="IQueryDB.cs" />
+    <Compile Include="Login.cs" />
+    <Compile Include="NotaJual.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Execute.cs" />
+    <Compile Include="Session.cs" />
     <Compile Include="Student.cs" />
     <Compile Include="Topic.cs" />
   </ItemGroup>

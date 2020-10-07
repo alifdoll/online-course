@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Database;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,11 +9,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Online_Course
 {
     public partial class FormMenu : Form
     {
+        ArrayList list = new ArrayList();
+        Session session = Session.Instance;
         public FormMenu()
         {
             InitializeComponent();
@@ -56,6 +61,8 @@ namespace Online_Course
             ShowMenu(panelCourse);
             openChildForm(new FormCourse());
             //code...
+            
+            
         }
 
         private void buttonAddCourse_Click(object sender, EventArgs e)
@@ -177,11 +184,42 @@ namespace Online_Course
 
         private void FormMenu_Load(object sender, EventArgs e)
         {
-            FormMenu formMenu = new FormMenu();
-            formMenu.FormBorderStyle = FormBorderStyle.FixedDialog;
-            formMenu.MaximizeBox = false;
-            formMenu.MinimizeBox = false;
-            formMenu.StartPosition = FormStartPosition.CenterScreen;
+            
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
+            MinimizeBox = false;
+            
+          
+
+            IsMdiContainer = true;
+            Enabled = false;
+
+            FormLogin form = new FormLogin();
+            form.Owner = this;
+            form.Show();
+        }
+
+        private void FormMenu_EnabledChanged(object sender, EventArgs e)
+        {
+            if (session.Name == "Student")
+            {
+                buttonCourse.Enabled = false;
+                buttonInstructor.Enabled = false;
+                buttonTopic.Enabled = false;
+                buttonRemoveStudent.Enabled = false;
+                buttonEditStudent.Enabled = false;
+            }
+            else if(session.Name == "Instructor")
+            {
+                buttonCourse.Enabled = true;
+                buttonInstructor.Enabled = true;
+                buttonRemoveInstructor.Enabled = false;
+                buttonStudent.Enabled = false;
+            }
+            else
+            {
+
+            }
         }
     }
 }

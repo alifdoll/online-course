@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.guna2ButtonClose = new Guna.UI2.WinForms.Guna2Button();
             this.labelEditTopic = new System.Windows.Forms.Label();
             this.guna2ButtonClear = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ButtonAdd = new Guna.UI2.WinForms.Guna2Button();
@@ -37,22 +36,6 @@
             this.labelNameTopic = new System.Windows.Forms.Label();
             this.labelIdTopic = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // guna2ButtonClose
-            // 
-            this.guna2ButtonClose.BorderRadius = 22;
-            this.guna2ButtonClose.CheckedState.Parent = this.guna2ButtonClose;
-            this.guna2ButtonClose.CustomImages.Parent = this.guna2ButtonClose;
-            this.guna2ButtonClose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(211)))), ((int)(((byte)(246)))));
-            this.guna2ButtonClose.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2ButtonClose.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonClose.HoverState.Parent = this.guna2ButtonClose;
-            this.guna2ButtonClose.Location = new System.Drawing.Point(371, 298);
-            this.guna2ButtonClose.Name = "guna2ButtonClose";
-            this.guna2ButtonClose.ShadowDecoration.Parent = this.guna2ButtonClose;
-            this.guna2ButtonClose.Size = new System.Drawing.Size(84, 41);
-            this.guna2ButtonClose.TabIndex = 77;
-            this.guna2ButtonClose.Text = "CLOSE";
             // 
             // labelEditTopic
             // 
@@ -73,12 +56,13 @@
             this.guna2ButtonClear.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2ButtonClear.ForeColor = System.Drawing.Color.White;
             this.guna2ButtonClear.HoverState.Parent = this.guna2ButtonClear;
-            this.guna2ButtonClear.Location = new System.Drawing.Point(250, 298);
+            this.guna2ButtonClear.Location = new System.Drawing.Point(371, 298);
             this.guna2ButtonClear.Name = "guna2ButtonClear";
             this.guna2ButtonClear.ShadowDecoration.Parent = this.guna2ButtonClear;
             this.guna2ButtonClear.Size = new System.Drawing.Size(84, 41);
             this.guna2ButtonClear.TabIndex = 75;
             this.guna2ButtonClear.Text = "CLEAR";
+            this.guna2ButtonClear.Click += new System.EventHandler(this.guna2ButtonClear_Click);
             // 
             // guna2ButtonAdd
             // 
@@ -94,7 +78,8 @@
             this.guna2ButtonAdd.ShadowDecoration.Parent = this.guna2ButtonAdd;
             this.guna2ButtonAdd.Size = new System.Drawing.Size(84, 41);
             this.guna2ButtonAdd.TabIndex = 74;
-            this.guna2ButtonAdd.Text = "ADD";
+            this.guna2ButtonAdd.Text = "SAVE";
+            this.guna2ButtonAdd.Click += new System.EventHandler(this.guna2ButtonAdd_Click);
             // 
             // guna2TextBoxEditNameTopic
             // 
@@ -136,6 +121,7 @@
             this.guna2TextBoxEditIdTopic.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxEditIdTopic.HoverState.Parent = this.guna2TextBoxEditIdTopic;
             this.guna2TextBoxEditIdTopic.Location = new System.Drawing.Point(128, 148);
+            this.guna2TextBoxEditIdTopic.MaxLength = 2;
             this.guna2TextBoxEditIdTopic.Name = "guna2TextBoxEditIdTopic";
             this.guna2TextBoxEditIdTopic.PasswordChar = '\0';
             this.guna2TextBoxEditIdTopic.PlaceholderText = "";
@@ -143,6 +129,7 @@
             this.guna2TextBoxEditIdTopic.ShadowDecoration.Parent = this.guna2TextBoxEditIdTopic;
             this.guna2TextBoxEditIdTopic.Size = new System.Drawing.Size(330, 36);
             this.guna2TextBoxEditIdTopic.TabIndex = 72;
+            this.guna2TextBoxEditIdTopic.TextChanged += new System.EventHandler(this.guna2TextBoxEditIdTopic_TextChanged);
             // 
             // labelNameTopic
             // 
@@ -167,7 +154,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(582, 415);
-            this.Controls.Add(this.guna2ButtonClose);
             this.Controls.Add(this.labelEditTopic);
             this.Controls.Add(this.guna2ButtonClear);
             this.Controls.Add(this.guna2ButtonAdd);
@@ -183,8 +169,6 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2Button guna2ButtonClose;
         private System.Windows.Forms.Label labelEditTopic;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonClear;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonAdd;

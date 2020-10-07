@@ -359,8 +359,10 @@
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panel1);
             this.Name = "FormMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMenu";
             this.Load += new System.EventHandler(this.FormMenu_Load);
+            this.EnabledChanged += new System.EventHandler(this.FormMenu_EnabledChanged);
             this.panel1.ResumeLayout(false);
             this.panelStudent.ResumeLayout(false);
             this.panelInstructor.ResumeLayout(false);

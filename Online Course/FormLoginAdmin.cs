@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace Online_Course
 {
     public partial class FormLoginAdmin : Form
     {
+        Session session = Session.Instance;
         public FormLoginAdmin()
         {
             InitializeComponent();
@@ -24,9 +26,37 @@ namespace Online_Course
 
         private void guna2ButtonLogin_Click(object sender, EventArgs e)
         {
-            FormMenu formMenu = new FormMenu();
-            formMenu.Owner = this;
-            formMenu.Show();
+            try
+            {
+                if (guna2TextBoxUsername.Text != "" || guna2TextBoxPassword.Text != "")
+                {
+                    Login.AdminLogin(guna2TextBoxUsername.Text, guna2TextBoxPassword.Text);
+                    session.SessionClear();
+                    session.Name = "Admin";
+                    MessageBox.Show("Koneksi Berhasil", "Info");
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Username atau Password Tidak Boleh Kosong", "Info");
+                }
+            }
+            catch(Exception error)
+            {
+                MessageBox.Show($"Gagal Login, Error : {error.Message}", "Error");
+            }
+           
+        }
+
+        private void FormLoginAdmin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FormLogin form = new FormLogin();
+            form.FormLogin_Load(guna2ButtonLogin, e);
+        }
+
+        private void FormLoginAdmin_Load(object sender, EventArgs e)
+        {
+            StartPosition = FormStartPosition.CenterScreen;
         }
     }
 }

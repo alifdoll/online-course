@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,12 +13,13 @@ namespace Online_Course
 {
     public partial class FormLogin : Form
     {
+        Session session = Session.Instance;
         public FormLogin()
         {
             InitializeComponent();
         }
 
-        private void FormLogin_Load(object sender, EventArgs e)
+        public void FormLogin_Load(object sender, EventArgs e)
         {
 
         }
@@ -25,27 +27,51 @@ namespace Online_Course
         private void guna2ButtonStudent_Click(object sender, EventArgs e)
         {
             FormLoginStudent formStudent = new FormLoginStudent();
-            formStudent.Owner = this;
-            formStudent.Show();
+            formStudent.FormClosed += delegate
+            {
+                if(session.Name != "")
+                {
+                    Owner.Enabled = true;
+                    this.Close();
+                }
+            };
+            formStudent.ShowDialog();
         }
 
         private void guna2ButtonAdmin_Click(object sender, EventArgs e)
         {
             FormLoginAdmin formAdmin = new FormLoginAdmin();
-            formAdmin.Owner = this;
-            formAdmin.Show();
+            formAdmin.FormClosed += delegate
+            {
+                if (session.Name != "")
+                {
+                    Owner.Enabled = true;
+                    this.Close();
+                }
+            };
+            formAdmin.ShowDialog();
+            
         }
 
         private void guna2ButtonInstructor_Click(object sender, EventArgs e)
         {
             FormLoginInstructor formInstructor = new FormLoginInstructor();
-            formInstructor.Owner = this;
-            formInstructor.Show();
+            formInstructor.FormClosed += delegate
+            {
+                if (session.Name != "")
+                {
+                    Owner.Enabled = true;
+                    this.Close();
+                }
+            };
+            formInstructor.ShowDialog();
         }
 
         private void guna2ButtonExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
+
+
     }
 }

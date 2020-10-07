@@ -30,7 +30,6 @@
         {
             this.guna2ButtonClose = new Guna.UI2.WinForms.Guna2Button();
             this.labelReleaseDateCourse = new System.Windows.Forms.Label();
-            this.guna2TextBoxAddReleaseDateCourse = new Guna.UI2.WinForms.Guna2TextBox();
             this.labelAddCourse = new System.Windows.Forms.Label();
             this.guna2TextBoxAddDescriptionCourse = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBoxAddNameCourse = new Guna.UI2.WinForms.Guna2TextBox();
@@ -44,6 +43,11 @@
             this.labelIdCourse = new System.Windows.Forms.Label();
             this.labelCost = new System.Windows.Forms.Label();
             this.guna2TextBoxCost = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2ComboBoxTopic = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.Topic = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.guna2ComboBoxInstr = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.dateTimePickerRelease = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // guna2ButtonClose
@@ -55,54 +59,30 @@
             this.guna2ButtonClose.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2ButtonClose.ForeColor = System.Drawing.Color.White;
             this.guna2ButtonClose.HoverState.Parent = this.guna2ButtonClose;
-            this.guna2ButtonClose.Location = new System.Drawing.Point(362, 607);
+            this.guna2ButtonClose.Location = new System.Drawing.Point(363, 770);
             this.guna2ButtonClose.Name = "guna2ButtonClose";
             this.guna2ButtonClose.ShadowDecoration.Parent = this.guna2ButtonClose;
             this.guna2ButtonClose.Size = new System.Drawing.Size(84, 41);
-            this.guna2ButtonClose.TabIndex = 77;
+            this.guna2ButtonClose.TabIndex = 19;
             this.guna2ButtonClose.Text = "CLOSE";
             // 
             // labelReleaseDateCourse
             // 
             this.labelReleaseDateCourse.AutoSize = true;
-            this.labelReleaseDateCourse.Location = new System.Drawing.Point(135, 432);
+            this.labelReleaseDateCourse.Location = new System.Drawing.Point(135, 427);
             this.labelReleaseDateCourse.Name = "labelReleaseDateCourse";
             this.labelReleaseDateCourse.Size = new System.Drawing.Size(94, 17);
-            this.labelReleaseDateCourse.TabIndex = 76;
+            this.labelReleaseDateCourse.TabIndex = 9;
             this.labelReleaseDateCourse.Text = "Release Date";
-            // 
-            // guna2TextBoxAddReleaseDateCourse
-            // 
-            this.guna2TextBoxAddReleaseDateCourse.BorderRadius = 22;
-            this.guna2TextBoxAddReleaseDateCourse.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBoxAddReleaseDateCourse.DefaultText = "";
-            this.guna2TextBoxAddReleaseDateCourse.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBoxAddReleaseDateCourse.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBoxAddReleaseDateCourse.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxAddReleaseDateCourse.DisabledState.Parent = this.guna2TextBoxAddReleaseDateCourse;
-            this.guna2TextBoxAddReleaseDateCourse.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxAddReleaseDateCourse.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxAddReleaseDateCourse.FocusedState.Parent = this.guna2TextBoxAddReleaseDateCourse;
-            this.guna2TextBoxAddReleaseDateCourse.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBoxAddReleaseDateCourse.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxAddReleaseDateCourse.HoverState.Parent = this.guna2TextBoxAddReleaseDateCourse;
-            this.guna2TextBoxAddReleaseDateCourse.Location = new System.Drawing.Point(120, 463);
-            this.guna2TextBoxAddReleaseDateCourse.Name = "guna2TextBoxAddReleaseDateCourse";
-            this.guna2TextBoxAddReleaseDateCourse.PasswordChar = '\0';
-            this.guna2TextBoxAddReleaseDateCourse.PlaceholderText = "";
-            this.guna2TextBoxAddReleaseDateCourse.SelectedText = "";
-            this.guna2TextBoxAddReleaseDateCourse.ShadowDecoration.Parent = this.guna2TextBoxAddReleaseDateCourse;
-            this.guna2TextBoxAddReleaseDateCourse.Size = new System.Drawing.Size(330, 36);
-            this.guna2TextBoxAddReleaseDateCourse.TabIndex = 75;
             // 
             // labelAddCourse
             // 
             this.labelAddCourse.AutoSize = true;
             this.labelAddCourse.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAddCourse.Location = new System.Drawing.Point(177, 32);
+            this.labelAddCourse.Location = new System.Drawing.Point(177, 18);
             this.labelAddCourse.Name = "labelAddCourse";
             this.labelAddCourse.Size = new System.Drawing.Size(221, 40);
-            this.labelAddCourse.TabIndex = 74;
+            this.labelAddCourse.TabIndex = 0;
             this.labelAddCourse.Text = "ADD COURSE";
             // 
             // guna2TextBoxAddDescriptionCourse
@@ -120,14 +100,15 @@
             this.guna2TextBoxAddDescriptionCourse.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBoxAddDescriptionCourse.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxAddDescriptionCourse.HoverState.Parent = this.guna2TextBoxAddDescriptionCourse;
-            this.guna2TextBoxAddDescriptionCourse.Location = new System.Drawing.Point(120, 298);
+            this.guna2TextBoxAddDescriptionCourse.Location = new System.Drawing.Point(120, 266);
+            this.guna2TextBoxAddDescriptionCourse.Multiline = true;
             this.guna2TextBoxAddDescriptionCourse.Name = "guna2TextBoxAddDescriptionCourse";
             this.guna2TextBoxAddDescriptionCourse.PasswordChar = '\0';
             this.guna2TextBoxAddDescriptionCourse.PlaceholderText = "";
             this.guna2TextBoxAddDescriptionCourse.SelectedText = "";
             this.guna2TextBoxAddDescriptionCourse.ShadowDecoration.Parent = this.guna2TextBoxAddDescriptionCourse;
-            this.guna2TextBoxAddDescriptionCourse.Size = new System.Drawing.Size(330, 36);
-            this.guna2TextBoxAddDescriptionCourse.TabIndex = 73;
+            this.guna2TextBoxAddDescriptionCourse.Size = new System.Drawing.Size(330, 76);
+            this.guna2TextBoxAddDescriptionCourse.TabIndex = 6;
             // 
             // guna2TextBoxAddNameCourse
             // 
@@ -144,31 +125,31 @@
             this.guna2TextBoxAddNameCourse.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBoxAddNameCourse.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxAddNameCourse.HoverState.Parent = this.guna2TextBoxAddNameCourse;
-            this.guna2TextBoxAddNameCourse.Location = new System.Drawing.Point(120, 213);
+            this.guna2TextBoxAddNameCourse.Location = new System.Drawing.Point(120, 181);
             this.guna2TextBoxAddNameCourse.Name = "guna2TextBoxAddNameCourse";
             this.guna2TextBoxAddNameCourse.PasswordChar = '\0';
             this.guna2TextBoxAddNameCourse.PlaceholderText = "";
             this.guna2TextBoxAddNameCourse.SelectedText = "";
             this.guna2TextBoxAddNameCourse.ShadowDecoration.Parent = this.guna2TextBoxAddNameCourse;
             this.guna2TextBoxAddNameCourse.Size = new System.Drawing.Size(327, 36);
-            this.guna2TextBoxAddNameCourse.TabIndex = 72;
+            this.guna2TextBoxAddNameCourse.TabIndex = 4;
             // 
             // labelDescriptionCourse
             // 
             this.labelDescriptionCourse.AutoSize = true;
-            this.labelDescriptionCourse.Location = new System.Drawing.Point(135, 266);
+            this.labelDescriptionCourse.Location = new System.Drawing.Point(135, 234);
             this.labelDescriptionCourse.Name = "labelDescriptionCourse";
             this.labelDescriptionCourse.Size = new System.Drawing.Size(79, 17);
-            this.labelDescriptionCourse.TabIndex = 71;
+            this.labelDescriptionCourse.TabIndex = 5;
             this.labelDescriptionCourse.Text = "Description";
             // 
             // labelNameCourse
             // 
             this.labelNameCourse.AutoSize = true;
-            this.labelNameCourse.Location = new System.Drawing.Point(135, 182);
+            this.labelNameCourse.Location = new System.Drawing.Point(135, 150);
             this.labelNameCourse.Name = "labelNameCourse";
             this.labelNameCourse.Size = new System.Drawing.Size(45, 17);
-            this.labelNameCourse.TabIndex = 70;
+            this.labelNameCourse.TabIndex = 3;
             this.labelNameCourse.Text = "Name";
             // 
             // guna2ButtonClear
@@ -180,12 +161,13 @@
             this.guna2ButtonClear.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2ButtonClear.ForeColor = System.Drawing.Color.White;
             this.guna2ButtonClear.HoverState.Parent = this.guna2ButtonClear;
-            this.guna2ButtonClear.Location = new System.Drawing.Point(241, 607);
+            this.guna2ButtonClear.Location = new System.Drawing.Point(242, 770);
             this.guna2ButtonClear.Name = "guna2ButtonClear";
             this.guna2ButtonClear.ShadowDecoration.Parent = this.guna2ButtonClear;
             this.guna2ButtonClear.Size = new System.Drawing.Size(84, 41);
-            this.guna2ButtonClear.TabIndex = 69;
+            this.guna2ButtonClear.TabIndex = 18;
             this.guna2ButtonClear.Text = "CLEAR";
+            this.guna2ButtonClear.Click += new System.EventHandler(this.guna2ButtonClear_Click);
             // 
             // guna2ButtonAdd
             // 
@@ -196,12 +178,13 @@
             this.guna2ButtonAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2ButtonAdd.ForeColor = System.Drawing.Color.White;
             this.guna2ButtonAdd.HoverState.Parent = this.guna2ButtonAdd;
-            this.guna2ButtonAdd.Location = new System.Drawing.Point(119, 607);
+            this.guna2ButtonAdd.Location = new System.Drawing.Point(120, 770);
             this.guna2ButtonAdd.Name = "guna2ButtonAdd";
             this.guna2ButtonAdd.ShadowDecoration.Parent = this.guna2ButtonAdd;
             this.guna2ButtonAdd.Size = new System.Drawing.Size(84, 41);
-            this.guna2ButtonAdd.TabIndex = 68;
+            this.guna2ButtonAdd.TabIndex = 17;
             this.guna2ButtonAdd.Text = "ADD";
+            this.guna2ButtonAdd.Click += new System.EventHandler(this.guna2ButtonAdd_Click);
             // 
             // guna2TextBoxAddLanguageCourse
             // 
@@ -218,14 +201,14 @@
             this.guna2TextBoxAddLanguageCourse.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBoxAddLanguageCourse.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxAddLanguageCourse.HoverState.Parent = this.guna2TextBoxAddLanguageCourse;
-            this.guna2TextBoxAddLanguageCourse.Location = new System.Drawing.Point(120, 379);
+            this.guna2TextBoxAddLanguageCourse.Location = new System.Drawing.Point(120, 374);
             this.guna2TextBoxAddLanguageCourse.Name = "guna2TextBoxAddLanguageCourse";
             this.guna2TextBoxAddLanguageCourse.PasswordChar = '\0';
             this.guna2TextBoxAddLanguageCourse.PlaceholderText = "";
             this.guna2TextBoxAddLanguageCourse.SelectedText = "";
             this.guna2TextBoxAddLanguageCourse.ShadowDecoration.Parent = this.guna2TextBoxAddLanguageCourse;
             this.guna2TextBoxAddLanguageCourse.Size = new System.Drawing.Size(330, 36);
-            this.guna2TextBoxAddLanguageCourse.TabIndex = 67;
+            this.guna2TextBoxAddLanguageCourse.TabIndex = 8;
             // 
             // guna2TextBoxAddIdCourse
             // 
@@ -237,46 +220,47 @@
             this.guna2TextBoxAddIdCourse.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBoxAddIdCourse.DisabledState.Parent = this.guna2TextBoxAddIdCourse;
             this.guna2TextBoxAddIdCourse.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxAddIdCourse.Enabled = false;
             this.guna2TextBoxAddIdCourse.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxAddIdCourse.FocusedState.Parent = this.guna2TextBoxAddIdCourse;
             this.guna2TextBoxAddIdCourse.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBoxAddIdCourse.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxAddIdCourse.HoverState.Parent = this.guna2TextBoxAddIdCourse;
-            this.guna2TextBoxAddIdCourse.Location = new System.Drawing.Point(120, 131);
+            this.guna2TextBoxAddIdCourse.Location = new System.Drawing.Point(120, 99);
             this.guna2TextBoxAddIdCourse.Name = "guna2TextBoxAddIdCourse";
             this.guna2TextBoxAddIdCourse.PasswordChar = '\0';
             this.guna2TextBoxAddIdCourse.PlaceholderText = "";
             this.guna2TextBoxAddIdCourse.SelectedText = "";
             this.guna2TextBoxAddIdCourse.ShadowDecoration.Parent = this.guna2TextBoxAddIdCourse;
             this.guna2TextBoxAddIdCourse.Size = new System.Drawing.Size(330, 36);
-            this.guna2TextBoxAddIdCourse.TabIndex = 66;
+            this.guna2TextBoxAddIdCourse.TabIndex = 2;
             // 
             // labelLanguageCourse
             // 
             this.labelLanguageCourse.AutoSize = true;
-            this.labelLanguageCourse.Location = new System.Drawing.Point(135, 350);
+            this.labelLanguageCourse.Location = new System.Drawing.Point(135, 345);
             this.labelLanguageCourse.Name = "labelLanguageCourse";
             this.labelLanguageCourse.Size = new System.Drawing.Size(72, 17);
-            this.labelLanguageCourse.TabIndex = 65;
+            this.labelLanguageCourse.TabIndex = 7;
             this.labelLanguageCourse.Text = "Language";
             // 
             // labelIdCourse
             // 
             this.labelIdCourse.AutoSize = true;
-            this.labelIdCourse.Location = new System.Drawing.Point(135, 101);
+            this.labelIdCourse.Location = new System.Drawing.Point(135, 69);
             this.labelIdCourse.Name = "labelIdCourse";
             this.labelIdCourse.Size = new System.Drawing.Size(19, 17);
-            this.labelIdCourse.TabIndex = 64;
+            this.labelIdCourse.TabIndex = 1;
             this.labelIdCourse.Text = "Id";
             // 
             // labelCost
             // 
             this.labelCost.AutoSize = true;
-            this.labelCost.Location = new System.Drawing.Point(135, 514);
+            this.labelCost.Location = new System.Drawing.Point(130, 669);
             this.labelCost.Name = "labelCost";
             this.labelCost.Size = new System.Drawing.Size(40, 17);
-            this.labelCost.TabIndex = 79;
-            this.labelCost.Text = "Cost ";
+            this.labelCost.TabIndex = 15;
+            this.labelCost.Text = "Price";
             // 
             // guna2TextBoxCost
             // 
@@ -293,26 +277,110 @@
             this.guna2TextBoxCost.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBoxCost.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxCost.HoverState.Parent = this.guna2TextBoxCost;
-            this.guna2TextBoxCost.Location = new System.Drawing.Point(120, 545);
+            this.guna2TextBoxCost.Location = new System.Drawing.Point(120, 709);
             this.guna2TextBoxCost.Name = "guna2TextBoxCost";
             this.guna2TextBoxCost.PasswordChar = '\0';
             this.guna2TextBoxCost.PlaceholderText = "";
             this.guna2TextBoxCost.SelectedText = "";
             this.guna2TextBoxCost.ShadowDecoration.Parent = this.guna2TextBoxCost;
             this.guna2TextBoxCost.Size = new System.Drawing.Size(330, 36);
-            this.guna2TextBoxCost.TabIndex = 78;
+            this.guna2TextBoxCost.TabIndex = 16;
+            // 
+            // guna2ComboBoxTopic
+            // 
+            this.guna2ComboBoxTopic.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ComboBoxTopic.BorderRadius = 22;
+            this.guna2ComboBoxTopic.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guna2ComboBoxTopic.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBoxTopic.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBoxTopic.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBoxTopic.FocusedState.Parent = this.guna2ComboBoxTopic;
+            this.guna2ComboBoxTopic.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.guna2ComboBoxTopic.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.guna2ComboBoxTopic.HoverState.Parent = this.guna2ComboBoxTopic;
+            this.guna2ComboBoxTopic.ItemHeight = 30;
+            this.guna2ComboBoxTopic.Items.AddRange(new object[] {
+            "Course Id",
+            "Course Name",
+            "Language",
+            "Price",
+            "Topic Name",
+            "Instructor Name"});
+            this.guna2ComboBoxTopic.ItemsAppearance.Parent = this.guna2ComboBoxTopic;
+            this.guna2ComboBoxTopic.Location = new System.Drawing.Point(118, 620);
+            this.guna2ComboBoxTopic.Name = "guna2ComboBoxTopic";
+            this.guna2ComboBoxTopic.ShadowDecoration.Parent = this.guna2ComboBoxTopic;
+            this.guna2ComboBoxTopic.Size = new System.Drawing.Size(327, 36);
+            this.guna2ComboBoxTopic.TabIndex = 14;
+            // 
+            // Topic
+            // 
+            this.Topic.AutoSize = true;
+            this.Topic.Location = new System.Drawing.Point(130, 589);
+            this.Topic.Name = "Topic";
+            this.Topic.Size = new System.Drawing.Size(43, 17);
+            this.Topic.TabIndex = 13;
+            this.Topic.Text = "Topic";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(135, 508);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 17);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Instructor";
+            // 
+            // guna2ComboBoxInstr
+            // 
+            this.guna2ComboBoxInstr.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ComboBoxInstr.BorderRadius = 22;
+            this.guna2ComboBoxInstr.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guna2ComboBoxInstr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBoxInstr.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBoxInstr.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBoxInstr.FocusedState.Parent = this.guna2ComboBoxInstr;
+            this.guna2ComboBoxInstr.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.guna2ComboBoxInstr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.guna2ComboBoxInstr.HoverState.Parent = this.guna2ComboBoxInstr;
+            this.guna2ComboBoxInstr.ItemHeight = 30;
+            this.guna2ComboBoxInstr.Items.AddRange(new object[] {
+            "Course Id",
+            "Course Name",
+            "Language",
+            "Price",
+            "Topic Name",
+            "Instructor Name"});
+            this.guna2ComboBoxInstr.ItemsAppearance.Parent = this.guna2ComboBoxInstr;
+            this.guna2ComboBoxInstr.Location = new System.Drawing.Point(118, 539);
+            this.guna2ComboBoxInstr.Name = "guna2ComboBoxInstr";
+            this.guna2ComboBoxInstr.ShadowDecoration.Parent = this.guna2ComboBoxInstr;
+            this.guna2ComboBoxInstr.Size = new System.Drawing.Size(332, 36);
+            this.guna2ComboBoxInstr.TabIndex = 12;
+            this.guna2ComboBoxInstr.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBoxInstr_SelectedIndexChanged);
+            // 
+            // dateTimePickerRelease
+            // 
+            this.dateTimePickerRelease.Location = new System.Drawing.Point(138, 465);
+            this.dateTimePickerRelease.Name = "dateTimePickerRelease";
+            this.dateTimePickerRelease.Size = new System.Drawing.Size(312, 22);
+            this.dateTimePickerRelease.TabIndex = 10;
             // 
             // FormAddCourse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(582, 677);
+            this.ClientSize = new System.Drawing.Size(582, 828);
+            this.Controls.Add(this.dateTimePickerRelease);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.guna2ComboBoxInstr);
+            this.Controls.Add(this.Topic);
+            this.Controls.Add(this.guna2ComboBoxTopic);
             this.Controls.Add(this.labelCost);
             this.Controls.Add(this.guna2TextBoxCost);
             this.Controls.Add(this.guna2ButtonClose);
             this.Controls.Add(this.labelReleaseDateCourse);
-            this.Controls.Add(this.guna2TextBoxAddReleaseDateCourse);
             this.Controls.Add(this.labelAddCourse);
             this.Controls.Add(this.guna2TextBoxAddDescriptionCourse);
             this.Controls.Add(this.guna2TextBoxAddNameCourse);
@@ -326,6 +394,7 @@
             this.Controls.Add(this.labelIdCourse);
             this.Name = "FormAddCourse";
             this.Text = "FormAddCourse";
+            this.Load += new System.EventHandler(this.FormAddCourse_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,7 +404,6 @@
 
         private Guna.UI2.WinForms.Guna2Button guna2ButtonClose;
         private System.Windows.Forms.Label labelReleaseDateCourse;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxAddReleaseDateCourse;
         private System.Windows.Forms.Label labelAddCourse;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxAddDescriptionCourse;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxAddNameCourse;
@@ -349,5 +417,10 @@
         private System.Windows.Forms.Label labelIdCourse;
         private System.Windows.Forms.Label labelCost;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxCost;
+        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBoxTopic;
+        private System.Windows.Forms.Label Topic;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBoxInstr;
+        private System.Windows.Forms.DateTimePicker dateTimePickerRelease;
     }
 }

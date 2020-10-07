@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Online Course", "Online Course\Online Course.csproj", "{C077FAE0-A737-400C-AC88-F54BD8902C46}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Online_Course_LIB", "Database\Online_Course_LIB.csproj", "{5C868A27-3527-4883-9C75-5C6A4F5C833F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Online_Course_LIB", "Online_Course_LIB\Online_Course_LIB.csproj", "{5C868A27-3527-4883-9C75-5C6A4F5C833F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

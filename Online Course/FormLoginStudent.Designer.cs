@@ -72,7 +72,7 @@
             this.guna2TextBoxPassword.HoverState.Parent = this.guna2TextBoxPassword;
             this.guna2TextBoxPassword.Location = new System.Drawing.Point(45, 212);
             this.guna2TextBoxPassword.Name = "guna2TextBoxPassword";
-            this.guna2TextBoxPassword.PasswordChar = '\0';
+            this.guna2TextBoxPassword.PasswordChar = '*';
             this.guna2TextBoxPassword.PlaceholderText = "";
             this.guna2TextBoxPassword.SelectedText = "";
             this.guna2TextBoxPassword.ShadowDecoration.Parent = this.guna2TextBoxPassword;
@@ -146,6 +146,7 @@
             this.guna2ButtonLogin.Size = new System.Drawing.Size(112, 41);
             this.guna2ButtonLogin.TabIndex = 36;
             this.guna2ButtonLogin.Text = "LOGIN";
+            this.guna2ButtonLogin.Click += new System.EventHandler(this.guna2ButtonLogin_Click);
             // 
             // FormLoginStudent
             // 
@@ -161,6 +162,7 @@
             this.Controls.Add(this.labelStudent);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormLoginStudent";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLoginStudent";
             this.ResumeLayout(false);
             this.PerformLayout();

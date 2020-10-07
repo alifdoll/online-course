@@ -20,6 +20,7 @@ namespace Database
         public static MySqlDataReader Query(string query)
         {
             DbConnect connect = new DbConnect();
+            connect.ConnecTotDB();
             MySqlCommand command = new MySqlCommand(query, connect.Connection);
             MySqlDataReader result = command.ExecuteReader();
             return result;
