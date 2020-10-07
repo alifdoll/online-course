@@ -361,7 +361,7 @@
             // 
             // dateTimePickerRelease
             // 
-            this.dateTimePickerRelease.Location = new System.Drawing.Point(138, 465);
+            this.dateTimePickerRelease.Location = new System.Drawing.Point(128, 466);
             this.dateTimePickerRelease.Name = "dateTimePickerRelease";
             this.dateTimePickerRelease.Size = new System.Drawing.Size(312, 22);
             this.dateTimePickerRelease.TabIndex = 10;
