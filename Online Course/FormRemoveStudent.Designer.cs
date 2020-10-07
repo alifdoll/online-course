@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.guna2ButtonClose = new Guna.UI2.WinForms.Guna2Button();
             this.labelEditStudent = new System.Windows.Forms.Label();
             this.guna2TextBoxDeletePasswordStudent = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBoxDeleteUsernameStudent = new Guna.UI2.WinForms.Guna2TextBox();
@@ -41,22 +40,6 @@
             this.labelNameStudent = new System.Windows.Forms.Label();
             this.labelIdStudent = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // guna2ButtonClose
-            // 
-            this.guna2ButtonClose.BorderRadius = 22;
-            this.guna2ButtonClose.CheckedState.Parent = this.guna2ButtonClose;
-            this.guna2ButtonClose.CustomImages.Parent = this.guna2ButtonClose;
-            this.guna2ButtonClose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(211)))), ((int)(((byte)(246)))));
-            this.guna2ButtonClose.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2ButtonClose.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonClose.HoverState.Parent = this.guna2ButtonClose;
-            this.guna2ButtonClose.Location = new System.Drawing.Point(369, 450);
-            this.guna2ButtonClose.Name = "guna2ButtonClose";
-            this.guna2ButtonClose.ShadowDecoration.Parent = this.guna2ButtonClose;
-            this.guna2ButtonClose.Size = new System.Drawing.Size(84, 41);
-            this.guna2ButtonClose.TabIndex = 85;
-            this.guna2ButtonClose.Text = "CLOSE";
             // 
             // labelEditStudent
             // 
@@ -78,6 +61,7 @@
             this.guna2TextBoxDeletePasswordStudent.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBoxDeletePasswordStudent.DisabledState.Parent = this.guna2TextBoxDeletePasswordStudent;
             this.guna2TextBoxDeletePasswordStudent.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxDeletePasswordStudent.Enabled = false;
             this.guna2TextBoxDeletePasswordStudent.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxDeletePasswordStudent.FocusedState.Parent = this.guna2TextBoxDeletePasswordStudent;
             this.guna2TextBoxDeletePasswordStudent.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -85,7 +69,7 @@
             this.guna2TextBoxDeletePasswordStudent.HoverState.Parent = this.guna2TextBoxDeletePasswordStudent;
             this.guna2TextBoxDeletePasswordStudent.Location = new System.Drawing.Point(126, 302);
             this.guna2TextBoxDeletePasswordStudent.Name = "guna2TextBoxDeletePasswordStudent";
-            this.guna2TextBoxDeletePasswordStudent.PasswordChar = '\0';
+            this.guna2TextBoxDeletePasswordStudent.PasswordChar = '*';
             this.guna2TextBoxDeletePasswordStudent.PlaceholderText = "";
             this.guna2TextBoxDeletePasswordStudent.SelectedText = "";
             this.guna2TextBoxDeletePasswordStudent.ShadowDecoration.Parent = this.guna2TextBoxDeletePasswordStudent;
@@ -102,6 +86,7 @@
             this.guna2TextBoxDeleteUsernameStudent.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBoxDeleteUsernameStudent.DisabledState.Parent = this.guna2TextBoxDeleteUsernameStudent;
             this.guna2TextBoxDeleteUsernameStudent.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxDeleteUsernameStudent.Enabled = false;
             this.guna2TextBoxDeleteUsernameStudent.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxDeleteUsernameStudent.FocusedState.Parent = this.guna2TextBoxDeleteUsernameStudent;
             this.guna2TextBoxDeleteUsernameStudent.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -143,12 +128,13 @@
             this.guna2ButtonClear.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2ButtonClear.ForeColor = System.Drawing.Color.White;
             this.guna2ButtonClear.HoverState.Parent = this.guna2ButtonClear;
-            this.guna2ButtonClear.Location = new System.Drawing.Point(248, 450);
+            this.guna2ButtonClear.Location = new System.Drawing.Point(369, 450);
             this.guna2ButtonClear.Name = "guna2ButtonClear";
             this.guna2ButtonClear.ShadowDecoration.Parent = this.guna2ButtonClear;
             this.guna2ButtonClear.Size = new System.Drawing.Size(84, 41);
             this.guna2ButtonClear.TabIndex = 79;
             this.guna2ButtonClear.Text = "CLEAR";
+            this.guna2ButtonClear.Click += new System.EventHandler(this.guna2ButtonClear_Click);
             // 
             // guna2ButtonDelete
             // 
@@ -165,6 +151,7 @@
             this.guna2ButtonDelete.Size = new System.Drawing.Size(84, 41);
             this.guna2ButtonDelete.TabIndex = 78;
             this.guna2ButtonDelete.Text = "DELETE";
+            this.guna2ButtonDelete.Click += new System.EventHandler(this.guna2ButtonDelete_Click);
             // 
             // guna2TextBoxDeleteNameStudent
             // 
@@ -176,6 +163,7 @@
             this.guna2TextBoxDeleteNameStudent.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBoxDeleteNameStudent.DisabledState.Parent = this.guna2TextBoxDeleteNameStudent;
             this.guna2TextBoxDeleteNameStudent.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxDeleteNameStudent.Enabled = false;
             this.guna2TextBoxDeleteNameStudent.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxDeleteNameStudent.FocusedState.Parent = this.guna2TextBoxDeleteNameStudent;
             this.guna2TextBoxDeleteNameStudent.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -183,7 +171,7 @@
             this.guna2TextBoxDeleteNameStudent.HoverState.Parent = this.guna2TextBoxDeleteNameStudent;
             this.guna2TextBoxDeleteNameStudent.Location = new System.Drawing.Point(126, 383);
             this.guna2TextBoxDeleteNameStudent.Name = "guna2TextBoxDeleteNameStudent";
-            this.guna2TextBoxDeleteNameStudent.PasswordChar = '\0';
+            this.guna2TextBoxDeleteNameStudent.PasswordChar = '*';
             this.guna2TextBoxDeleteNameStudent.PlaceholderText = "";
             this.guna2TextBoxDeleteNameStudent.SelectedText = "";
             this.guna2TextBoxDeleteNameStudent.ShadowDecoration.Parent = this.guna2TextBoxDeleteNameStudent;
@@ -206,6 +194,7 @@
             this.guna2TextBoxDeleteIdStudent.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxDeleteIdStudent.HoverState.Parent = this.guna2TextBoxDeleteIdStudent;
             this.guna2TextBoxDeleteIdStudent.Location = new System.Drawing.Point(126, 135);
+            this.guna2TextBoxDeleteIdStudent.MaxLength = 2;
             this.guna2TextBoxDeleteIdStudent.Name = "guna2TextBoxDeleteIdStudent";
             this.guna2TextBoxDeleteIdStudent.PasswordChar = '\0';
             this.guna2TextBoxDeleteIdStudent.PlaceholderText = "";
@@ -213,6 +202,7 @@
             this.guna2TextBoxDeleteIdStudent.ShadowDecoration.Parent = this.guna2TextBoxDeleteIdStudent;
             this.guna2TextBoxDeleteIdStudent.Size = new System.Drawing.Size(330, 36);
             this.guna2TextBoxDeleteIdStudent.TabIndex = 76;
+            this.guna2TextBoxDeleteIdStudent.TextChanged += new System.EventHandler(this.guna2TextBoxDeleteIdStudent_TextChanged);
             // 
             // labelNameStudent
             // 
@@ -238,7 +228,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(582, 523);
-            this.Controls.Add(this.guna2ButtonClose);
             this.Controls.Add(this.labelEditStudent);
             this.Controls.Add(this.guna2TextBoxDeletePasswordStudent);
             this.Controls.Add(this.guna2TextBoxDeleteUsernameStudent);
@@ -258,8 +247,6 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2Button guna2ButtonClose;
         private System.Windows.Forms.Label labelEditStudent;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxDeletePasswordStudent;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxDeleteUsernameStudent;

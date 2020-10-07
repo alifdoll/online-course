@@ -22,7 +22,7 @@ namespace Database
         #endregion
 
         #region constructors
-        public Topic(string id, string name)
+        public Topic(string id = " ", string name = " ")
         {
             Id = id;
             Name = name;
@@ -33,7 +33,7 @@ namespace Database
         #region methods
         public void Insert()
         {
-            string command = $"INSERT INTO Topic(Id, Nama) VALUES('{Id}', {Name.Replace("'", "\\'")}')";
+            string command = $"INSERT INTO Topic(Id, Nama) VALUES('{Id}', '{Name.Replace("'", "\\'")}')";
             Execute.DML(command);
         }
 
@@ -62,11 +62,11 @@ namespace Database
             string command;
             if (criteria == "")
             {
-                command = "SELECT * FROM Topic";
+                command = "SELECT * FROM topic";
             }
             else
             {
-                command = $"SELECT * FROM Topic WHHERE {criteria} LIKE '%{value}%'";
+                command = $"SELECT * FROM topic WHERE {criteria} LIKE '%{value}%'";
             }
 
             MySqlDataReader result = Execute.Query(command);
@@ -90,7 +90,7 @@ namespace Database
 
             MySqlDataReader result = Execute.Query(command);
 
-            if(result.Read() == true)
+            if(result.Read())
             {
                 pKey = result.GetInt32(0) + 1;
 
@@ -99,8 +99,8 @@ namespace Database
             {
                 pKey = 1;
             }
-
-            return pKey.ToString();
+            string newId = pKey.ToString().PadLeft(2, '0');
+            return newId;
         }
         #endregion
 

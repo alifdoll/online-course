@@ -22,16 +22,28 @@ namespace Database
         #endregion
 
         #region constructor
-        public Course(int id, string name, string desc, string lang, DateTime release, double price,Topic topic, Instructor instructor)
+        public Course(string id, string name, string desc, string lang, double price, DateTime release, Topic topic, Instructor instructor)
         {
-            Id = Id;
-            Name = Name;
-            Desc = Desc;
-            Lang = Lang;
-            Release = Release;
-            Topic = Topic;
-            Instructor = Instructor;
+            Id = id;
+            Name = name;
+            Desc = desc;
+            Lang = lang;
+            Release = release;
+            Topic = topic;
+            Instructor = instructor;
             Price = price;
+        }
+
+        public Course(string id = "")
+        {
+            Id = id;
+            Name = "";
+            Desc = "";
+            Lang = "";
+            Release = DateTime.Now;
+            Topic = new Topic();
+            Instructor = new Instructor();
+            Price = 0;
         }
         #endregion
 
@@ -50,16 +62,16 @@ namespace Database
 
         public void Insert()
         {
-            string command = $"INSERT INTO Course(Id, Name, Description, Language, Release_Date, Price, Id_Topic, Id_Instructor)" +
-                $"Values('{Id}', '{Name.Replace("'", "\\")}', '{Desc}', '{Lang}', '{Release:yyyy-MM-dd}', '{Price}', '{Topic.Id}', '{Instructor.Id}')";
+            string command = $"INSERT INTO Course(Id, Nama, Description, Language, harga, Release_Date, Id_Topic, Id_Instructor) " +
+                $"Values('{Id}', '{Name.Replace("'", "\\")}', '{Desc}', '{Lang}', '{Price}', '{Release:yyyy-MM-dd}', '{Topic.Id}', '{Instructor.Id}')";
 
             Execute.DML(command);
         }
 
         public void Update()
         {
-            string command = $"UPDATE Course set nama='{Name}', description='{Desc}', language='{Lang}', Release_Date='{Release:yyy-MM-dd}', Price='{Price}'" +
-                 $"WHERE Id='{Id}'";
+            string command = $"UPDATE Course set nama='{Name}', description='{Desc}', language='{Lang}', Release_Date='{Release:yyy-MM-dd}', Harga='{Price}', Id_Topic='{Topic.Id}'" +
+                 $" WHERE Id='{Id}'";
             Execute.DML(command);
         }
 
@@ -80,7 +92,7 @@ namespace Database
 
         public string GeneratePrimaryKey()
         {
-            string command = $"SELECT Max(Right(Id,3)) FROM Course WHERE Id_Topic='{Topic.Id}'";
+            string command = $"SELECT Max(Right(Id,3)) FROM Course WHERE course.id_instructor='{Instructor.Id}'";
             string code = "";
 
             MySqlDataReader result = Execute.Query(command);
@@ -90,25 +102,74 @@ namespace Database
                 if(result.GetValue(0).ToString() != "")
                 {
                     int newcode = result.GetInt32(0) + 1;
-                    code = Instructor.Id + newcode;
+                    code = Instructor.Id  + newcode.ToString().PadLeft(3, '0');
                 }
                 else
                 {
-                    code = Instructor.Id + "001";
+                    code = Instructor.Id  + "001";
                 }
 
             }
             return code;
 
+        }
 
+        public string GeneratePrimaryKey(Instructor instructor)
+        {
+            Instructor = instructor;
+            return GeneratePrimaryKey();
         }
 
         public ArrayList QueryData(string criteria = "", string value = "")
         {
-            throw new NotImplementedException();
+            string command;
+            if (criteria == "")
+            {
+                command =
+                    "SELECT course.id, course.nama, course.description, course.language, course.harga, course.release_date, course.id_topic, topic.nama, course.id_instructor, instructor.nama " +
+                    "FROM course " +
+                    "INNER JOIN topic on course.id_topic = topic.id " +
+                    "INNER JOIN instructor on course.id_instructor = instructor.id";
+            }
+            else
+            {
+                command =
+                    "SELECT course.id, course.nama, course.description, course.language, course.harga, course.release_date, course.id_topic, topic.nama, course.id_instructor, instructor.nama " +
+                    "FROM course " +
+                    "INNER JOIN topic on course.id_topic = topic.id " +
+                    "INNER JOIN instructor on course.id_instructor = instructor.id " +
+                    $"WHERE {criteria} LIKE '%{value}%'";
+            }
+
+            MySqlDataReader result = Execute.Query(command);
+
+            ArrayList list = new ArrayList();
+
+            while (result.Read() == true)
+            {
+                Topic topic = new Topic( result.GetValue(6).ToString(), result.GetValue(7).ToString() );
+
+                Instructor instructor = new Instructor( result.GetValue(8).ToString(), result.GetValue(9).ToString() );
+
+                Course course = new Course(
+                    result.GetValue(0).ToString(),
+                    result.GetValue(1).ToString(),
+                    result.GetValue(2).ToString(),
+                    result.GetValue(3).ToString(),
+                    result.GetDouble(4),
+                    result.GetDateTime(5),
+                    topic,
+                    instructor);
+
+                list.Add(course);
+            }
+
+            return list;
         }
 
+      
 
+      
         #endregion
     }
 }

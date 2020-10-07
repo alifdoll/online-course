@@ -41,6 +41,7 @@
             this.dataGridViewSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewSearch.Location = new System.Drawing.Point(24, 155);
             this.dataGridViewSearch.Name = "dataGridViewSearch";
+            this.dataGridViewSearch.RowHeadersWidth = 51;
             this.dataGridViewSearch.RowTemplate.Height = 24;
             this.dataGridViewSearch.Size = new System.Drawing.Size(534, 310);
             this.dataGridViewSearch.TabIndex = 84;
@@ -68,6 +69,7 @@
             this.guna2TextBoxSearch.ShadowDecoration.Parent = this.guna2TextBoxSearch;
             this.guna2TextBoxSearch.Size = new System.Drawing.Size(272, 36);
             this.guna2TextBoxSearch.TabIndex = 83;
+            this.guna2TextBoxSearch.TextChanged += new System.EventHandler(this.guna2TextBoxSearch_TextChanged);
             // 
             // guna2ComboBoxSearch
             // 
@@ -82,6 +84,9 @@
             this.guna2ComboBoxSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.guna2ComboBoxSearch.HoverState.Parent = this.guna2ComboBoxSearch;
             this.guna2ComboBoxSearch.ItemHeight = 30;
+            this.guna2ComboBoxSearch.Items.AddRange(new object[] {
+            "Id",
+            "Nama"});
             this.guna2ComboBoxSearch.ItemsAppearance.Parent = this.guna2ComboBoxSearch;
             this.guna2ComboBoxSearch.Location = new System.Drawing.Point(105, 93);
             this.guna2ComboBoxSearch.Name = "guna2ComboBoxSearch";
@@ -121,6 +126,7 @@
             this.Controls.Add(this.labelAddTopic);
             this.Name = "FormTopic";
             this.Text = "FormTopic";
+            this.Load += new System.EventHandler(this.FormTopic_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSearch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

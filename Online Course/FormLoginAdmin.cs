@@ -28,28 +28,35 @@ namespace Online_Course
         {
             try
             {
-                if(guna2TextBoxUsername.Text != "")
+                if (guna2TextBoxUsername.Text != "" || guna2TextBoxPassword.Text != "")
                 {
-                    Login.AdminLogin(guna2TextBoxUsername.Text);
+                    Login.AdminLogin(guna2TextBoxUsername.Text, guna2TextBoxPassword.Text);
+                    session.SessionClear();
                     session.Name = "Admin";
                     MessageBox.Show("Koneksi Berhasil", "Info");
-
-                    
-                    FormMenu formMenu = new FormMenu();
-                    //formMenu.Owner = this;
-                    formMenu.Show();
-                    
+                    this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Username Tidak Boleh Kosong", "Info");
+                    MessageBox.Show("Username atau Password Tidak Boleh Kosong", "Info");
                 }
             }
             catch(Exception error)
             {
-                MessageBox.Show($"Gagal Login, Error : {error}", "Error");
+                MessageBox.Show($"Gagal Login, Error : {error.Message}", "Error");
             }
            
+        }
+
+        private void FormLoginAdmin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FormLogin form = new FormLogin();
+            form.FormLogin_Load(guna2ButtonLogin, e);
+        }
+
+        private void FormLoginAdmin_Load(object sender, EventArgs e)
+        {
+            StartPosition = FormStartPosition.CenterScreen;
         }
     }
 }

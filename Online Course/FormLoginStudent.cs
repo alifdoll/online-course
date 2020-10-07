@@ -31,7 +31,24 @@ namespace Online_Course
             {
                 if(guna2TextBoxUsername.Text != "" && guna2TextBoxPassword.Text != "")
                 {
+                    string user = Login.StudentLogin(guna2TextBoxUsername.Text, guna2TextBoxPassword.Text);
+                    if(user == "0")
+                    {
+                        MessageBox.Show("Gagal Untuk Login, Username atau Password Salah", "Warning");
+                    }
+                    else
+                    {
+                        session.SessionClear();
+                        session.Name = "Student";
+
+                        MessageBox.Show($"Berhasil Login Sebagai Student, Nama Anda adalah {user}", "Login Sukses");
+                        this.Close();
+                    }
                     
+                }
+                else
+                {
+                    MessageBox.Show("Username dan Password Tidak Boleh Kosong", "Warning");
                 }
 
             }

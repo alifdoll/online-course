@@ -27,7 +27,7 @@ namespace Database
         #endregion
 
         #region constructors
-        public Instructor(string id, string username, string password, string name, string bio)
+        public Instructor(string id="", string name = "", string bio = "", string username = "", string password = "")
         {
             Id = id;
             Name = name;
@@ -73,7 +73,7 @@ namespace Database
             }
             else
             {
-                command = $"SELECT * FROM Instructor WHERE {criteria} LIKE %'{value}%'";
+                command = $"SELECT * FROM Instructor WHERE {criteria} LIKE '%{value}%'";
             }
 
             MySqlDataReader result = Execute.Query(command);
@@ -112,16 +112,19 @@ namespace Database
                 pKey = 1;
             }
 
-            return pKey.ToString();
+            return pKey.ToString().PadLeft(2, '0');
+        }
+
+        public string GetPass()
+        {
+            string masked = Password;
+            if(Password.Length > 0)
+            {
+                string.Concat("".PadLeft(Password.Length, '*'), masked.Substring(masked.Length));
+            }
+            return masked;
         }
         #endregion
-
-
-
-
-
-
-
 
     }
 }

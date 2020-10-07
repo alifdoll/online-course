@@ -25,7 +25,7 @@ namespace Database
         #endregion
 
         #region constructors
-        public Student(string id, string username, string password, string name)
+        public Student(string id="", string name = "" , string username = "", string password = "")
         {
             Id = id;
             Name = name;
@@ -37,13 +37,13 @@ namespace Database
         #region methods
         public void Insert()
         {
-            string command = $"INSERT INTO Student(Id, Username, Password, Name) VALUES('{Id}', '{Username}', '{Password}', '{Name.Replace("'", "\\'")}'";
+            string command = $"INSERT INTO Student(Id, Username, Password, Nama) VALUES ('{Id}', '{Username}', '{Password}', '{Name.Replace("'", "\\'")}')";
             Execute.DML(command);
         }
 
         public void Update()
         {
-            string command = $"UPDATE Student SET Username='{Username}', Password='{Password}', Name='{Name.Replace("'", "\\'")}' WHERE Id='{id}'";
+            string command = $"UPDATE Student SET Username='{Username}', Password='{Password}', Nama='{Name.Replace("'", "\\'")}' WHERE Id='{id}'";
             Execute.DML(command);
         }
 
@@ -109,6 +109,16 @@ namespace Database
             }
 
             return pKey.ToString();
+        }
+
+        public string GetPass()
+        {
+            string masked = Password;
+            if (Password.Length > 0)
+            {
+                string.Concat("".PadLeft(Password.Length, '*'), masked.Substring(masked.Length));
+            }
+            return masked;
         }
         #endregion
 

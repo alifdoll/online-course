@@ -22,7 +22,7 @@ namespace Database
             {
                 while (result.Read())
                 {
-                    user = result.GetString(0);
+                    user = result.GetString(1);
                 }
                
             }
@@ -46,7 +46,7 @@ namespace Database
             {
                 while (result.Read())
                 {
-                    instruct = result.GetString(0);
+                    instruct = result.GetString(1);
                 }
             }
             else
@@ -58,7 +58,7 @@ namespace Database
 
         public static void AdminLogin(string username = "root", string password = "")
         {
-            _ = new DbConnect("127.0.0.1", "online_course", username, password);
+            DbConnect connect = new DbConnect("127.0.0.1", "online_course", username, password);
         }
 
     }

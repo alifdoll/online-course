@@ -72,7 +72,7 @@
             this.guna2TextBoxPassword.HoverState.Parent = this.guna2TextBoxPassword;
             this.guna2TextBoxPassword.Location = new System.Drawing.Point(48, 215);
             this.guna2TextBoxPassword.Name = "guna2TextBoxPassword";
-            this.guna2TextBoxPassword.PasswordChar = '\0';
+            this.guna2TextBoxPassword.PasswordChar = '*';
             this.guna2TextBoxPassword.PlaceholderText = "";
             this.guna2TextBoxPassword.SelectedText = "";
             this.guna2TextBoxPassword.ShadowDecoration.Parent = this.guna2TextBoxPassword;
@@ -162,6 +162,7 @@
             this.Controls.Add(this.labelAdmin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormLoginAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLoginAdmin";
             this.ResumeLayout(false);
             this.PerformLayout();
