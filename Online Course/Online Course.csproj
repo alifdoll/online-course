@@ -37,8 +37,7 @@
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>..\References\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
-    <Reference Include="Database, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Database">
       <HintPath>..\Online_Course_LIB\bin\Debug\Database.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI2">

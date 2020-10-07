@@ -60,7 +60,6 @@ namespace Online_Course
 
         private void guna2TextBoxSearch_TextChanged(object sender, EventArgs e)
         {
-            guna2TextBoxSearch.Clear();
             switch (guna2ComboBoxSearch.Text)
             {
                 case "Course Id":

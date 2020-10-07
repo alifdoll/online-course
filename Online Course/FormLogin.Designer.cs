@@ -60,12 +60,13 @@
             // 
             this.labelNamaAplikaasi.AutoSize = true;
             this.labelNamaAplikaasi.BackColor = System.Drawing.Color.Transparent;
+            this.labelNamaAplikaasi.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNamaAplikaasi.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelNamaAplikaasi.Location = new System.Drawing.Point(75, 206);
+            this.labelNamaAplikaasi.Location = new System.Drawing.Point(22, 216);
             this.labelNamaAplikaasi.Name = "labelNamaAplikaasi";
-            this.labelNamaAplikaasi.Size = new System.Drawing.Size(110, 17);
+            this.labelNamaAplikaasi.Size = new System.Drawing.Size(253, 32);
             this.labelNamaAplikaasi.TabIndex = 7;
-            this.labelNamaAplikaasi.Text = "NAMA APLIKASI";
+            this.labelNamaAplikaasi.Text = "ONLINE COURSE";
             // 
             // labelSelamatDatang
             // 
