@@ -30,7 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelStudent = new System.Windows.Forms.Panel();
-            this.buttonRemoveStudent = new System.Windows.Forms.Button();
             this.buttonEditStudent = new System.Windows.Forms.Button();
             this.buttonAddStudent = new System.Windows.Forms.Button();
             this.buttonStudent = new System.Windows.Forms.Button();
@@ -51,17 +50,26 @@
             this.buttonCourse = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.buttonTransaction = new System.Windows.Forms.Button();
+            this.buttonRemoveStudent = new System.Windows.Forms.Button();
+            this.panelTranscation = new System.Windows.Forms.Panel();
+            this.buttonAddTransaction = new System.Windows.Forms.Button();
+            this.labelLogin = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panelStudent.SuspendLayout();
             this.panelInstructor.SuspendLayout();
             this.panelTopic.SuspendLayout();
             this.panelCourse.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panelTranscation.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.panelTranscation);
+            this.panel1.Controls.Add(this.buttonTransaction);
             this.panel1.Controls.Add(this.panelStudent);
             this.panel1.Controls.Add(this.buttonStudent);
             this.panel1.Controls.Add(this.panelInstructor);
@@ -74,7 +82,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 679);
+            this.panel1.Size = new System.Drawing.Size(200, 957);
             this.panel1.TabIndex = 0;
             // 
             // panelStudent
@@ -86,21 +94,8 @@
             this.panelStudent.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelStudent.Location = new System.Drawing.Point(0, 639);
             this.panelStudent.Name = "panelStudent";
-            this.panelStudent.Size = new System.Drawing.Size(179, 122);
+            this.panelStudent.Size = new System.Drawing.Size(200, 122);
             this.panelStudent.TabIndex = 9;
-            // 
-            // buttonRemoveStudent
-            // 
-            this.buttonRemoveStudent.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonRemoveStudent.Location = new System.Drawing.Point(0, 80);
-            this.buttonRemoveStudent.Name = "buttonRemoveStudent";
-            this.buttonRemoveStudent.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonRemoveStudent.Size = new System.Drawing.Size(179, 42);
-            this.buttonRemoveStudent.TabIndex = 2;
-            this.buttonRemoveStudent.Text = "Remove";
-            this.buttonRemoveStudent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonRemoveStudent.UseVisualStyleBackColor = true;
-            this.buttonRemoveStudent.Click += new System.EventHandler(this.buttonRemoveStudent_Click);
             // 
             // buttonEditStudent
             // 
@@ -108,7 +103,7 @@
             this.buttonEditStudent.Location = new System.Drawing.Point(0, 40);
             this.buttonEditStudent.Name = "buttonEditStudent";
             this.buttonEditStudent.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonEditStudent.Size = new System.Drawing.Size(179, 40);
+            this.buttonEditStudent.Size = new System.Drawing.Size(200, 40);
             this.buttonEditStudent.TabIndex = 1;
             this.buttonEditStudent.Text = "Edit";
             this.buttonEditStudent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -121,7 +116,7 @@
             this.buttonAddStudent.Location = new System.Drawing.Point(0, 0);
             this.buttonAddStudent.Name = "buttonAddStudent";
             this.buttonAddStudent.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonAddStudent.Size = new System.Drawing.Size(179, 40);
+            this.buttonAddStudent.Size = new System.Drawing.Size(200, 40);
             this.buttonAddStudent.TabIndex = 0;
             this.buttonAddStudent.Text = "Add";
             this.buttonAddStudent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -134,7 +129,7 @@
             this.buttonStudent.Location = new System.Drawing.Point(0, 594);
             this.buttonStudent.Name = "buttonStudent";
             this.buttonStudent.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonStudent.Size = new System.Drawing.Size(179, 45);
+            this.buttonStudent.Size = new System.Drawing.Size(200, 45);
             this.buttonStudent.TabIndex = 8;
             this.buttonStudent.Text = "Student";
             this.buttonStudent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -150,7 +145,7 @@
             this.panelInstructor.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelInstructor.Location = new System.Drawing.Point(0, 470);
             this.panelInstructor.Name = "panelInstructor";
-            this.panelInstructor.Size = new System.Drawing.Size(179, 124);
+            this.panelInstructor.Size = new System.Drawing.Size(200, 124);
             this.panelInstructor.TabIndex = 7;
             // 
             // buttonRemoveInstructor
@@ -159,7 +154,7 @@
             this.buttonRemoveInstructor.Location = new System.Drawing.Point(0, 80);
             this.buttonRemoveInstructor.Name = "buttonRemoveInstructor";
             this.buttonRemoveInstructor.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonRemoveInstructor.Size = new System.Drawing.Size(179, 41);
+            this.buttonRemoveInstructor.Size = new System.Drawing.Size(200, 41);
             this.buttonRemoveInstructor.TabIndex = 2;
             this.buttonRemoveInstructor.Text = "Remove";
             this.buttonRemoveInstructor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -172,7 +167,7 @@
             this.buttonEditInstructor.Location = new System.Drawing.Point(0, 40);
             this.buttonEditInstructor.Name = "buttonEditInstructor";
             this.buttonEditInstructor.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonEditInstructor.Size = new System.Drawing.Size(179, 40);
+            this.buttonEditInstructor.Size = new System.Drawing.Size(200, 40);
             this.buttonEditInstructor.TabIndex = 1;
             this.buttonEditInstructor.Text = "Edit";
             this.buttonEditInstructor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -185,7 +180,7 @@
             this.buttonAddInstructor.Location = new System.Drawing.Point(0, 0);
             this.buttonAddInstructor.Name = "buttonAddInstructor";
             this.buttonAddInstructor.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonAddInstructor.Size = new System.Drawing.Size(179, 40);
+            this.buttonAddInstructor.Size = new System.Drawing.Size(200, 40);
             this.buttonAddInstructor.TabIndex = 0;
             this.buttonAddInstructor.Text = "Add";
             this.buttonAddInstructor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -198,7 +193,7 @@
             this.buttonInstructor.Location = new System.Drawing.Point(0, 425);
             this.buttonInstructor.Name = "buttonInstructor";
             this.buttonInstructor.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonInstructor.Size = new System.Drawing.Size(179, 45);
+            this.buttonInstructor.Size = new System.Drawing.Size(200, 45);
             this.buttonInstructor.TabIndex = 6;
             this.buttonInstructor.Text = "Instructor";
             this.buttonInstructor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -214,7 +209,7 @@
             this.panelTopic.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTopic.Location = new System.Drawing.Point(0, 303);
             this.panelTopic.Name = "panelTopic";
-            this.panelTopic.Size = new System.Drawing.Size(179, 122);
+            this.panelTopic.Size = new System.Drawing.Size(200, 122);
             this.panelTopic.TabIndex = 5;
             // 
             // buttonRemoveTopic
@@ -223,7 +218,7 @@
             this.buttonRemoveTopic.Location = new System.Drawing.Point(0, 80);
             this.buttonRemoveTopic.Name = "buttonRemoveTopic";
             this.buttonRemoveTopic.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonRemoveTopic.Size = new System.Drawing.Size(179, 39);
+            this.buttonRemoveTopic.Size = new System.Drawing.Size(200, 39);
             this.buttonRemoveTopic.TabIndex = 2;
             this.buttonRemoveTopic.Text = "Remove";
             this.buttonRemoveTopic.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -236,7 +231,7 @@
             this.buttonEditTopic.Location = new System.Drawing.Point(0, 40);
             this.buttonEditTopic.Name = "buttonEditTopic";
             this.buttonEditTopic.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonEditTopic.Size = new System.Drawing.Size(179, 40);
+            this.buttonEditTopic.Size = new System.Drawing.Size(200, 40);
             this.buttonEditTopic.TabIndex = 1;
             this.buttonEditTopic.Text = "Edit";
             this.buttonEditTopic.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -249,7 +244,7 @@
             this.buttonAddTopic.Location = new System.Drawing.Point(0, 0);
             this.buttonAddTopic.Name = "buttonAddTopic";
             this.buttonAddTopic.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonAddTopic.Size = new System.Drawing.Size(179, 40);
+            this.buttonAddTopic.Size = new System.Drawing.Size(200, 40);
             this.buttonAddTopic.TabIndex = 0;
             this.buttonAddTopic.Text = "Add";
             this.buttonAddTopic.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -262,7 +257,7 @@
             this.buttonTopic.Location = new System.Drawing.Point(0, 258);
             this.buttonTopic.Name = "buttonTopic";
             this.buttonTopic.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonTopic.Size = new System.Drawing.Size(179, 45);
+            this.buttonTopic.Size = new System.Drawing.Size(200, 45);
             this.buttonTopic.TabIndex = 4;
             this.buttonTopic.Text = "Topic";
             this.buttonTopic.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -278,7 +273,7 @@
             this.panelCourse.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCourse.Location = new System.Drawing.Point(0, 136);
             this.panelCourse.Name = "panelCourse";
-            this.panelCourse.Size = new System.Drawing.Size(179, 122);
+            this.panelCourse.Size = new System.Drawing.Size(200, 122);
             this.panelCourse.TabIndex = 3;
             // 
             // buttonRemoveCourse
@@ -287,7 +282,7 @@
             this.buttonRemoveCourse.Location = new System.Drawing.Point(0, 80);
             this.buttonRemoveCourse.Name = "buttonRemoveCourse";
             this.buttonRemoveCourse.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonRemoveCourse.Size = new System.Drawing.Size(179, 39);
+            this.buttonRemoveCourse.Size = new System.Drawing.Size(200, 39);
             this.buttonRemoveCourse.TabIndex = 2;
             this.buttonRemoveCourse.Text = "Remove";
             this.buttonRemoveCourse.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -300,7 +295,7 @@
             this.buttonEditCourse.Location = new System.Drawing.Point(0, 40);
             this.buttonEditCourse.Name = "buttonEditCourse";
             this.buttonEditCourse.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonEditCourse.Size = new System.Drawing.Size(179, 40);
+            this.buttonEditCourse.Size = new System.Drawing.Size(200, 40);
             this.buttonEditCourse.TabIndex = 1;
             this.buttonEditCourse.Text = "Edit";
             this.buttonEditCourse.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -313,7 +308,7 @@
             this.buttonAddCourse.Location = new System.Drawing.Point(0, 0);
             this.buttonAddCourse.Name = "buttonAddCourse";
             this.buttonAddCourse.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonAddCourse.Size = new System.Drawing.Size(179, 40);
+            this.buttonAddCourse.Size = new System.Drawing.Size(200, 40);
             this.buttonAddCourse.TabIndex = 0;
             this.buttonAddCourse.Text = "Add";
             this.buttonAddCourse.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -326,7 +321,7 @@
             this.buttonCourse.Location = new System.Drawing.Point(0, 91);
             this.buttonCourse.Name = "buttonCourse";
             this.buttonCourse.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonCourse.Size = new System.Drawing.Size(179, 45);
+            this.buttonCourse.Size = new System.Drawing.Size(200, 45);
             this.buttonCourse.TabIndex = 2;
             this.buttonCourse.Text = "Course";
             this.buttonCourse.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -336,10 +331,11 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.labelLogin);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(179, 91);
+            this.panel2.Size = new System.Drawing.Size(200, 91);
             this.panel2.TabIndex = 1;
             // 
             // panelChildForm
@@ -348,14 +344,73 @@
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(200, 0);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(600, 679);
+            this.panelChildForm.Size = new System.Drawing.Size(600, 957);
             this.panelChildForm.TabIndex = 1;
+            // 
+            // buttonTransaction
+            // 
+            this.buttonTransaction.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonTransaction.Location = new System.Drawing.Point(0, 761);
+            this.buttonTransaction.Name = "buttonTransaction";
+            this.buttonTransaction.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.buttonTransaction.Size = new System.Drawing.Size(200, 45);
+            this.buttonTransaction.TabIndex = 10;
+            this.buttonTransaction.Text = "Transaction";
+            this.buttonTransaction.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonTransaction.UseVisualStyleBackColor = true;
+            this.buttonTransaction.Click += new System.EventHandler(this.buttonTransaction_Click);
+            // 
+            // buttonRemoveStudent
+            // 
+            this.buttonRemoveStudent.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonRemoveStudent.Location = new System.Drawing.Point(0, 80);
+            this.buttonRemoveStudent.Name = "buttonRemoveStudent";
+            this.buttonRemoveStudent.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonRemoveStudent.Size = new System.Drawing.Size(200, 39);
+            this.buttonRemoveStudent.TabIndex = 2;
+            this.buttonRemoveStudent.Text = "Remove";
+            this.buttonRemoveStudent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonRemoveStudent.UseVisualStyleBackColor = true;
+            this.buttonRemoveStudent.Click += new System.EventHandler(this.buttonRemoveStudent_Click);
+            // 
+            // panelTranscation
+            // 
+            this.panelTranscation.BackColor = System.Drawing.Color.White;
+            this.panelTranscation.Controls.Add(this.buttonAddTransaction);
+            this.panelTranscation.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTranscation.Location = new System.Drawing.Point(0, 806);
+            this.panelTranscation.Name = "panelTranscation";
+            this.panelTranscation.Size = new System.Drawing.Size(200, 44);
+            this.panelTranscation.TabIndex = 11;
+            // 
+            // buttonAddTransaction
+            // 
+            this.buttonAddTransaction.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonAddTransaction.Location = new System.Drawing.Point(0, 0);
+            this.buttonAddTransaction.Name = "buttonAddTransaction";
+            this.buttonAddTransaction.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonAddTransaction.Size = new System.Drawing.Size(200, 41);
+            this.buttonAddTransaction.TabIndex = 0;
+            this.buttonAddTransaction.Text = "Add";
+            this.buttonAddTransaction.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAddTransaction.UseVisualStyleBackColor = true;
+            this.buttonAddTransaction.Click += new System.EventHandler(this.buttonAddTransaction_Click);
+            // 
+            // labelLogin
+            // 
+            this.labelLogin.AutoSize = true;
+            this.labelLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLogin.Location = new System.Drawing.Point(53, 30);
+            this.labelLogin.Name = "labelLogin";
+            this.labelLogin.Size = new System.Drawing.Size(84, 25);
+            this.labelLogin.TabIndex = 0;
+            this.labelLogin.Text = "LOGIN ";
             // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 679);
+            this.ClientSize = new System.Drawing.Size(800, 957);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panel1);
             this.Name = "FormMenu";
@@ -368,6 +423,9 @@
             this.panelInstructor.ResumeLayout(false);
             this.panelTopic.ResumeLayout(false);
             this.panelCourse.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panelTranscation.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -383,7 +441,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button buttonTopic;
         private System.Windows.Forms.Panel panelStudent;
-        private System.Windows.Forms.Button buttonRemoveStudent;
         private System.Windows.Forms.Button buttonEditStudent;
         private System.Windows.Forms.Button buttonAddStudent;
         private System.Windows.Forms.Button buttonStudent;
@@ -397,5 +454,10 @@
         private System.Windows.Forms.Button buttonEditTopic;
         private System.Windows.Forms.Button buttonAddTopic;
         private System.Windows.Forms.Panel panelChildForm;
+        private System.Windows.Forms.Panel panelTranscation;
+        private System.Windows.Forms.Button buttonAddTransaction;
+        private System.Windows.Forms.Button buttonTransaction;
+        private System.Windows.Forms.Button buttonRemoveStudent;
+        private System.Windows.Forms.Label labelLogin;
     }
 }

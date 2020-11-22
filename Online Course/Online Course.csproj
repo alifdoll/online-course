@@ -89,6 +89,12 @@
     <Compile Include="FormAddTopic.Designer.cs">
       <DependentUpon>FormAddTopic.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAddTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddTransaction.Designer.cs">
+      <DependentUpon>FormAddTransaction.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCourse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +197,12 @@
     <Compile Include="FormTopic.Designer.cs">
       <DependentUpon>FormTopic.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTransaction.Designer.cs">
+      <DependentUpon>FormTransaction.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormAddCourse.resx">
@@ -204,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAddTopic.resx">
       <DependentUpon>FormAddTopic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddTransaction.resx">
+      <DependentUpon>FormAddTransaction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCourse.resx">
       <DependentUpon>FormCourse.cs</DependentUpon>
@@ -255,6 +270,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormTopic.resx">
       <DependentUpon>FormTopic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTransaction.resx">
+      <DependentUpon>FormTransaction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
