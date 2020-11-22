@@ -56,6 +56,14 @@ namespace Online_Course
             }
         }
 
+        private void buttonTransaction_Click(object sender, EventArgs e)
+        {
+            ShowMenu(panelTranscation);
+            openChildForm(new FormTransaction());
+            //code...
+
+        }
+
         private void buttonCourse_Click(object sender, EventArgs e)
         {
             ShowMenu(panelCourse);
@@ -163,6 +171,13 @@ namespace Online_Course
         private void buttonRemoveStudent_Click(object sender, EventArgs e)
         {
             openChildForm(new FormRemoveStudent());
+            //code...
+            HideMenu();
+        }
+
+        private void buttonAddTransaction_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormAddTransaction());
             //code...
             HideMenu();
         }
