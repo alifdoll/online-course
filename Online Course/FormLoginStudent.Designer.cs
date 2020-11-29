@@ -78,6 +78,7 @@
             this.guna2TextBoxPassword.ShadowDecoration.Parent = this.guna2TextBoxPassword;
             this.guna2TextBoxPassword.Size = new System.Drawing.Size(237, 36);
             this.guna2TextBoxPassword.TabIndex = 33;
+            this.guna2TextBoxPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.guna2TextBoxPassword_KeyDown);
             // 
             // guna2TextBoxUsername
             // 
@@ -164,6 +165,7 @@
             this.Name = "FormLoginStudent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLoginStudent";
+            this.Load += new System.EventHandler(this.FormLoginStudent_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

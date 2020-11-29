@@ -17,6 +17,7 @@ namespace Online_Course
     {
         ArrayList list = new ArrayList();
         Session session = Session.Instance;
+        Session sesi = Session.Instance;
         public FormMenu()
         {
             InitializeComponent();
@@ -56,6 +57,7 @@ namespace Online_Course
             }
         }
 
+        #region button
         private void buttonTransaction_Click(object sender, EventArgs e)
         {
             ShowMenu(panelTranscation);
@@ -69,8 +71,8 @@ namespace Online_Course
             ShowMenu(panelCourse);
             openChildForm(new FormCourse());
             //code...
-            
-            
+
+
         }
 
         private void buttonAddCourse_Click(object sender, EventArgs e)
@@ -181,6 +183,8 @@ namespace Online_Course
             //code...
             HideMenu();
         }
+        #endregion
+
 
         private Form activeForm = null;
         private void openChildForm(Form childForm)
@@ -216,24 +220,21 @@ namespace Online_Course
 
         private void FormMenu_EnabledChanged(object sender, EventArgs e)
         {
-            if (session.Name == "Student")
+            if (session.User == "Student")
             {
                 buttonCourse.Enabled = false;
                 buttonInstructor.Enabled = false;
                 buttonTopic.Enabled = false;
                 buttonRemoveStudent.Enabled = false;
                 buttonEditStudent.Enabled = false;
+                labelLogin.Text = $"{session.Name} | Student";
             }
-            else if(session.Name == "Instructor")
+            else if(session.User == "Instructor")
             {
                 buttonCourse.Enabled = true;
                 buttonInstructor.Enabled = true;
                 buttonRemoveInstructor.Enabled = false;
                 buttonStudent.Enabled = false;
-            }
-            else
-            {
-
             }
         }
     }

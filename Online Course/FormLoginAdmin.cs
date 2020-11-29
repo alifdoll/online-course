@@ -33,6 +33,8 @@ namespace Online_Course
                     Login.AdminLogin(guna2TextBoxUsername.Text, guna2TextBoxPassword.Text);
                     session.SessionClear();
                     session.Name = "Admin";
+                    session.Id = "Admin";
+                    session.User = "Admin";
                     MessageBox.Show("Koneksi Berhasil", "Info");
                     this.Close();
                 }
@@ -51,7 +53,7 @@ namespace Online_Course
         private void FormLoginAdmin_FormClosed(object sender, FormClosedEventArgs e)
         {
             FormLogin form = new FormLogin();
-            form.FormLogin_Load(guna2ButtonLogin, e);
+            form.FormLogin_Load(guna2ButtonLogin, e); 
         }
 
         private void FormLoginAdmin_Load(object sender, EventArgs e)
