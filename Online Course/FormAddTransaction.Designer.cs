@@ -49,6 +49,7 @@
             // 
             // guna2TextBoxNota
             // 
+            this.guna2TextBoxNota.BackColor = System.Drawing.Color.Transparent;
             this.guna2TextBoxNota.BorderRadius = 18;
             this.guna2TextBoxNota.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxNota.DefaultText = "";
@@ -63,7 +64,7 @@
             this.guna2TextBoxNota.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBoxNota.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxNota.HoverState.Parent = this.guna2TextBoxNota;
-            this.guna2TextBoxNota.Location = new System.Drawing.Point(168, 91);
+            this.guna2TextBoxNota.Location = new System.Drawing.Point(229, 98);
             this.guna2TextBoxNota.Name = "guna2TextBoxNota";
             this.guna2TextBoxNota.PasswordChar = '\0';
             this.guna2TextBoxNota.PlaceholderText = "";
@@ -75,8 +76,9 @@
             // labelNoNota
             // 
             this.labelNoNota.AutoSize = true;
+            this.labelNoNota.BackColor = System.Drawing.Color.Transparent;
             this.labelNoNota.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNoNota.Location = new System.Drawing.Point(22, 102);
+            this.labelNoNota.Location = new System.Drawing.Point(83, 109);
             this.labelNoNota.Name = "labelNoNota";
             this.labelNoNota.Size = new System.Drawing.Size(93, 25);
             this.labelNoNota.TabIndex = 91;
@@ -85,8 +87,9 @@
             // labelAddTransaction
             // 
             this.labelAddTransaction.AutoSize = true;
+            this.labelAddTransaction.BackColor = System.Drawing.Color.Transparent;
             this.labelAddTransaction.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAddTransaction.Location = new System.Drawing.Point(123, 26);
+            this.labelAddTransaction.Location = new System.Drawing.Point(126, 24);
             this.labelAddTransaction.Name = "labelAddTransaction";
             this.labelAddTransaction.Size = new System.Drawing.Size(325, 40);
             this.labelAddTransaction.TabIndex = 90;
@@ -109,7 +112,7 @@
             "Id",
             "Nama"});
             this.guna2ComboBoxCourse.ItemsAppearance.Parent = this.guna2ComboBoxCourse;
-            this.guna2ComboBoxCourse.Location = new System.Drawing.Point(168, 191);
+            this.guna2ComboBoxCourse.Location = new System.Drawing.Point(229, 198);
             this.guna2ComboBoxCourse.Name = "guna2ComboBoxCourse";
             this.guna2ComboBoxCourse.ShadowDecoration.Parent = this.guna2ComboBoxCourse;
             this.guna2ComboBoxCourse.Size = new System.Drawing.Size(272, 36);
@@ -119,8 +122,9 @@
             // labelCourse
             // 
             this.labelCourse.AutoSize = true;
+            this.labelCourse.BackColor = System.Drawing.Color.Transparent;
             this.labelCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCourse.Location = new System.Drawing.Point(22, 202);
+            this.labelCourse.Location = new System.Drawing.Point(83, 209);
             this.labelCourse.Name = "labelCourse";
             this.labelCourse.Size = new System.Drawing.Size(76, 25);
             this.labelCourse.TabIndex = 95;
@@ -129,8 +133,9 @@
             // labelDate
             // 
             this.labelDate.AutoSize = true;
+            this.labelDate.BackColor = System.Drawing.Color.Transparent;
             this.labelDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDate.Location = new System.Drawing.Point(22, 152);
+            this.labelDate.Location = new System.Drawing.Point(83, 159);
             this.labelDate.Name = "labelDate";
             this.labelDate.Size = new System.Drawing.Size(58, 25);
             this.labelDate.TabIndex = 98;
@@ -138,14 +143,15 @@
             // 
             // guna2DateTimePicker1
             // 
+            this.guna2DateTimePicker1.BackColor = System.Drawing.Color.Transparent;
             this.guna2DateTimePicker1.BorderRadius = 18;
             this.guna2DateTimePicker1.CheckedState.Parent = this.guna2DateTimePicker1;
             this.guna2DateTimePicker1.Enabled = false;
-            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.DodgerBlue;
             this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.guna2DateTimePicker1.HoverState.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(168, 141);
+            this.guna2DateTimePicker1.Location = new System.Drawing.Point(229, 148);
             this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
@@ -157,6 +163,7 @@
             // 
             // guna2ButtonAdd
             // 
+            this.guna2ButtonAdd.BackColor = System.Drawing.Color.Transparent;
             this.guna2ButtonAdd.BorderRadius = 18;
             this.guna2ButtonAdd.CheckedState.Parent = this.guna2ButtonAdd;
             this.guna2ButtonAdd.CustomImages.Parent = this.guna2ButtonAdd;
@@ -173,6 +180,7 @@
             // 
             // guna2TextBoxHarga
             // 
+            this.guna2TextBoxHarga.BackColor = System.Drawing.Color.Transparent;
             this.guna2TextBoxHarga.BorderRadius = 18;
             this.guna2TextBoxHarga.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxHarga.DefaultText = "";
@@ -187,7 +195,7 @@
             this.guna2TextBoxHarga.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBoxHarga.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxHarga.HoverState.Parent = this.guna2TextBoxHarga;
-            this.guna2TextBoxHarga.Location = new System.Drawing.Point(168, 245);
+            this.guna2TextBoxHarga.Location = new System.Drawing.Point(229, 252);
             this.guna2TextBoxHarga.Name = "guna2TextBoxHarga";
             this.guna2TextBoxHarga.PasswordChar = '\0';
             this.guna2TextBoxHarga.PlaceholderText = "";
@@ -199,8 +207,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 256);
+            this.label1.Location = new System.Drawing.Point(83, 263);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 25);
             this.label1.TabIndex = 103;
@@ -261,6 +270,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Online_Course.Properties.Resources.background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(582, 706);
             this.Controls.Add(this.dataGridViewSearch);
             this.Controls.Add(this.label1);

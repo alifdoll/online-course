@@ -55,6 +55,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelLogin = new System.Windows.Forms.Label();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.labelSebagai = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panelTranscation.SuspendLayout();
             this.panelStudent.SuspendLayout();
@@ -90,7 +91,7 @@
             this.panelTranscation.BackColor = System.Drawing.Color.White;
             this.panelTranscation.Controls.Add(this.buttonAddTransaction);
             this.panelTranscation.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTranscation.Location = new System.Drawing.Point(0, 806);
+            this.panelTranscation.Location = new System.Drawing.Point(0, 807);
             this.panelTranscation.Name = "panelTranscation";
             this.panelTranscation.Size = new System.Drawing.Size(200, 44);
             this.panelTranscation.TabIndex = 11;
@@ -111,7 +112,7 @@
             // buttonTransaction
             // 
             this.buttonTransaction.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonTransaction.Location = new System.Drawing.Point(0, 761);
+            this.buttonTransaction.Location = new System.Drawing.Point(0, 762);
             this.buttonTransaction.Name = "buttonTransaction";
             this.buttonTransaction.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonTransaction.Size = new System.Drawing.Size(200, 45);
@@ -128,7 +129,7 @@
             this.panelStudent.Controls.Add(this.buttonEditStudent);
             this.panelStudent.Controls.Add(this.buttonAddStudent);
             this.panelStudent.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelStudent.Location = new System.Drawing.Point(0, 639);
+            this.panelStudent.Location = new System.Drawing.Point(0, 640);
             this.panelStudent.Name = "panelStudent";
             this.panelStudent.Size = new System.Drawing.Size(200, 122);
             this.panelStudent.TabIndex = 9;
@@ -175,7 +176,7 @@
             // buttonStudent
             // 
             this.buttonStudent.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonStudent.Location = new System.Drawing.Point(0, 594);
+            this.buttonStudent.Location = new System.Drawing.Point(0, 595);
             this.buttonStudent.Name = "buttonStudent";
             this.buttonStudent.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonStudent.Size = new System.Drawing.Size(200, 45);
@@ -192,7 +193,7 @@
             this.panelInstructor.Controls.Add(this.buttonEditInstructor);
             this.panelInstructor.Controls.Add(this.buttonAddInstructor);
             this.panelInstructor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelInstructor.Location = new System.Drawing.Point(0, 470);
+            this.panelInstructor.Location = new System.Drawing.Point(0, 471);
             this.panelInstructor.Name = "panelInstructor";
             this.panelInstructor.Size = new System.Drawing.Size(200, 124);
             this.panelInstructor.TabIndex = 7;
@@ -239,7 +240,7 @@
             // buttonInstructor
             // 
             this.buttonInstructor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonInstructor.Location = new System.Drawing.Point(0, 425);
+            this.buttonInstructor.Location = new System.Drawing.Point(0, 426);
             this.buttonInstructor.Name = "buttonInstructor";
             this.buttonInstructor.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonInstructor.Size = new System.Drawing.Size(200, 45);
@@ -256,7 +257,7 @@
             this.panelTopic.Controls.Add(this.buttonEditTopic);
             this.panelTopic.Controls.Add(this.buttonAddTopic);
             this.panelTopic.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTopic.Location = new System.Drawing.Point(0, 303);
+            this.panelTopic.Location = new System.Drawing.Point(0, 304);
             this.panelTopic.Name = "panelTopic";
             this.panelTopic.Size = new System.Drawing.Size(200, 122);
             this.panelTopic.TabIndex = 5;
@@ -303,7 +304,7 @@
             // buttonTopic
             // 
             this.buttonTopic.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonTopic.Location = new System.Drawing.Point(0, 258);
+            this.buttonTopic.Location = new System.Drawing.Point(0, 259);
             this.buttonTopic.Name = "buttonTopic";
             this.buttonTopic.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonTopic.Size = new System.Drawing.Size(200, 45);
@@ -320,7 +321,7 @@
             this.panelCourse.Controls.Add(this.buttonEditCourse);
             this.panelCourse.Controls.Add(this.buttonAddCourse);
             this.panelCourse.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelCourse.Location = new System.Drawing.Point(0, 136);
+            this.panelCourse.Location = new System.Drawing.Point(0, 137);
             this.panelCourse.Name = "panelCourse";
             this.panelCourse.Size = new System.Drawing.Size(200, 122);
             this.panelCourse.TabIndex = 3;
@@ -367,7 +368,7 @@
             // buttonCourse
             // 
             this.buttonCourse.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonCourse.Location = new System.Drawing.Point(0, 91);
+            this.buttonCourse.Location = new System.Drawing.Point(0, 92);
             this.buttonCourse.Name = "buttonCourse";
             this.buttonCourse.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonCourse.Size = new System.Drawing.Size(200, 45);
@@ -380,18 +381,19 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.labelSebagai);
             this.panel2.Controls.Add(this.labelLogin);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 91);
+            this.panel2.Size = new System.Drawing.Size(200, 92);
             this.panel2.TabIndex = 1;
             // 
             // labelLogin
             // 
             this.labelLogin.AutoSize = true;
             this.labelLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLogin.Location = new System.Drawing.Point(12, 27);
+            this.labelLogin.Location = new System.Drawing.Point(12, 18);
             this.labelLogin.Name = "labelLogin";
             this.labelLogin.Size = new System.Drawing.Size(84, 25);
             this.labelLogin.TabIndex = 0;
@@ -405,6 +407,16 @@
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(600, 957);
             this.panelChildForm.TabIndex = 1;
+            // 
+            // labelSebagai
+            // 
+            this.labelSebagai.AutoSize = true;
+            this.labelSebagai.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSebagai.Location = new System.Drawing.Point(14, 54);
+            this.labelSebagai.Name = "labelSebagai";
+            this.labelSebagai.Size = new System.Drawing.Size(61, 17);
+            this.labelSebagai.TabIndex = 1;
+            this.labelSebagai.Text = "LOGIN ";
             // 
             // FormMenu
             // 
@@ -459,5 +471,6 @@
         private System.Windows.Forms.Button buttonTransaction;
         private System.Windows.Forms.Button buttonRemoveStudent;
         private System.Windows.Forms.Label labelLogin;
+        private System.Windows.Forms.Label labelSebagai;
     }
 }

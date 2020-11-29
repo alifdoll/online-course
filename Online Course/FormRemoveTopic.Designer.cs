@@ -40,6 +40,7 @@
             // labelDeleteTopic
             // 
             this.labelDeleteTopic.AutoSize = true;
+            this.labelDeleteTopic.BackColor = System.Drawing.Color.Transparent;
             this.labelDeleteTopic.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDeleteTopic.Location = new System.Drawing.Point(169, 45);
             this.labelDeleteTopic.Name = "labelDeleteTopic";
@@ -49,6 +50,7 @@
             // 
             // guna2ButtonClear
             // 
+            this.guna2ButtonClear.BackColor = System.Drawing.Color.Transparent;
             this.guna2ButtonClear.BorderRadius = 22;
             this.guna2ButtonClear.CheckedState.Parent = this.guna2ButtonClear;
             this.guna2ButtonClear.CustomImages.Parent = this.guna2ButtonClear;
@@ -66,6 +68,7 @@
             // 
             // guna2ButtonAdd
             // 
+            this.guna2ButtonAdd.BackColor = System.Drawing.Color.Transparent;
             this.guna2ButtonAdd.BorderRadius = 22;
             this.guna2ButtonAdd.CheckedState.Parent = this.guna2ButtonAdd;
             this.guna2ButtonAdd.CustomImages.Parent = this.guna2ButtonAdd;
@@ -83,6 +86,7 @@
             // 
             // guna2TextBoxDeleteNameTopic
             // 
+            this.guna2TextBoxDeleteNameTopic.BackColor = System.Drawing.Color.Transparent;
             this.guna2TextBoxDeleteNameTopic.BorderRadius = 22;
             this.guna2TextBoxDeleteNameTopic.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxDeleteNameTopic.DefaultText = "";
@@ -108,6 +112,7 @@
             // 
             // guna2TextBoxDeleteIdTopic
             // 
+            this.guna2TextBoxDeleteIdTopic.BackColor = System.Drawing.Color.Transparent;
             this.guna2TextBoxDeleteIdTopic.BorderRadius = 22;
             this.guna2TextBoxDeleteIdTopic.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxDeleteIdTopic.DefaultText = "";
@@ -135,6 +140,7 @@
             // labelNameTopic
             // 
             this.labelNameTopic.AutoSize = true;
+            this.labelNameTopic.BackColor = System.Drawing.Color.Transparent;
             this.labelNameTopic.Location = new System.Drawing.Point(133, 198);
             this.labelNameTopic.Name = "labelNameTopic";
             this.labelNameTopic.Size = new System.Drawing.Size(45, 17);
@@ -144,6 +150,7 @@
             // labelIdTopic
             // 
             this.labelIdTopic.AutoSize = true;
+            this.labelIdTopic.BackColor = System.Drawing.Color.Transparent;
             this.labelIdTopic.Location = new System.Drawing.Point(136, 109);
             this.labelIdTopic.Name = "labelIdTopic";
             this.labelIdTopic.Size = new System.Drawing.Size(19, 17);
@@ -155,6 +162,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.BackgroundImage = global::Online_Course.Properties.Resources.background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(582, 415);
             this.Controls.Add(this.labelDeleteTopic);
             this.Controls.Add(this.guna2ButtonClear);

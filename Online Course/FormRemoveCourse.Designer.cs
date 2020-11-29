@@ -31,7 +31,6 @@
             this.labelDeleteCourse = new System.Windows.Forms.Label();
             this.guna2ButtonClear = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ButtonDelete = new Guna.UI2.WinForms.Guna2Button();
-            this.dateTimePickerRelease = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2ComboBoxInstr = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Topic = new System.Windows.Forms.Label();
@@ -47,13 +46,15 @@
             this.guna2TextBoxAddIdCourse = new Guna.UI2.WinForms.Guna2TextBox();
             this.labelLanguageCourse = new System.Windows.Forms.Label();
             this.labelIdCourse = new System.Windows.Forms.Label();
+            this.dateTimePickerRelease = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.SuspendLayout();
             // 
             // labelDeleteCourse
             // 
             this.labelDeleteCourse.AutoSize = true;
+            this.labelDeleteCourse.BackColor = System.Drawing.Color.Transparent;
             this.labelDeleteCourse.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDeleteCourse.Location = new System.Drawing.Point(156, 35);
+            this.labelDeleteCourse.Location = new System.Drawing.Point(156, 20);
             this.labelDeleteCourse.Name = "labelDeleteCourse";
             this.labelDeleteCourse.Size = new System.Drawing.Size(260, 40);
             this.labelDeleteCourse.TabIndex = 74;
@@ -61,6 +62,7 @@
             // 
             // guna2ButtonClear
             // 
+            this.guna2ButtonClear.BackColor = System.Drawing.Color.Transparent;
             this.guna2ButtonClear.BorderRadius = 22;
             this.guna2ButtonClear.CheckedState.Parent = this.guna2ButtonClear;
             this.guna2ButtonClear.CustomImages.Parent = this.guna2ButtonClear;
@@ -78,6 +80,7 @@
             // 
             // guna2ButtonDelete
             // 
+            this.guna2ButtonDelete.BackColor = System.Drawing.Color.Transparent;
             this.guna2ButtonDelete.BorderRadius = 22;
             this.guna2ButtonDelete.CheckedState.Parent = this.guna2ButtonDelete;
             this.guna2ButtonDelete.CustomImages.Parent = this.guna2ButtonDelete;
@@ -93,17 +96,10 @@
             this.guna2ButtonDelete.Text = "DELETE";
             this.guna2ButtonDelete.Click += new System.EventHandler(this.guna2ButtonDelete_Click);
             // 
-            // dateTimePickerRelease
-            // 
-            this.dateTimePickerRelease.Enabled = false;
-            this.dateTimePickerRelease.Location = new System.Drawing.Point(145, 472);
-            this.dateTimePickerRelease.Name = "dateTimePickerRelease";
-            this.dateTimePickerRelease.Size = new System.Drawing.Size(312, 22);
-            this.dateTimePickerRelease.TabIndex = 87;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(142, 515);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 17);
@@ -141,6 +137,7 @@
             // Topic
             // 
             this.Topic.AutoSize = true;
+            this.Topic.BackColor = System.Drawing.Color.Transparent;
             this.Topic.Location = new System.Drawing.Point(137, 596);
             this.Topic.Name = "Topic";
             this.Topic.Size = new System.Drawing.Size(43, 17);
@@ -178,6 +175,7 @@
             // labelCost
             // 
             this.labelCost.AutoSize = true;
+            this.labelCost.BackColor = System.Drawing.Color.Transparent;
             this.labelCost.Location = new System.Drawing.Point(137, 676);
             this.labelCost.Name = "labelCost";
             this.labelCost.Size = new System.Drawing.Size(40, 17);
@@ -186,6 +184,7 @@
             // 
             // guna2TextBoxCost
             // 
+            this.guna2TextBoxCost.BackColor = System.Drawing.Color.Transparent;
             this.guna2TextBoxCost.BorderRadius = 22;
             this.guna2TextBoxCost.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxCost.DefaultText = "";
@@ -212,6 +211,7 @@
             // labelReleaseDateCourse
             // 
             this.labelReleaseDateCourse.AutoSize = true;
+            this.labelReleaseDateCourse.BackColor = System.Drawing.Color.Transparent;
             this.labelReleaseDateCourse.Location = new System.Drawing.Point(142, 434);
             this.labelReleaseDateCourse.Name = "labelReleaseDateCourse";
             this.labelReleaseDateCourse.Size = new System.Drawing.Size(94, 17);
@@ -220,6 +220,7 @@
             // 
             // guna2TextBoxAddDescriptionCourse
             // 
+            this.guna2TextBoxAddDescriptionCourse.BackColor = System.Drawing.Color.Transparent;
             this.guna2TextBoxAddDescriptionCourse.BorderRadius = 22;
             this.guna2TextBoxAddDescriptionCourse.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxAddDescriptionCourse.DefaultText = "";
@@ -246,6 +247,7 @@
             // 
             // guna2TextBoxAddNameCourse
             // 
+            this.guna2TextBoxAddNameCourse.BackColor = System.Drawing.Color.Transparent;
             this.guna2TextBoxAddNameCourse.BorderRadius = 22;
             this.guna2TextBoxAddNameCourse.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxAddNameCourse.DefaultText = "";
@@ -272,6 +274,7 @@
             // labelDescriptionCourse
             // 
             this.labelDescriptionCourse.AutoSize = true;
+            this.labelDescriptionCourse.BackColor = System.Drawing.Color.Transparent;
             this.labelDescriptionCourse.Location = new System.Drawing.Point(142, 241);
             this.labelDescriptionCourse.Name = "labelDescriptionCourse";
             this.labelDescriptionCourse.Size = new System.Drawing.Size(79, 17);
@@ -281,6 +284,7 @@
             // labelNameCourse
             // 
             this.labelNameCourse.AutoSize = true;
+            this.labelNameCourse.BackColor = System.Drawing.Color.Transparent;
             this.labelNameCourse.Location = new System.Drawing.Point(142, 157);
             this.labelNameCourse.Name = "labelNameCourse";
             this.labelNameCourse.Size = new System.Drawing.Size(45, 17);
@@ -289,6 +293,7 @@
             // 
             // guna2TextBoxAddLanguageCourse
             // 
+            this.guna2TextBoxAddLanguageCourse.BackColor = System.Drawing.Color.Transparent;
             this.guna2TextBoxAddLanguageCourse.BorderRadius = 22;
             this.guna2TextBoxAddLanguageCourse.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxAddLanguageCourse.DefaultText = "";
@@ -314,6 +319,7 @@
             // 
             // guna2TextBoxAddIdCourse
             // 
+            this.guna2TextBoxAddIdCourse.BackColor = System.Drawing.Color.Transparent;
             this.guna2TextBoxAddIdCourse.BorderRadius = 22;
             this.guna2TextBoxAddIdCourse.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxAddIdCourse.DefaultText = "";
@@ -341,6 +347,7 @@
             // labelLanguageCourse
             // 
             this.labelLanguageCourse.AutoSize = true;
+            this.labelLanguageCourse.BackColor = System.Drawing.Color.Transparent;
             this.labelLanguageCourse.Location = new System.Drawing.Point(142, 352);
             this.labelLanguageCourse.Name = "labelLanguageCourse";
             this.labelLanguageCourse.Size = new System.Drawing.Size(72, 17);
@@ -350,17 +357,39 @@
             // labelIdCourse
             // 
             this.labelIdCourse.AutoSize = true;
+            this.labelIdCourse.BackColor = System.Drawing.Color.Transparent;
             this.labelIdCourse.Location = new System.Drawing.Point(142, 76);
             this.labelIdCourse.Name = "labelIdCourse";
             this.labelIdCourse.Size = new System.Drawing.Size(19, 17);
             this.labelIdCourse.TabIndex = 78;
             this.labelIdCourse.Text = "Id";
             // 
+            // dateTimePickerRelease
+            // 
+            this.dateTimePickerRelease.BackColor = System.Drawing.Color.Transparent;
+            this.dateTimePickerRelease.BorderRadius = 18;
+            this.dateTimePickerRelease.CheckedState.Parent = this.dateTimePickerRelease;
+            this.dateTimePickerRelease.FillColor = System.Drawing.Color.DodgerBlue;
+            this.dateTimePickerRelease.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dateTimePickerRelease.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dateTimePickerRelease.HoverState.Parent = this.dateTimePickerRelease;
+            this.dateTimePickerRelease.Location = new System.Drawing.Point(127, 460);
+            this.dateTimePickerRelease.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dateTimePickerRelease.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dateTimePickerRelease.Name = "dateTimePickerRelease";
+            this.dateTimePickerRelease.ShadowDecoration.Parent = this.dateTimePickerRelease;
+            this.dateTimePickerRelease.Size = new System.Drawing.Size(330, 36);
+            this.dateTimePickerRelease.TabIndex = 94;
+            this.dateTimePickerRelease.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.dateTimePickerRelease.Value = new System.DateTime(2020, 11, 29, 21, 35, 8, 809);
+            // 
             // FormRemoveCourse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.BackgroundImage = global::Online_Course.Properties.Resources.background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(582, 828);
             this.Controls.Add(this.dateTimePickerRelease);
             this.Controls.Add(this.label1);
@@ -392,7 +421,6 @@
         private System.Windows.Forms.Label labelDeleteCourse;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonClear;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonDelete;
-        private System.Windows.Forms.DateTimePicker dateTimePickerRelease;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBoxInstr;
         private System.Windows.Forms.Label Topic;
@@ -408,5 +436,6 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxAddIdCourse;
         private System.Windows.Forms.Label labelLanguageCourse;
         private System.Windows.Forms.Label labelIdCourse;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dateTimePickerRelease;
     }
 }

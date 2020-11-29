@@ -46,6 +46,7 @@
             // labelBioInstructor
             // 
             this.labelBioInstructor.AutoSize = true;
+            this.labelBioInstructor.BackColor = System.Drawing.Color.Transparent;
             this.labelBioInstructor.Location = new System.Drawing.Point(140, 228);
             this.labelBioInstructor.Name = "labelBioInstructor";
             this.labelBioInstructor.Size = new System.Drawing.Size(28, 17);
@@ -54,6 +55,7 @@
             // 
             // guna2TextBoxDeleteBioInstructor
             // 
+            this.guna2TextBoxDeleteBioInstructor.BackColor = System.Drawing.Color.Transparent;
             this.guna2TextBoxDeleteBioInstructor.BorderRadius = 22;
             this.guna2TextBoxDeleteBioInstructor.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxDeleteBioInstructor.DefaultText = "";
@@ -81,8 +83,9 @@
             // labelDeleteInstructor
             // 
             this.labelDeleteInstructor.AutoSize = true;
+            this.labelDeleteInstructor.BackColor = System.Drawing.Color.Transparent;
             this.labelDeleteInstructor.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDeleteInstructor.Location = new System.Drawing.Point(118, 26);
+            this.labelDeleteInstructor.Location = new System.Drawing.Point(126, 18);
             this.labelDeleteInstructor.Name = "labelDeleteInstructor";
             this.labelDeleteInstructor.Size = new System.Drawing.Size(337, 40);
             this.labelDeleteInstructor.TabIndex = 0;
@@ -90,6 +93,7 @@
             // 
             // guna2TextBoxDeletePasswordInstructor
             // 
+            this.guna2TextBoxDeletePasswordInstructor.BackColor = System.Drawing.Color.Transparent;
             this.guna2TextBoxDeletePasswordInstructor.BorderRadius = 22;
             this.guna2TextBoxDeletePasswordInstructor.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxDeletePasswordInstructor.DefaultText = "";
@@ -115,6 +119,7 @@
             // 
             // guna2TextBoxDeleteUsernameInstructor
             // 
+            this.guna2TextBoxDeleteUsernameInstructor.BackColor = System.Drawing.Color.Transparent;
             this.guna2TextBoxDeleteUsernameInstructor.BorderRadius = 22;
             this.guna2TextBoxDeleteUsernameInstructor.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxDeleteUsernameInstructor.DefaultText = "";
@@ -141,6 +146,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(140, 437);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 17);
@@ -150,6 +156,7 @@
             // labelUsernameInstrcutor
             // 
             this.labelUsernameInstrcutor.AutoSize = true;
+            this.labelUsernameInstrcutor.BackColor = System.Drawing.Color.Transparent;
             this.labelUsernameInstrcutor.Location = new System.Drawing.Point(140, 364);
             this.labelUsernameInstrcutor.Name = "labelUsernameInstrcutor";
             this.labelUsernameInstrcutor.Size = new System.Drawing.Size(73, 17);
@@ -158,6 +165,7 @@
             // 
             // guna2ButtonClear
             // 
+            this.guna2ButtonClear.BackColor = System.Drawing.Color.Transparent;
             this.guna2ButtonClear.BorderRadius = 22;
             this.guna2ButtonClear.CheckedState.Parent = this.guna2ButtonClear;
             this.guna2ButtonClear.CustomImages.Parent = this.guna2ButtonClear;
@@ -175,6 +183,7 @@
             // 
             // guna2ButtonDelete
             // 
+            this.guna2ButtonDelete.BackColor = System.Drawing.Color.Transparent;
             this.guna2ButtonDelete.BorderRadius = 22;
             this.guna2ButtonDelete.CheckedState.Parent = this.guna2ButtonDelete;
             this.guna2ButtonDelete.CustomImages.Parent = this.guna2ButtonDelete;
@@ -192,6 +201,7 @@
             // 
             // guna2TextBoxDeleteNameInstructor
             // 
+            this.guna2TextBoxDeleteNameInstructor.BackColor = System.Drawing.Color.Transparent;
             this.guna2TextBoxDeleteNameInstructor.BorderRadius = 22;
             this.guna2TextBoxDeleteNameInstructor.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxDeleteNameInstructor.DefaultText = "";
@@ -217,6 +227,7 @@
             // 
             // guna2TextBoxDeleteIdInstructor
             // 
+            this.guna2TextBoxDeleteIdInstructor.BackColor = System.Drawing.Color.Transparent;
             this.guna2TextBoxDeleteIdInstructor.BorderRadius = 22;
             this.guna2TextBoxDeleteIdInstructor.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxDeleteIdInstructor.DefaultText = "";
@@ -244,6 +255,7 @@
             // labelNameInstructor
             // 
             this.labelNameInstructor.AutoSize = true;
+            this.labelNameInstructor.BackColor = System.Drawing.Color.Transparent;
             this.labelNameInstructor.Location = new System.Drawing.Point(140, 148);
             this.labelNameInstructor.Name = "labelNameInstructor";
             this.labelNameInstructor.Size = new System.Drawing.Size(45, 17);
@@ -253,6 +265,7 @@
             // labelIdInstructor
             // 
             this.labelIdInstructor.AutoSize = true;
+            this.labelIdInstructor.BackColor = System.Drawing.Color.Transparent;
             this.labelIdInstructor.Location = new System.Drawing.Point(140, 76);
             this.labelIdInstructor.Name = "labelIdInstructor";
             this.labelIdInstructor.Size = new System.Drawing.Size(19, 17);
@@ -264,6 +277,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.BackgroundImage = global::Online_Course.Properties.Resources.background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(582, 600);
             this.Controls.Add(this.labelBioInstructor);
             this.Controls.Add(this.guna2TextBoxDeleteBioInstructor);

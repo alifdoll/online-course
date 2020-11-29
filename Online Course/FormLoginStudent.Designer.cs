@@ -40,15 +40,17 @@
             // labelPassword
             // 
             this.labelPassword.AutoSize = true;
+            this.labelPassword.BackColor = System.Drawing.Color.Transparent;
             this.labelPassword.Location = new System.Drawing.Point(42, 179);
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(77, 17);
+            this.labelPassword.Size = new System.Drawing.Size(69, 17);
             this.labelPassword.TabIndex = 35;
-            this.labelPassword.Text = "Paassword";
+            this.labelPassword.Text = "Password";
             // 
             // labelUsername
             // 
             this.labelUsername.AutoSize = true;
+            this.labelUsername.BackColor = System.Drawing.Color.Transparent;
             this.labelUsername.Location = new System.Drawing.Point(42, 90);
             this.labelUsername.Name = "labelUsername";
             this.labelUsername.Size = new System.Drawing.Size(73, 17);
@@ -57,6 +59,7 @@
             // 
             // guna2TextBoxPassword
             // 
+            this.guna2TextBoxPassword.BackColor = System.Drawing.Color.Transparent;
             this.guna2TextBoxPassword.BorderRadius = 22;
             this.guna2TextBoxPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxPassword.DefaultText = "";
@@ -82,6 +85,7 @@
             // 
             // guna2TextBoxUsername
             // 
+            this.guna2TextBoxUsername.BackColor = System.Drawing.Color.Transparent;
             this.guna2TextBoxUsername.BorderRadius = 22;
             this.guna2TextBoxUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxUsername.DefaultText = "";
@@ -107,6 +111,7 @@
             // labelStudent
             // 
             this.labelStudent.AutoSize = true;
+            this.labelStudent.BackColor = System.Drawing.Color.Transparent;
             this.labelStudent.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStudent.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labelStudent.Location = new System.Drawing.Point(100, 27);
@@ -117,6 +122,7 @@
             // 
             // guna2ButtonExit
             // 
+            this.guna2ButtonExit.BackColor = System.Drawing.Color.Transparent;
             this.guna2ButtonExit.BorderRadius = 22;
             this.guna2ButtonExit.CheckedState.Parent = this.guna2ButtonExit;
             this.guna2ButtonExit.CustomImages.Parent = this.guna2ButtonExit;
@@ -134,6 +140,7 @@
             // 
             // guna2ButtonLogin
             // 
+            this.guna2ButtonLogin.BackColor = System.Drawing.Color.Transparent;
             this.guna2ButtonLogin.BorderRadius = 22;
             this.guna2ButtonLogin.CheckedState.Parent = this.guna2ButtonLogin;
             this.guna2ButtonLogin.CustomImages.Parent = this.guna2ButtonLogin;
@@ -153,6 +160,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Online_Course.Properties.Resources.background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(325, 351);
             this.Controls.Add(this.guna2ButtonExit);
             this.Controls.Add(this.guna2ButtonLogin);

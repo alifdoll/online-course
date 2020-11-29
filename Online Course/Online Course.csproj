@@ -37,8 +37,7 @@
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>..\References\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
-    <Reference Include="Database, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Database">
       <HintPath>..\Online_Course_LIB\bin\Debug\Database.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI2">
@@ -298,6 +297,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Armando.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background23jpg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pibys.win_Sakuragun_2-025.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ramadhan8.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

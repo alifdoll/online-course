@@ -48,6 +48,7 @@
             // 
             // guna2TextBoxSearch
             // 
+            this.guna2TextBoxSearch.BackColor = System.Drawing.Color.Transparent;
             this.guna2TextBoxSearch.BorderRadius = 22;
             this.guna2TextBoxSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxSearch.DefaultText = "";
@@ -98,6 +99,7 @@
             // labelSearch
             // 
             this.labelSearch.AutoSize = true;
+            this.labelSearch.BackColor = System.Drawing.Color.Transparent;
             this.labelSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSearch.Location = new System.Drawing.Point(21, 99);
             this.labelSearch.Name = "labelSearch";
@@ -108,6 +110,7 @@
             // labelAddInstructor
             // 
             this.labelAddInstructor.AutoSize = true;
+            this.labelAddInstructor.BackColor = System.Drawing.Color.Transparent;
             this.labelAddInstructor.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAddInstructor.Location = new System.Drawing.Point(183, 24);
             this.labelAddInstructor.Name = "labelAddInstructor";

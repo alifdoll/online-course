@@ -85,7 +85,7 @@ namespace Online_Course
 
         private void guna2ButtonClear_Click(object sender, EventArgs e)
         {
-            guna2TextBoxAddIdCourse.Clear();
+            //guna2TextBoxAddIdCourse.Clear();
             guna2TextBoxAddIdCourse.Focus();
             guna2TextBoxAddNameCourse.Clear();
             guna2TextBoxAddDescriptionCourse.Clear();
