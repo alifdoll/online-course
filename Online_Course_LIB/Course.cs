@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -34,16 +35,16 @@ namespace Database
             Price = price;
         }
 
-        public Course(string id = "")
+        public Course(string id = "", string name = "", string desc = "", string lang = "", double price = 0)
         {
             Id = id;
-            Name = "";
-            Desc = "";
-            Lang = "";
+            Name = name;
+            Desc = desc;
+            Lang = lang;
             Release = DateTime.Now;
             Topic = new Topic();
             Instructor = new Instructor();
-            Price = 0;
+            Price = price;
         }
         #endregion
 

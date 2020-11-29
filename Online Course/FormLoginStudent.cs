@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace Online_Course
     public partial class FormLoginStudent : Form
     {
         Session session = Session.Instance;
+        Student student = new Student();
         public FormLoginStudent()
         {
             InitializeComponent();
@@ -38,8 +40,11 @@ namespace Online_Course
                     }
                     else
                     {
+                        ArrayList listStudent = student.QueryData("username", guna2TextBoxUsername.Text);
                         session.SessionClear();
-                        session.Name = "Student";
+                        session.Id = ((Student)listStudent[0]).Id;
+                        session.Name = ((Student)listStudent[0]).Name;
+                        session.User = "Student";
 
                         MessageBox.Show($"Berhasil Login Sebagai Student, Nama Anda adalah {user}", "Login Sukses");
                         this.Close();
@@ -54,8 +59,23 @@ namespace Online_Course
             }
             catch(Exception error)
             {
-                MessageBox.Show($"Ada Kesalahan TIdak Bisa Login, Error : {error}", "Error");
+                MessageBox.Show($"Ada Kesalahan TIdak Bisa Login, Error : {error.Message}", "Error");
             }
+        }
+
+        private void guna2TextBoxPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                guna2ButtonLogin_Click(guna2TextBoxPassword, e);
+            }
+        }
+
+        private void FormLoginStudent_Load(object sender, EventArgs e)
+        {
+            //untuk debug user
+            guna2TextBoxUsername.Text = "alifdoll";
+            guna2TextBoxPassword.Text = "alif123321";
         }
     }
 }

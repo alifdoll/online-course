@@ -29,7 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panelTranscation = new System.Windows.Forms.Panel();
+            this.buttonAddTransaction = new System.Windows.Forms.Button();
+            this.buttonTransaction = new System.Windows.Forms.Button();
             this.panelStudent = new System.Windows.Forms.Panel();
+            this.buttonRemoveStudent = new System.Windows.Forms.Button();
             this.buttonEditStudent = new System.Windows.Forms.Button();
             this.buttonAddStudent = new System.Windows.Forms.Button();
             this.buttonStudent = new System.Windows.Forms.Button();
@@ -49,19 +53,15 @@
             this.buttonAddCourse = new System.Windows.Forms.Button();
             this.buttonCourse = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panelChildForm = new System.Windows.Forms.Panel();
-            this.buttonTransaction = new System.Windows.Forms.Button();
-            this.buttonRemoveStudent = new System.Windows.Forms.Button();
-            this.panelTranscation = new System.Windows.Forms.Panel();
-            this.buttonAddTransaction = new System.Windows.Forms.Button();
             this.labelLogin = new System.Windows.Forms.Label();
+            this.panelChildForm = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.panelTranscation.SuspendLayout();
             this.panelStudent.SuspendLayout();
             this.panelInstructor.SuspendLayout();
             this.panelTopic.SuspendLayout();
             this.panelCourse.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panelTranscation.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -85,6 +85,42 @@
             this.panel1.Size = new System.Drawing.Size(200, 957);
             this.panel1.TabIndex = 0;
             // 
+            // panelTranscation
+            // 
+            this.panelTranscation.BackColor = System.Drawing.Color.White;
+            this.panelTranscation.Controls.Add(this.buttonAddTransaction);
+            this.panelTranscation.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTranscation.Location = new System.Drawing.Point(0, 806);
+            this.panelTranscation.Name = "panelTranscation";
+            this.panelTranscation.Size = new System.Drawing.Size(200, 44);
+            this.panelTranscation.TabIndex = 11;
+            // 
+            // buttonAddTransaction
+            // 
+            this.buttonAddTransaction.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonAddTransaction.Location = new System.Drawing.Point(0, 0);
+            this.buttonAddTransaction.Name = "buttonAddTransaction";
+            this.buttonAddTransaction.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonAddTransaction.Size = new System.Drawing.Size(200, 41);
+            this.buttonAddTransaction.TabIndex = 0;
+            this.buttonAddTransaction.Text = "Add";
+            this.buttonAddTransaction.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAddTransaction.UseVisualStyleBackColor = true;
+            this.buttonAddTransaction.Click += new System.EventHandler(this.buttonAddTransaction_Click);
+            // 
+            // buttonTransaction
+            // 
+            this.buttonTransaction.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonTransaction.Location = new System.Drawing.Point(0, 761);
+            this.buttonTransaction.Name = "buttonTransaction";
+            this.buttonTransaction.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.buttonTransaction.Size = new System.Drawing.Size(200, 45);
+            this.buttonTransaction.TabIndex = 10;
+            this.buttonTransaction.Text = "Transaction";
+            this.buttonTransaction.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonTransaction.UseVisualStyleBackColor = true;
+            this.buttonTransaction.Click += new System.EventHandler(this.buttonTransaction_Click);
+            // 
             // panelStudent
             // 
             this.panelStudent.BackColor = System.Drawing.Color.White;
@@ -96,6 +132,19 @@
             this.panelStudent.Name = "panelStudent";
             this.panelStudent.Size = new System.Drawing.Size(200, 122);
             this.panelStudent.TabIndex = 9;
+            // 
+            // buttonRemoveStudent
+            // 
+            this.buttonRemoveStudent.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonRemoveStudent.Location = new System.Drawing.Point(0, 80);
+            this.buttonRemoveStudent.Name = "buttonRemoveStudent";
+            this.buttonRemoveStudent.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonRemoveStudent.Size = new System.Drawing.Size(200, 39);
+            this.buttonRemoveStudent.TabIndex = 2;
+            this.buttonRemoveStudent.Text = "Remove";
+            this.buttonRemoveStudent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonRemoveStudent.UseVisualStyleBackColor = true;
+            this.buttonRemoveStudent.Click += new System.EventHandler(this.buttonRemoveStudent_Click);
             // 
             // buttonEditStudent
             // 
@@ -338,6 +387,16 @@
             this.panel2.Size = new System.Drawing.Size(200, 91);
             this.panel2.TabIndex = 1;
             // 
+            // labelLogin
+            // 
+            this.labelLogin.AutoSize = true;
+            this.labelLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLogin.Location = new System.Drawing.Point(12, 27);
+            this.labelLogin.Name = "labelLogin";
+            this.labelLogin.Size = new System.Drawing.Size(84, 25);
+            this.labelLogin.TabIndex = 0;
+            this.labelLogin.Text = "LOGIN ";
+            // 
             // panelChildForm
             // 
             this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(211)))), ((int)(((byte)(246)))));
@@ -346,65 +405,6 @@
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(600, 957);
             this.panelChildForm.TabIndex = 1;
-            // 
-            // buttonTransaction
-            // 
-            this.buttonTransaction.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonTransaction.Location = new System.Drawing.Point(0, 761);
-            this.buttonTransaction.Name = "buttonTransaction";
-            this.buttonTransaction.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonTransaction.Size = new System.Drawing.Size(200, 45);
-            this.buttonTransaction.TabIndex = 10;
-            this.buttonTransaction.Text = "Transaction";
-            this.buttonTransaction.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonTransaction.UseVisualStyleBackColor = true;
-            this.buttonTransaction.Click += new System.EventHandler(this.buttonTransaction_Click);
-            // 
-            // buttonRemoveStudent
-            // 
-            this.buttonRemoveStudent.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonRemoveStudent.Location = new System.Drawing.Point(0, 80);
-            this.buttonRemoveStudent.Name = "buttonRemoveStudent";
-            this.buttonRemoveStudent.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonRemoveStudent.Size = new System.Drawing.Size(200, 39);
-            this.buttonRemoveStudent.TabIndex = 2;
-            this.buttonRemoveStudent.Text = "Remove";
-            this.buttonRemoveStudent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonRemoveStudent.UseVisualStyleBackColor = true;
-            this.buttonRemoveStudent.Click += new System.EventHandler(this.buttonRemoveStudent_Click);
-            // 
-            // panelTranscation
-            // 
-            this.panelTranscation.BackColor = System.Drawing.Color.White;
-            this.panelTranscation.Controls.Add(this.buttonAddTransaction);
-            this.panelTranscation.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTranscation.Location = new System.Drawing.Point(0, 806);
-            this.panelTranscation.Name = "panelTranscation";
-            this.panelTranscation.Size = new System.Drawing.Size(200, 44);
-            this.panelTranscation.TabIndex = 11;
-            // 
-            // buttonAddTransaction
-            // 
-            this.buttonAddTransaction.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonAddTransaction.Location = new System.Drawing.Point(0, 0);
-            this.buttonAddTransaction.Name = "buttonAddTransaction";
-            this.buttonAddTransaction.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonAddTransaction.Size = new System.Drawing.Size(200, 41);
-            this.buttonAddTransaction.TabIndex = 0;
-            this.buttonAddTransaction.Text = "Add";
-            this.buttonAddTransaction.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAddTransaction.UseVisualStyleBackColor = true;
-            this.buttonAddTransaction.Click += new System.EventHandler(this.buttonAddTransaction_Click);
-            // 
-            // labelLogin
-            // 
-            this.labelLogin.AutoSize = true;
-            this.labelLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLogin.Location = new System.Drawing.Point(53, 30);
-            this.labelLogin.Name = "labelLogin";
-            this.labelLogin.Size = new System.Drawing.Size(84, 25);
-            this.labelLogin.TabIndex = 0;
-            this.labelLogin.Text = "LOGIN ";
             // 
             // FormMenu
             // 
@@ -419,13 +419,13 @@
             this.Load += new System.EventHandler(this.FormMenu_Load);
             this.EnabledChanged += new System.EventHandler(this.FormMenu_EnabledChanged);
             this.panel1.ResumeLayout(false);
+            this.panelTranscation.ResumeLayout(false);
             this.panelStudent.ResumeLayout(false);
             this.panelInstructor.ResumeLayout(false);
             this.panelTopic.ResumeLayout(false);
             this.panelCourse.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panelTranscation.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
