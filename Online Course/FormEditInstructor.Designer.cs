@@ -46,6 +46,7 @@
             // labelBioInstructor
             // 
             this.labelBioInstructor.AutoSize = true;
+            this.labelBioInstructor.BackColor = System.Drawing.Color.Transparent;
             this.labelBioInstructor.Location = new System.Drawing.Point(137, 246);
             this.labelBioInstructor.Name = "labelBioInstructor";
             this.labelBioInstructor.Size = new System.Drawing.Size(28, 17);
@@ -54,6 +55,7 @@
             // 
             // guna2TextBoxEditBioInstructor
             // 
+            this.guna2TextBoxEditBioInstructor.BackColor = System.Drawing.Color.Transparent;
             this.guna2TextBoxEditBioInstructor.BorderRadius = 22;
             this.guna2TextBoxEditBioInstructor.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxEditBioInstructor.DefaultText = "";
@@ -80,6 +82,7 @@
             // labelEditInstructor
             // 
             this.labelEditInstructor.AutoSize = true;
+            this.labelEditInstructor.BackColor = System.Drawing.Color.Transparent;
             this.labelEditInstructor.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEditInstructor.Location = new System.Drawing.Point(142, 25);
             this.labelEditInstructor.Name = "labelEditInstructor";
@@ -89,6 +92,7 @@
             // 
             // guna2TextBoxEditPasswordInstructor
             // 
+            this.guna2TextBoxEditPasswordInstructor.BackColor = System.Drawing.Color.Transparent;
             this.guna2TextBoxEditPasswordInstructor.BorderRadius = 22;
             this.guna2TextBoxEditPasswordInstructor.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxEditPasswordInstructor.DefaultText = "";
@@ -113,6 +117,7 @@
             // 
             // guna2TextBoxEditUsernameInstructor
             // 
+            this.guna2TextBoxEditUsernameInstructor.BackColor = System.Drawing.Color.Transparent;
             this.guna2TextBoxEditUsernameInstructor.BorderRadius = 22;
             this.guna2TextBoxEditUsernameInstructor.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxEditUsernameInstructor.DefaultText = "";
@@ -138,6 +143,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(137, 464);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 17);
@@ -147,6 +153,7 @@
             // labelUsernameInstrcutor
             // 
             this.labelUsernameInstrcutor.AutoSize = true;
+            this.labelUsernameInstrcutor.BackColor = System.Drawing.Color.Transparent;
             this.labelUsernameInstrcutor.Location = new System.Drawing.Point(137, 380);
             this.labelUsernameInstrcutor.Name = "labelUsernameInstrcutor";
             this.labelUsernameInstrcutor.Size = new System.Drawing.Size(73, 17);
@@ -155,6 +162,7 @@
             // 
             // guna2ButtonClear
             // 
+            this.guna2ButtonClear.BackColor = System.Drawing.Color.Transparent;
             this.guna2ButtonClear.BorderRadius = 22;
             this.guna2ButtonClear.CheckedState.Parent = this.guna2ButtonClear;
             this.guna2ButtonClear.CustomImages.Parent = this.guna2ButtonClear;
@@ -172,6 +180,7 @@
             // 
             // guna2ButtonEdit
             // 
+            this.guna2ButtonEdit.BackColor = System.Drawing.Color.Transparent;
             this.guna2ButtonEdit.BorderRadius = 22;
             this.guna2ButtonEdit.CheckedState.Parent = this.guna2ButtonEdit;
             this.guna2ButtonEdit.CustomImages.Parent = this.guna2ButtonEdit;
@@ -189,6 +198,7 @@
             // 
             // guna2TextBoxEditNameInstructor
             // 
+            this.guna2TextBoxEditNameInstructor.BackColor = System.Drawing.Color.Transparent;
             this.guna2TextBoxEditNameInstructor.BorderRadius = 22;
             this.guna2TextBoxEditNameInstructor.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxEditNameInstructor.DefaultText = "";
@@ -213,6 +223,7 @@
             // 
             // guna2TextBoxEditIdInstructor
             // 
+            this.guna2TextBoxEditIdInstructor.BackColor = System.Drawing.Color.Transparent;
             this.guna2TextBoxEditIdInstructor.BorderRadius = 22;
             this.guna2TextBoxEditIdInstructor.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxEditIdInstructor.DefaultText = "";
@@ -240,6 +251,7 @@
             // labelNameInstructor
             // 
             this.labelNameInstructor.AutoSize = true;
+            this.labelNameInstructor.BackColor = System.Drawing.Color.Transparent;
             this.labelNameInstructor.Location = new System.Drawing.Point(137, 167);
             this.labelNameInstructor.Name = "labelNameInstructor";
             this.labelNameInstructor.Size = new System.Drawing.Size(45, 17);
@@ -249,6 +261,7 @@
             // labelIdInstructor
             // 
             this.labelIdInstructor.AutoSize = true;
+            this.labelIdInstructor.BackColor = System.Drawing.Color.Transparent;
             this.labelIdInstructor.Location = new System.Drawing.Point(137, 90);
             this.labelIdInstructor.Name = "labelIdInstructor";
             this.labelIdInstructor.Size = new System.Drawing.Size(19, 17);
@@ -260,6 +273,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.BackgroundImage = global::Online_Course.Properties.Resources.background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(582, 626);
             this.Controls.Add(this.labelBioInstructor);
             this.Controls.Add(this.guna2TextBoxEditBioInstructor);

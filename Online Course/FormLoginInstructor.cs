@@ -9,12 +9,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace Online_Course
 {
     public partial class FormLoginInstructor : Form
     {
         Session session = Session.Instance;
+        Instructor instructor = new Instructor();
         public FormLoginInstructor()
         {
             InitializeComponent();
@@ -39,8 +41,11 @@ namespace Online_Course
                     }
                     else
                     {
+                        ArrayList list = instructor.QueryData("username", guna2TextBoxUsername.Text);
                         session.SessionClear();
-                        session.Name = "Instructor";
+                        session.Id = ((Instructor)list[0]).Id;
+                        session.Name = ((Instructor)list[0]).Name; 
+                        session.User = "Instructor";
 
                         MessageBox.Show($"Berhasil Login Sebagai Instructor, Nama Anda adalah {user}", "Login Sukses");
                         this.Close();
@@ -57,6 +62,12 @@ namespace Online_Course
             {
                 MessageBox.Show($"Ada Kesalahan TIdak Bisa Login, Error : {error}", "Error");
             }
+        }
+
+        private void FormLoginInstructor_Load(object sender, EventArgs e)
+        {
+            guna2TextBoxUsername.Text = "ankit123";
+            guna2TextBoxPassword.Text = "ankit321";
         }
     }
 }

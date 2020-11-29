@@ -71,6 +71,7 @@
             // labelSelamatDatang
             // 
             this.labelSelamatDatang.AutoSize = true;
+            this.labelSelamatDatang.BackColor = System.Drawing.Color.Transparent;
             this.labelSelamatDatang.Font = new System.Drawing.Font("Microsoft YaHei UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSelamatDatang.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labelSelamatDatang.Location = new System.Drawing.Point(332, 36);
@@ -82,6 +83,7 @@
             // labelLogin
             // 
             this.labelLogin.AutoSize = true;
+            this.labelLogin.BackColor = System.Drawing.Color.Transparent;
             this.labelLogin.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLogin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labelLogin.Location = new System.Drawing.Point(499, 107);
@@ -92,6 +94,7 @@
             // 
             // guna2ButtonInstructor
             // 
+            this.guna2ButtonInstructor.BackColor = System.Drawing.Color.Transparent;
             this.guna2ButtonInstructor.BorderRadius = 20;
             this.guna2ButtonInstructor.CheckedState.Parent = this.guna2ButtonInstructor;
             this.guna2ButtonInstructor.CustomImages.Parent = this.guna2ButtonInstructor;
@@ -109,6 +112,7 @@
             // 
             // guna2ButtonAdmin
             // 
+            this.guna2ButtonAdmin.BackColor = System.Drawing.Color.Transparent;
             this.guna2ButtonAdmin.BorderRadius = 20;
             this.guna2ButtonAdmin.CheckedState.Parent = this.guna2ButtonAdmin;
             this.guna2ButtonAdmin.CustomImages.Parent = this.guna2ButtonAdmin;
@@ -126,6 +130,7 @@
             // 
             // guna2ButtonStudent
             // 
+            this.guna2ButtonStudent.BackColor = System.Drawing.Color.Transparent;
             this.guna2ButtonStudent.BorderRadius = 20;
             this.guna2ButtonStudent.CheckedState.Parent = this.guna2ButtonStudent;
             this.guna2ButtonStudent.CustomImages.Parent = this.guna2ButtonStudent;
@@ -143,6 +148,7 @@
             // 
             // guna2ButtonExit
             // 
+            this.guna2ButtonExit.BackColor = System.Drawing.Color.Transparent;
             this.guna2ButtonExit.BorderRadius = 20;
             this.guna2ButtonExit.CheckedState.Parent = this.guna2ButtonExit;
             this.guna2ButtonExit.CustomImages.Parent = this.guna2ButtonExit;
@@ -163,6 +169,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
+            this.BackgroundImage = global::Online_Course.Properties.Resources.background23jpg;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(816, 509);
             this.Controls.Add(this.guna2ButtonExit);
             this.Controls.Add(this.labelSelamatDatang);

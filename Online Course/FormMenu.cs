@@ -227,7 +227,8 @@ namespace Online_Course
                 buttonTopic.Enabled = false;
                 buttonRemoveStudent.Enabled = false;
                 buttonEditStudent.Enabled = false;
-                labelLogin.Text = $"{session.Name} | Student";
+                labelLogin.Text = $"{session.Name.Substring(0,11)}";
+                labelSebagai.Text = $"{session.User}";
             }
             else if(session.User == "Instructor")
             {
@@ -235,6 +236,13 @@ namespace Online_Course
                 buttonInstructor.Enabled = true;
                 buttonRemoveInstructor.Enabled = false;
                 buttonStudent.Enabled = false;
+                labelLogin.Text = $"{session.Name.Substring(0, 5)}";
+                labelSebagai.Text = $"{session.User}";
+            }
+            else
+            {
+                labelLogin.Text = $"{session.Name}";
+                labelSebagai.Text = $"{session.User}";
             }
         }
     }

@@ -44,6 +44,7 @@
             // labelEditStudent
             // 
             this.labelEditStudent.AutoSize = true;
+            this.labelEditStudent.BackColor = System.Drawing.Color.Transparent;
             this.labelEditStudent.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEditStudent.Location = new System.Drawing.Point(147, 35);
             this.labelEditStudent.Name = "labelEditStudent";
@@ -53,6 +54,7 @@
             // 
             // guna2TextBoxDeletePasswordStudent
             // 
+            this.guna2TextBoxDeletePasswordStudent.BackColor = System.Drawing.Color.Transparent;
             this.guna2TextBoxDeletePasswordStudent.BorderRadius = 22;
             this.guna2TextBoxDeletePasswordStudent.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxDeletePasswordStudent.DefaultText = "";
@@ -78,6 +80,7 @@
             // 
             // guna2TextBoxDeleteUsernameStudent
             // 
+            this.guna2TextBoxDeleteUsernameStudent.BackColor = System.Drawing.Color.Transparent;
             this.guna2TextBoxDeleteUsernameStudent.BorderRadius = 22;
             this.guna2TextBoxDeleteUsernameStudent.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxDeleteUsernameStudent.DefaultText = "";
@@ -104,6 +107,7 @@
             // labelPasswordStudent
             // 
             this.labelPasswordStudent.AutoSize = true;
+            this.labelPasswordStudent.BackColor = System.Drawing.Color.Transparent;
             this.labelPasswordStudent.Location = new System.Drawing.Point(141, 270);
             this.labelPasswordStudent.Name = "labelPasswordStudent";
             this.labelPasswordStudent.Size = new System.Drawing.Size(69, 17);
@@ -113,6 +117,7 @@
             // labelUsernameStudent
             // 
             this.labelUsernameStudent.AutoSize = true;
+            this.labelUsernameStudent.BackColor = System.Drawing.Color.Transparent;
             this.labelUsernameStudent.Location = new System.Drawing.Point(141, 186);
             this.labelUsernameStudent.Name = "labelUsernameStudent";
             this.labelUsernameStudent.Size = new System.Drawing.Size(73, 17);
@@ -121,6 +126,7 @@
             // 
             // guna2ButtonClear
             // 
+            this.guna2ButtonClear.BackColor = System.Drawing.Color.Transparent;
             this.guna2ButtonClear.BorderRadius = 22;
             this.guna2ButtonClear.CheckedState.Parent = this.guna2ButtonClear;
             this.guna2ButtonClear.CustomImages.Parent = this.guna2ButtonClear;
@@ -138,6 +144,7 @@
             // 
             // guna2ButtonDelete
             // 
+            this.guna2ButtonDelete.BackColor = System.Drawing.Color.Transparent;
             this.guna2ButtonDelete.BorderRadius = 22;
             this.guna2ButtonDelete.CheckedState.Parent = this.guna2ButtonDelete;
             this.guna2ButtonDelete.CustomImages.Parent = this.guna2ButtonDelete;
@@ -155,6 +162,7 @@
             // 
             // guna2TextBoxDeleteNameStudent
             // 
+            this.guna2TextBoxDeleteNameStudent.BackColor = System.Drawing.Color.Transparent;
             this.guna2TextBoxDeleteNameStudent.BorderRadius = 22;
             this.guna2TextBoxDeleteNameStudent.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxDeleteNameStudent.DefaultText = "";
@@ -180,6 +188,7 @@
             // 
             // guna2TextBoxDeleteIdStudent
             // 
+            this.guna2TextBoxDeleteIdStudent.BackColor = System.Drawing.Color.Transparent;
             this.guna2TextBoxDeleteIdStudent.BorderRadius = 22;
             this.guna2TextBoxDeleteIdStudent.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxDeleteIdStudent.DefaultText = "";
@@ -207,6 +216,7 @@
             // labelNameStudent
             // 
             this.labelNameStudent.AutoSize = true;
+            this.labelNameStudent.BackColor = System.Drawing.Color.Transparent;
             this.labelNameStudent.Location = new System.Drawing.Point(141, 354);
             this.labelNameStudent.Name = "labelNameStudent";
             this.labelNameStudent.Size = new System.Drawing.Size(45, 17);
@@ -216,6 +226,7 @@
             // labelIdStudent
             // 
             this.labelIdStudent.AutoSize = true;
+            this.labelIdStudent.BackColor = System.Drawing.Color.Transparent;
             this.labelIdStudent.Location = new System.Drawing.Point(141, 105);
             this.labelIdStudent.Name = "labelIdStudent";
             this.labelIdStudent.Size = new System.Drawing.Size(19, 17);
@@ -227,6 +238,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.BackgroundImage = global::Online_Course.Properties.Resources.background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(582, 523);
             this.Controls.Add(this.labelEditStudent);
             this.Controls.Add(this.guna2TextBoxDeletePasswordStudent);

@@ -48,6 +48,7 @@
             // 
             // guna2TextBoxSearch
             // 
+            this.guna2TextBoxSearch.BackColor = System.Drawing.Color.Transparent;
             this.guna2TextBoxSearch.BorderRadius = 22;
             this.guna2TextBoxSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxSearch.DefaultText = "";
@@ -97,6 +98,7 @@
             // labelSearch
             // 
             this.labelSearch.AutoSize = true;
+            this.labelSearch.BackColor = System.Drawing.Color.Transparent;
             this.labelSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSearch.Location = new System.Drawing.Point(19, 99);
             this.labelSearch.Name = "labelSearch";
@@ -107,6 +109,7 @@
             // labelAddTopic
             // 
             this.labelAddTopic.AutoSize = true;
+            this.labelAddTopic.BackColor = System.Drawing.Color.Transparent;
             this.labelAddTopic.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAddTopic.Location = new System.Drawing.Point(224, 24);
             this.labelAddTopic.Name = "labelAddTopic";
@@ -118,6 +121,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Online_Course.Properties.Resources.background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(582, 490);
             this.Controls.Add(this.dataGridViewSearch);
             this.Controls.Add(this.guna2TextBoxSearch);
