@@ -1,13 +1,6 @@
 ﻿using Database;
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Online_Course
@@ -23,9 +16,9 @@ namespace Online_Course
 
         private void guna2ButtonAdd_Click(object sender, EventArgs e)
         {
-            
 
-            if(guna2TextBoxDeleteIdTopic.Text != "")
+
+            if (guna2TextBoxDeleteIdTopic.Text != "")
             {
                 DialogResult confirm = MessageBox.Show("Data Topic akan dihapus. Anda Yakin ?", "Konfirmasi", MessageBoxButtons.YesNo);
                 if (confirm == DialogResult.Yes)
@@ -47,7 +40,7 @@ namespace Online_Course
             {
                 MessageBox.Show("Id Tidak Boleh Kosong", "Warning");
             }
-            
+
 
         }
 
@@ -75,7 +68,7 @@ namespace Online_Course
             }
             try
             {
-                
+
             }
             catch (Exception error)
             {

@@ -1,10 +1,6 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
 
 namespace Database
 {
@@ -90,7 +86,7 @@ namespace Database
 
             MySqlDataReader result = Execute.Query(command);
 
-            if(result.Read())
+            if (result.Read())
             {
                 pKey = result.GetInt32(0) + 1;
 

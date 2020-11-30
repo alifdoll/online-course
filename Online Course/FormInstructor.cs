@@ -1,13 +1,6 @@
 ﻿using Database;
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Online_Course
@@ -24,7 +17,7 @@ namespace Online_Course
         private void FormInstructor_Load(object sender, EventArgs e)
         {
             list = instructor.QueryData();
-            if(list.Count > 0)
+            if (list.Count > 0)
             {
                 dataGridViewSearch.DataSource = list;
             }
@@ -36,11 +29,11 @@ namespace Online_Course
 
         private void guna2TextBoxSearch_TextChanged(object sender, EventArgs e)
         {
-            if(guna2ComboBoxSearch.Text == "Id")
+            if (guna2ComboBoxSearch.Text == "Id")
             {
                 list = instructor.QueryData("id", guna2TextBoxSearch.Text);
             }
-            else if(guna2ComboBoxSearch.Text == "Nama")
+            else if (guna2ComboBoxSearch.Text == "Nama")
             {
                 list = instructor.QueryData("nama", guna2TextBoxSearch.Text);
             }

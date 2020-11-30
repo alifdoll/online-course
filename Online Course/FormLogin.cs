@@ -1,12 +1,5 @@
 ﻿using Database;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Online_Course
@@ -29,7 +22,7 @@ namespace Online_Course
             FormLoginStudent formStudent = new FormLoginStudent();
             formStudent.FormClosed += delegate
             {
-                if(session.Name != "")
+                if (session.Name != "")
                 {
                     Owner.Enabled = true;
                     this.Close();
@@ -50,7 +43,7 @@ namespace Online_Course
                 }
             };
             formAdmin.ShowDialog();
-            
+
         }
 
         private void guna2ButtonInstructor_Click(object sender, EventArgs e)

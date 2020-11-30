@@ -1,10 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Database
 {
@@ -25,7 +21,7 @@ namespace Database
         #endregion
 
         #region constructors
-        public Student(string id="", string name = "" , string username = "", string password = "")
+        public Student(string id = "", string name = "", string username = "", string password = "")
         {
             Id = id;
             Name = name;
@@ -98,8 +94,8 @@ namespace Database
             int pKey;
 
             MySqlDataReader result = Execute.Query(command);
-            
-            if(result.Read() == true)
+
+            if (result.Read() == true)
             {
                 pKey = result.GetInt32(0) + 1;
             }

@@ -1,15 +1,7 @@
 ﻿using Database;
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace Online_Course
 {
@@ -34,19 +26,19 @@ namespace Online_Course
 
         private void HideMenu()
         {
-            if(panelCourse.Visible == true)
+            if (panelCourse.Visible == true)
                 panelCourse.Visible = false;
             if (panelInstructor.Visible == true)
                 panelInstructor.Visible = false;
-            if(panelStudent.Visible == true)
+            if (panelStudent.Visible == true)
                 panelStudent.Visible = false;
-            if(panelTopic.Visible == true)
+            if (panelTopic.Visible == true)
                 panelTopic.Visible = false;
         }
 
         private void ShowMenu(Panel subMenu)
         {
-            if(subMenu.Visible == false)
+            if (subMenu.Visible == false)
             {
                 HideMenu();
                 subMenu.Visible = true;
@@ -203,12 +195,12 @@ namespace Online_Course
 
         private void FormMenu_Load(object sender, EventArgs e)
         {
-            
+
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             MinimizeBox = false;
-            
-          
+
+
 
             IsMdiContainer = true;
             Enabled = false;
@@ -227,15 +219,19 @@ namespace Online_Course
                 buttonTopic.Enabled = false;
                 buttonRemoveStudent.Enabled = false;
                 buttonEditStudent.Enabled = false;
-                labelLogin.Text = $"{session.Name.Substring(0,11)}";
+                labelLogin.Text = $"{session.Name.Substring(0, 11)}";
                 labelSebagai.Text = $"{session.User}";
             }
-            else if(session.User == "Instructor")
+            else if (session.User == "Instructor")
             {
                 buttonCourse.Enabled = true;
                 buttonInstructor.Enabled = true;
                 buttonRemoveInstructor.Enabled = false;
                 buttonStudent.Enabled = false;
+                buttonTransaction.Enabled = false;
+                buttonAddTransaction.Enabled = false;
+                buttonTopic.Enabled = false;
+                buttonAddInstructor.Enabled = false;
                 labelLogin.Text = $"{session.Name.Substring(0, 5)}";
                 labelSebagai.Text = $"{session.User}";
             }

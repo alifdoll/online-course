@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using System.Configuration;
 
 namespace Database
@@ -26,7 +21,7 @@ namespace Database
         public DbConnect(string server, string database, string username, string password)
         {
             string connection;
-            if(password != "")
+            if (password != "")
             {
                 connection = $"Server={server};Database={database};Uid={username};Pwd={password};";
             }
@@ -45,7 +40,7 @@ namespace Database
 
         public void ConnecTotDB()
         {
-            if(Connection.State == System.Data.ConnectionState.Open)
+            if (Connection.State == System.Data.ConnectionState.Open)
             {
                 Connection.Close();
             }
@@ -61,6 +56,6 @@ namespace Database
             ConfigurationManager.RefreshSection("connectionStrings");
         }
 
-        
+
     }
 }

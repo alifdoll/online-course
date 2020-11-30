@@ -2,12 +2,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Online_Course
@@ -17,6 +11,7 @@ namespace Online_Course
         ArrayList list = new ArrayList();
         List<Course> courses = new List<Course>();
         Course course = new Course();
+        Session session = Session.Instance;
         public FormCourse()
         {
             InitializeComponent();
@@ -24,11 +19,11 @@ namespace Online_Course
 
         private void FormCourse_Load(object sender, EventArgs e)
         {
-            list = course.QueryData();
+            list = course.QueryData("instructor.id", session.Id);
             CustomGrid();
-            
+
         }
-        
+
         private void CustomGrid()
         {
             if (list.Count > 0)
@@ -47,8 +42,6 @@ namespace Online_Course
                         courseList.Topic.Name,
                         courseList.Instructor.Id,
                         courseList.Instructor.Name);
-
-                   
                 }
 
             }
@@ -63,27 +56,27 @@ namespace Online_Course
             switch (guna2ComboBoxSearch.Text)
             {
                 case "Course Id":
-                    list = course.QueryData("course.id", guna2TextBoxSearch.Text);
+                    list = course.QueryData("course.id", guna2TextBoxSearch.Text, session.Id);
                     break;
 
                 case "Course Name":
-                    list = course.QueryData("course.nama", guna2TextBoxSearch.Text);
+                    list = course.QueryData("course.nama", guna2TextBoxSearch.Text, session.Id);
                     break;
 
                 case "Language":
-                    list = course.QueryData("language", guna2TextBoxSearch.Text);
+                    list = course.QueryData("language", guna2TextBoxSearch.Text, session.Id);
                     break;
 
                 case "Price":
-                    list = course.QueryData("harga", guna2TextBoxSearch.Text);
+                    list = course.QueryData("harga", guna2TextBoxSearch.Text, session.Id);
                     break;
 
                 case "Topic Name":
-                    list = course.QueryData("topic.nama", guna2TextBoxSearch.Text);
+                    list = course.QueryData("topic.nama", guna2TextBoxSearch.Text, session.Id);
                     break;
 
                 default:
-                    list = course.QueryData("instructor.nama", guna2TextBoxSearch.Text);
+                    list = course.QueryData("instructor.nama", guna2TextBoxSearch.Text, session.Id);
                     break;
             }
 

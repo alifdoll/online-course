@@ -1,15 +1,7 @@
 ﻿using Database;
-using Microsoft.VisualBasic.Logging;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Collections;
+using System.Windows.Forms;
 
 namespace Online_Course
 {
@@ -34,8 +26,8 @@ namespace Online_Course
                 if (guna2TextBoxUsername.Text != "" && guna2TextBoxPassword.Text != "")
                 {
                     string user = Login.InstructorLogin(guna2TextBoxUsername.Text, guna2TextBoxPassword.Text);
-                    
-                    if(user == "0")
+
+                    if (user == "0")
                     {
                         MessageBox.Show("Gagal Untuk Login, Username atau Password Salah", "Warning");
                     }
@@ -44,13 +36,13 @@ namespace Online_Course
                         ArrayList list = instructor.QueryData("username", guna2TextBoxUsername.Text);
                         session.SessionClear();
                         session.Id = ((Instructor)list[0]).Id;
-                        session.Name = ((Instructor)list[0]).Name; 
+                        session.Name = ((Instructor)list[0]).Name;
                         session.User = "Instructor";
 
                         MessageBox.Show($"Berhasil Login Sebagai Instructor, Nama Anda adalah {user}", "Login Sukses");
                         this.Close();
                     }
-                   
+
                 }
                 else
                 {
@@ -66,8 +58,8 @@ namespace Online_Course
 
         private void FormLoginInstructor_Load(object sender, EventArgs e)
         {
-            guna2TextBoxUsername.Text = "ankit123";
-            guna2TextBoxPassword.Text = "ankit321";
+            guna2TextBoxUsername.Text = "gaban";
+            guna2TextBoxPassword.Text = "buymoregames";
         }
     }
 }

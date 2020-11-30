@@ -1,13 +1,7 @@
 ﻿using Database;
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Online_Course
@@ -45,13 +39,14 @@ namespace Online_Course
                 {
                     AssignData();
                 }
+
             }
-            catch(Exception error)
+            catch (Exception error)
             {
                 MessageBox.Show($"Error : {error.Message}", "Warning");
             }
 
-           
+
         }
 
         private void guna2TextBoxSearch_KeyDown(object sender, KeyEventArgs e)
@@ -92,12 +87,12 @@ namespace Online_Course
                     }
                 }
             }
-            catch(Exception error)
+            catch (Exception error)
             {
                 MessageBox.Show($"Error : {error.Message}", "Warning");
             }
-           
-            
+
+
         }
 
         private void guna2ButtonPrint_Click(object sender, EventArgs e)
@@ -106,15 +101,15 @@ namespace Online_Course
             {
                 if (listNota.Count > 0)
                 {
-                    NotaJual.CetakNota(new Font("Courier New", 12), studentId: session.Id, namaFile : "nota_jual.txt");
+                    NotaJual.CetakNota(new Font("Courier New", 12), studentId: session.Id, namaFile: "nota_jual.txt");
                     MessageBox.Show("Nota Berhasil Di Cetak");
                 }
             }
-            catch(Exception error)
+            catch (Exception error)
             {
                 MessageBox.Show($"Gagal Mencetak, Error : {error.Message}");
             }
-           
+
         }
     }
 }

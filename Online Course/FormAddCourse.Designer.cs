@@ -292,7 +292,7 @@
             this.guna2TextBoxCost.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBoxCost.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxCost.HoverState.Parent = this.guna2TextBoxCost;
-            this.guna2TextBoxCost.Location = new System.Drawing.Point(120, 709);
+            this.guna2TextBoxCost.Location = new System.Drawing.Point(120, 702);
             this.guna2TextBoxCost.Name = "guna2TextBoxCost";
             this.guna2TextBoxCost.PasswordChar = '\0';
             this.guna2TextBoxCost.PlaceholderText = "";
@@ -354,6 +354,7 @@
             this.guna2ComboBoxInstr.BorderRadius = 22;
             this.guna2ComboBoxInstr.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.guna2ComboBoxInstr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBoxInstr.Enabled = false;
             this.guna2ComboBoxInstr.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2ComboBoxInstr.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2ComboBoxInstr.FocusedState.Parent = this.guna2ComboBoxInstr;

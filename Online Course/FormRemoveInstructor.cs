@@ -1,13 +1,6 @@
 ﻿using Database;
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Online_Course
@@ -24,10 +17,10 @@ namespace Online_Course
 
         private void guna2TextBoxDeleteIdInstructor_TextChanged(object sender, EventArgs e)
         {
-            if(guna2TextBoxDeleteIdInstructor.Text.Length == 2)
+            if (guna2TextBoxDeleteIdInstructor.Text.Length == 2)
             {
                 list = instructor.QueryData("id", guna2TextBoxDeleteIdInstructor.Text);
-                if(list.Count > 0)
+                if (list.Count > 0)
                 {
                     guna2TextBoxDeleteNameInstructor.Text = ((Instructor)list[0]).Name;
                     guna2TextBoxDeleteBioInstructor.Text = ((Instructor)list[0]).Biography;
@@ -41,12 +34,12 @@ namespace Online_Course
             }
         }
 
-       
+
 
         private void guna2ButtonDelete_Click(object sender, EventArgs e)
         {
-            
-            if(guna2TextBoxDeleteIdInstructor.Text != "")
+
+            if (guna2TextBoxDeleteIdInstructor.Text != "")
             {
                 DialogResult confirm = MessageBox.Show("Data Instructor akan dihapus. Anda Yakin ?", "Konfirmasi", MessageBoxButtons.YesNo);
                 if (confirm == DialogResult.Yes)
@@ -72,7 +65,7 @@ namespace Online_Course
             {
                 MessageBox.Show("Id Tidak Boleh Kosong", "Warning");
             }
-           
+
 
         }
 

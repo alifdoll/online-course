@@ -1,13 +1,6 @@
 ﻿using Database;
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Online_Course
@@ -26,7 +19,7 @@ namespace Online_Course
             if (guna2TextBoxEditIdTopic.Text.Length == 2)
             {
                 list = topic.QueryData("id", guna2TextBoxEditIdTopic.Text);
-                if(list.Count > 0)
+                if (list.Count > 0)
                 {
                     guna2TextBoxEditNameTopic.Text = ((Topic)list[0]).Name;
                     guna2TextBoxEditNameTopic.Focus();
@@ -49,7 +42,7 @@ namespace Online_Course
                 MessageBox.Show("Data Berhasil Diubah", "Info");
                 guna2ButtonClear_Click(guna2ButtonAdd, e);
             }
-            catch(Exception error)
+            catch (Exception error)
             {
                 MessageBox.Show($"Data Gagal Diubah, Error : {error}", "Error");
             }

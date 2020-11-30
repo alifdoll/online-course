@@ -1,13 +1,6 @@
 ﻿using Database;
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Online_Course
@@ -23,10 +16,10 @@ namespace Online_Course
 
         private void guna2TextBoxDeleteIdStudent_TextChanged(object sender, EventArgs e)
         {
-            if(guna2TextBoxDeleteIdStudent.Text.Length <= 2)
+            if (guna2TextBoxDeleteIdStudent.Text.Length <= 2)
             {
                 list = student.QueryData("id", guna2TextBoxDeleteIdStudent.Text);
-                if(list.Count > 0)
+                if (list.Count > 0)
                 {
                     guna2TextBoxDeleteNameStudent.Text = ((Student)list[0]).Name;
                     guna2TextBoxDeleteUsernameStudent.Text = ((Student)list[0]).Username;
@@ -37,8 +30,8 @@ namespace Online_Course
 
         private void guna2ButtonDelete_Click(object sender, EventArgs e)
         {
-            
-            if(guna2TextBoxDeleteIdStudent.Text != "")
+
+            if (guna2TextBoxDeleteIdStudent.Text != "")
             {
                 DialogResult confirm = MessageBox.Show("Data Student akan dihapus. Anda Yakin ?", "Konfirmasi", MessageBoxButtons.YesNo);
                 if (confirm == DialogResult.Yes)
@@ -56,7 +49,7 @@ namespace Online_Course
                         MessageBox.Show($"Gagal Menghapus Data, Error : {delete}", "Error");
                     }
                 }
-                
+
             }
             else
             {

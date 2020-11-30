@@ -1,12 +1,5 @@
 ﻿using Database;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Online_Course
@@ -43,17 +36,17 @@ namespace Online_Course
                     MessageBox.Show("Username atau Password Tidak Boleh Kosong", "Info");
                 }
             }
-            catch(Exception error)
+            catch (Exception error)
             {
                 MessageBox.Show($"Gagal Login, Error : {error.Message}", "Error");
             }
-           
+
         }
 
         private void FormLoginAdmin_FormClosed(object sender, FormClosedEventArgs e)
         {
             FormLogin form = new FormLogin();
-            form.FormLogin_Load(guna2ButtonLogin, e); 
+            form.FormLogin_Load(guna2ButtonLogin, e);
         }
 
         private void FormLoginAdmin_Load(object sender, EventArgs e)
