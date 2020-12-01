@@ -1,11 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Database
 {
@@ -85,7 +80,7 @@ namespace Database
                 Execute.DML(command);
                 return "1";
             }
-            catch(Exception error)
+            catch (Exception error)
             {
                 return $"{error.Message}, Command : {command}";
             }
@@ -100,14 +95,14 @@ namespace Database
 
             if (result.Read())
             {
-                if(result.GetValue(0).ToString() != "")
+                if (result.GetValue(0).ToString() != "")
                 {
                     int newcode = result.GetInt32(0) + 1;
-                    code = Instructor.Id  + newcode.ToString().PadLeft(3, '0');
+                    code = Instructor.Id + newcode.ToString().PadLeft(3, '0');
                 }
                 else
                 {
-                    code = Instructor.Id  + "001";
+                    code = Instructor.Id + "001";
                 }
 
             }
@@ -130,7 +125,7 @@ namespace Database
                     "SELECT course.id, course.nama, course.description, course.language, course.harga, course.release_date, course.id_topic, topic.nama, course.id_instructor, instructor.nama " +
                     "FROM course " +
                     "INNER JOIN topic on course.id_topic = topic.id " +
-                    "INNER JOIN instructor on course.id_instructor = instructor.id";
+                    "INNER JOIN instructor on course.id_instructor = instructor.id ";
             }
             else
             {
@@ -139,7 +134,7 @@ namespace Database
                     "FROM course " +
                     "INNER JOIN topic on course.id_topic = topic.id " +
                     "INNER JOIN instructor on course.id_instructor = instructor.id " +
-                    $"WHERE {criteria} LIKE '%{value}%'";
+                    $"WHERE {criteria} LIKE '%{value}%' AND instructor.id LIKE '%{value}%'";
             }
 
             MySqlDataReader result = Execute.Query(command);
@@ -148,9 +143,9 @@ namespace Database
 
             while (result.Read() == true)
             {
-                Topic topic = new Topic( result.GetValue(6).ToString(), result.GetValue(7).ToString() );
+                Topic topic = new Topic(result.GetValue(6).ToString(), result.GetValue(7).ToString());
 
-                Instructor instructor = new Instructor( result.GetValue(8).ToString(), result.GetValue(9).ToString() );
+                Instructor instructor = new Instructor(result.GetValue(8).ToString(), result.GetValue(9).ToString());
 
                 Course course = new Course(
                     result.GetValue(0).ToString(),
@@ -168,9 +163,45 @@ namespace Database
             return list;
         }
 
-      
+        public ArrayList QueryData(string criteria = "", string value = "", string instructorId = "")
+        {
+            string command =
+                    "SELECT course.id, course.nama, course.description, course.language, course.harga, course.release_date, course.id_topic, topic.nama, course.id_instructor, instructor.nama " +
+                    "FROM course " +
+                    "INNER JOIN topic on course.id_topic = topic.id " +
+                    "INNER JOIN instructor on course.id_instructor = instructor.id " +
+                    $"WHERE {criteria} LIKE '%{value}%' AND instructor.id LIKE '%{instructorId}%'";
 
-      
+
+            MySqlDataReader result = Execute.Query(command);
+
+            ArrayList list = new ArrayList();
+
+            while (result.Read() == true)
+            {
+                Topic topic = new Topic(result.GetValue(6).ToString(), result.GetValue(7).ToString());
+
+                Instructor instructor = new Instructor(result.GetValue(8).ToString(), result.GetValue(9).ToString());
+
+                Course course = new Course(
+                    result.GetValue(0).ToString(),
+                    result.GetValue(1).ToString(),
+                    result.GetValue(2).ToString(),
+                    result.GetValue(3).ToString(),
+                    result.GetDouble(4),
+                    result.GetDateTime(5),
+                    topic,
+                    instructor);
+
+                list.Add(course);
+            }
+
+            return list;
+        }
+
+
+
+
         #endregion
     }
 }

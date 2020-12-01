@@ -43,10 +43,10 @@
             this.labelDescriptionCourse = new System.Windows.Forms.Label();
             this.labelNameCourse = new System.Windows.Forms.Label();
             this.guna2TextBoxAddLanguageCourse = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBoxAddIdCourse = new Guna.UI2.WinForms.Guna2TextBox();
             this.labelLanguageCourse = new System.Windows.Forms.Label();
             this.labelIdCourse = new System.Windows.Forms.Label();
             this.dateTimePickerRelease = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.guna2ComboBoxRemoveCourse = new Guna.UI2.WinForms.Guna2ComboBox();
             this.SuspendLayout();
             // 
             // labelDeleteCourse
@@ -317,33 +317,6 @@
             this.guna2TextBoxAddLanguageCourse.Size = new System.Drawing.Size(330, 36);
             this.guna2TextBoxAddLanguageCourse.TabIndex = 85;
             // 
-            // guna2TextBoxAddIdCourse
-            // 
-            this.guna2TextBoxAddIdCourse.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBoxAddIdCourse.BorderRadius = 22;
-            this.guna2TextBoxAddIdCourse.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBoxAddIdCourse.DefaultText = "";
-            this.guna2TextBoxAddIdCourse.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBoxAddIdCourse.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBoxAddIdCourse.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxAddIdCourse.DisabledState.Parent = this.guna2TextBoxAddIdCourse;
-            this.guna2TextBoxAddIdCourse.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxAddIdCourse.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxAddIdCourse.FocusedState.Parent = this.guna2TextBoxAddIdCourse;
-            this.guna2TextBoxAddIdCourse.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBoxAddIdCourse.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxAddIdCourse.HoverState.Parent = this.guna2TextBoxAddIdCourse;
-            this.guna2TextBoxAddIdCourse.Location = new System.Drawing.Point(127, 106);
-            this.guna2TextBoxAddIdCourse.MaxLength = 5;
-            this.guna2TextBoxAddIdCourse.Name = "guna2TextBoxAddIdCourse";
-            this.guna2TextBoxAddIdCourse.PasswordChar = '\0';
-            this.guna2TextBoxAddIdCourse.PlaceholderText = "";
-            this.guna2TextBoxAddIdCourse.SelectedText = "";
-            this.guna2TextBoxAddIdCourse.ShadowDecoration.Parent = this.guna2TextBoxAddIdCourse;
-            this.guna2TextBoxAddIdCourse.Size = new System.Drawing.Size(330, 36);
-            this.guna2TextBoxAddIdCourse.TabIndex = 79;
-            this.guna2TextBoxAddIdCourse.TextChanged += new System.EventHandler(this.guna2TextBoxAddIdCourse_TextChanged);
-            // 
             // labelLanguageCourse
             // 
             this.labelLanguageCourse.AutoSize = true;
@@ -369,6 +342,7 @@
             this.dateTimePickerRelease.BackColor = System.Drawing.Color.Transparent;
             this.dateTimePickerRelease.BorderRadius = 18;
             this.dateTimePickerRelease.CheckedState.Parent = this.dateTimePickerRelease;
+            this.dateTimePickerRelease.Enabled = false;
             this.dateTimePickerRelease.FillColor = System.Drawing.Color.DodgerBlue;
             this.dateTimePickerRelease.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dateTimePickerRelease.Format = System.Windows.Forms.DateTimePickerFormat.Long;
@@ -383,6 +357,27 @@
             this.dateTimePickerRelease.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.dateTimePickerRelease.Value = new System.DateTime(2020, 11, 29, 21, 35, 8, 809);
             // 
+            // guna2ComboBoxRemoveCourse
+            // 
+            this.guna2ComboBoxRemoveCourse.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ComboBoxRemoveCourse.BorderRadius = 22;
+            this.guna2ComboBoxRemoveCourse.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guna2ComboBoxRemoveCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBoxRemoveCourse.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBoxRemoveCourse.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBoxRemoveCourse.FocusedState.Parent = this.guna2ComboBoxRemoveCourse;
+            this.guna2ComboBoxRemoveCourse.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.guna2ComboBoxRemoveCourse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.guna2ComboBoxRemoveCourse.HoverState.Parent = this.guna2ComboBoxRemoveCourse;
+            this.guna2ComboBoxRemoveCourse.ItemHeight = 30;
+            this.guna2ComboBoxRemoveCourse.ItemsAppearance.Parent = this.guna2ComboBoxRemoveCourse;
+            this.guna2ComboBoxRemoveCourse.Location = new System.Drawing.Point(127, 105);
+            this.guna2ComboBoxRemoveCourse.Name = "guna2ComboBoxRemoveCourse";
+            this.guna2ComboBoxRemoveCourse.ShadowDecoration.Parent = this.guna2ComboBoxRemoveCourse;
+            this.guna2ComboBoxRemoveCourse.Size = new System.Drawing.Size(330, 36);
+            this.guna2ComboBoxRemoveCourse.TabIndex = 95;
+            this.guna2ComboBoxRemoveCourse.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBoxRemoveCourse_SelectedIndexChanged);
+            // 
             // FormRemoveCourse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -391,6 +386,7 @@
             this.BackgroundImage = global::Online_Course.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(582, 828);
+            this.Controls.Add(this.guna2ComboBoxRemoveCourse);
             this.Controls.Add(this.dateTimePickerRelease);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2ComboBoxInstr);
@@ -404,7 +400,6 @@
             this.Controls.Add(this.labelDescriptionCourse);
             this.Controls.Add(this.labelNameCourse);
             this.Controls.Add(this.guna2TextBoxAddLanguageCourse);
-            this.Controls.Add(this.guna2TextBoxAddIdCourse);
             this.Controls.Add(this.labelLanguageCourse);
             this.Controls.Add(this.labelIdCourse);
             this.Controls.Add(this.labelDeleteCourse);
@@ -412,6 +407,7 @@
             this.Controls.Add(this.guna2ButtonDelete);
             this.Name = "FormRemoveCourse";
             this.Text = "FormRemoveCourse";
+            this.Load += new System.EventHandler(this.FormRemoveCourse_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -433,9 +429,9 @@
         private System.Windows.Forms.Label labelDescriptionCourse;
         private System.Windows.Forms.Label labelNameCourse;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxAddLanguageCourse;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxAddIdCourse;
         private System.Windows.Forms.Label labelLanguageCourse;
         private System.Windows.Forms.Label labelIdCourse;
         private Guna.UI2.WinForms.Guna2DateTimePicker dateTimePickerRelease;
+        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBoxRemoveCourse;
     }
 }

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Database
+﻿namespace Database
 {
     public class Session
     {
@@ -16,7 +10,7 @@ namespace Database
         public string Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
         public string User { get => user; set => user = value; }
-        
+
 
         private Session()
         {
@@ -24,13 +18,13 @@ namespace Database
             Name = "";
             User = "";
         }
-       
+
 
         public static Session Instance
         {
             get
             {
-                if(instance == null)
+                if (instance == null)
                 {
                     instance = new Session();
                 }
@@ -38,7 +32,7 @@ namespace Database
             }
         }
 
-       
+
 
         public void SessionClear()
         {

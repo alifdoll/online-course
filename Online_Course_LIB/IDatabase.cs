@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections;
 
 namespace Database
 {
-    public interface IDatabase 
+    public interface IDatabase
     {
-         void Insert();
+        void Insert();
 
-         void Update();
+        void Update();
 
-         string Delete();
+        string Delete();
 
         ArrayList QueryData(string criteria = "", string value = "");
 

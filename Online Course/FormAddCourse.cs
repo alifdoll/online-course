@@ -1,13 +1,6 @@
 ﻿using Database;
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Online_Course
@@ -26,7 +19,7 @@ namespace Online_Course
 
         private void FormAddCourse_Load(object sender, EventArgs e)
         {
-            
+
             listTopic = topic.QueryData();
             listInstr = instructor.QueryData();
             guna2ComboBoxTopic.DataSource = listTopic;
@@ -34,11 +27,13 @@ namespace Online_Course
 
             guna2ComboBoxTopic.DisplayMember = "Name";
             guna2ComboBoxInstr.DisplayMember = "Name";
+
+            guna2ComboBoxInstr.Text = Session.Instance.Name;
         }
 
         private void guna2ComboBoxInstr_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(guna2ComboBoxInstr.SelectedIndex != -1 && guna2ComboBoxTopic.SelectedIndex != -1)
+            if (guna2ComboBoxInstr.SelectedIndex != -1 && guna2ComboBoxTopic.SelectedIndex != -1)
             {
                 Instructor instructor = (Instructor)guna2ComboBoxInstr.SelectedItem;
 
@@ -69,7 +64,7 @@ namespace Online_Course
                 guna2ButtonClear_Click(guna2ButtonAdd, e);
 
             }
-            catch(Exception error)
+            catch (Exception error)
             {
                 MessageBox.Show($"Gagal Menambahkan Data, Error : {error.Message}", "Error");
             }

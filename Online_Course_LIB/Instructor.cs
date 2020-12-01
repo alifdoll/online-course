@@ -1,10 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Database
 {
@@ -27,7 +23,7 @@ namespace Database
         #endregion
 
         #region constructors
-        public Instructor(string id="", string name = "", string bio = "", string username = "", string password = "")
+        public Instructor(string id = "", string name = "", string bio = "", string username = "", string password = "")
         {
             Id = id;
             Name = name;
@@ -102,8 +98,8 @@ namespace Database
             int pKey;
 
             MySqlDataReader result = Execute.Query(command);
-        
-            if(result.Read() == true)
+
+            if (result.Read() == true)
             {
                 pKey = result.GetInt32(0) + 1;
             }
@@ -118,7 +114,7 @@ namespace Database
         public string GetPass()
         {
             string masked = Password;
-            if(Password.Length > 0)
+            if (Password.Length > 0)
             {
                 string.Concat("".PadLeft(Password.Length, '*'), masked.Substring(masked.Length));
             }

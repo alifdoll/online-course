@@ -1,15 +1,7 @@
-﻿using System;
+﻿using Database;
+using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.Common;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Database;
 
 namespace Online_Course
 {
@@ -31,10 +23,10 @@ namespace Online_Course
         {
             try
             {
-                if(guna2TextBoxUsername.Text != "" && guna2TextBoxPassword.Text != "")
+                if (guna2TextBoxUsername.Text != "" && guna2TextBoxPassword.Text != "")
                 {
                     string user = Login.StudentLogin(guna2TextBoxUsername.Text, guna2TextBoxPassword.Text);
-                    if(user == "0")
+                    if (user == "0")
                     {
                         MessageBox.Show("Gagal Untuk Login, Username atau Password Salah", "Warning");
                     }
@@ -49,7 +41,7 @@ namespace Online_Course
                         MessageBox.Show($"Berhasil Login Sebagai Student, Nama Anda adalah {user}", "Login Sukses");
                         this.Close();
                     }
-                    
+
                 }
                 else
                 {
@@ -57,7 +49,7 @@ namespace Online_Course
                 }
 
             }
-            catch(Exception error)
+            catch (Exception error)
             {
                 MessageBox.Show($"Ada Kesalahan TIdak Bisa Login, Error : {error.Message}", "Error");
             }
@@ -65,7 +57,7 @@ namespace Online_Course
 
         private void guna2TextBoxPassword_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 guna2ButtonLogin_Click(guna2TextBoxPassword, e);
             }

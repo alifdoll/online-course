@@ -1,13 +1,6 @@
 ﻿using Database;
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Online_Course
@@ -25,19 +18,25 @@ namespace Online_Course
 
         private void FormAddTransaction_Load(object sender, EventArgs e)
         {
-            guna2DateTimePicker1.Value = DateTime.Now;
-            guna2TextBoxNota.Text = nota.GenerateNoNota(session.Id);
-            listCourse = nota.AvailableCourse(session.Id);
+            if (listCourse.Count > 0)
+            {
+                guna2DateTimePicker1.Value = DateTime.Now;
+                guna2TextBoxNota.Text = nota.GenerateNoNota(session.Id);
+                listCourse = nota.AvailableCourse(session.Id);
+                guna2ComboBoxCourse.DataSource = listCourse;
+                guna2ComboBoxCourse.DisplayMember = "Name";
 
-            guna2ComboBoxCourse.DataSource = listCourse;
-            guna2ComboBoxCourse.DisplayMember = "Name";
-
-            guna2TextBoxHarga.Text = listCourse[guna2ComboBoxCourse.SelectedIndex].Price.ToString();
+                guna2TextBoxHarga.Text = listCourse[guna2ComboBoxCourse.SelectedIndex].Price.ToString();
+            }
+            else
+            {
+                MessageBox.Show("No Available Course", "Information");
+            }
         }
 
         private void guna2ComboBoxCourse_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(guna2ComboBoxCourse.SelectedIndex != -1)
+            if (guna2ComboBoxCourse.SelectedIndex != -1)
             {
                 guna2TextBoxHarga.Text = listCourse[guna2ComboBoxCourse.SelectedIndex].Price.ToString();
             }
@@ -45,7 +44,7 @@ namespace Online_Course
 
         private void guna2ButtonAdd_Click(object sender, EventArgs e)
         {
-            
+
             try
             {
 
@@ -71,7 +70,7 @@ namespace Online_Course
 
                 FormAddTransaction_Load(guna2ButtonAdd, e);
             }
-            catch(Exception error)
+            catch (Exception error)
             {
                 MessageBox.Show($"Gagal Menyimpan, Error : {error.Message}", "Warning");
             }

@@ -46,7 +46,7 @@
             this.labelLanguageCourse = new System.Windows.Forms.Label();
             this.labelIdCourse = new System.Windows.Forms.Label();
             this.dateTimePickerRelease = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.guna2TextBoxAddIdCourse = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2ComboBoxEditCourse = new Guna.UI2.WinForms.Guna2ComboBox();
             this.SuspendLayout();
             // 
             // labelEditCourse
@@ -351,25 +351,26 @@
             this.dateTimePickerRelease.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.dateTimePickerRelease.Value = new System.DateTime(2020, 11, 29, 21, 2, 31, 570);
             // 
-            // guna2TextBoxAddIdCourse
+            // guna2ComboBoxEditCourse
             // 
-            this.guna2TextBoxAddIdCourse.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBoxAddIdCourse.BorderRadius = 22;
-            this.guna2TextBoxAddIdCourse.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2TextBoxAddIdCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2TextBoxAddIdCourse.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxAddIdCourse.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxAddIdCourse.FocusedState.Parent = this.guna2TextBoxAddIdCourse;
-            this.guna2TextBoxAddIdCourse.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2TextBoxAddIdCourse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2TextBoxAddIdCourse.HoverState.Parent = this.guna2TextBoxAddIdCourse;
-            this.guna2TextBoxAddIdCourse.ItemHeight = 30;
-            this.guna2TextBoxAddIdCourse.ItemsAppearance.Parent = this.guna2TextBoxAddIdCourse;
-            this.guna2TextBoxAddIdCourse.Location = new System.Drawing.Point(127, 107);
-            this.guna2TextBoxAddIdCourse.Name = "guna2TextBoxAddIdCourse";
-            this.guna2TextBoxAddIdCourse.ShadowDecoration.Parent = this.guna2TextBoxAddIdCourse;
-            this.guna2TextBoxAddIdCourse.Size = new System.Drawing.Size(330, 36);
-            this.guna2TextBoxAddIdCourse.TabIndex = 20;
+            this.guna2ComboBoxEditCourse.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ComboBoxEditCourse.BorderRadius = 22;
+            this.guna2ComboBoxEditCourse.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guna2ComboBoxEditCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBoxEditCourse.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBoxEditCourse.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBoxEditCourse.FocusedState.Parent = this.guna2ComboBoxEditCourse;
+            this.guna2ComboBoxEditCourse.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.guna2ComboBoxEditCourse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.guna2ComboBoxEditCourse.HoverState.Parent = this.guna2ComboBoxEditCourse;
+            this.guna2ComboBoxEditCourse.ItemHeight = 30;
+            this.guna2ComboBoxEditCourse.ItemsAppearance.Parent = this.guna2ComboBoxEditCourse;
+            this.guna2ComboBoxEditCourse.Location = new System.Drawing.Point(127, 107);
+            this.guna2ComboBoxEditCourse.Name = "guna2ComboBoxEditCourse";
+            this.guna2ComboBoxEditCourse.ShadowDecoration.Parent = this.guna2ComboBoxEditCourse;
+            this.guna2ComboBoxEditCourse.Size = new System.Drawing.Size(330, 36);
+            this.guna2ComboBoxEditCourse.TabIndex = 20;
+            this.guna2ComboBoxEditCourse.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBoxEditCourse_SelectedIndexChanged);
             // 
             // FormEditCourse
             // 
@@ -379,7 +380,7 @@
             this.BackgroundImage = global::Online_Course.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(582, 828);
-            this.Controls.Add(this.guna2TextBoxAddIdCourse);
+            this.Controls.Add(this.guna2ComboBoxEditCourse);
             this.Controls.Add(this.dateTimePickerRelease);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2ComboBoxInstr);
@@ -400,6 +401,7 @@
             this.Controls.Add(this.guna2ButtonEdit);
             this.Name = "FormEditCourse";
             this.Text = "FormEditCourse";
+            this.Load += new System.EventHandler(this.FormEditCourse_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -424,6 +426,6 @@
         private System.Windows.Forms.Label labelLanguageCourse;
         private System.Windows.Forms.Label labelIdCourse;
         private Guna.UI2.WinForms.Guna2DateTimePicker dateTimePickerRelease;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2TextBoxAddIdCourse;
+        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBoxEditCourse;
     }
 }

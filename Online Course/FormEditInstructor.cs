@@ -1,13 +1,6 @@
 ﻿using Database;
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Online_Course
@@ -23,21 +16,7 @@ namespace Online_Course
 
         private void guna2TextBoxEditIdInstructor_TextChanged(object sender, EventArgs e)
         {
-            if(guna2TextBoxEditIdInstructor.Text.Length == 2)
-            {
-                list = instructor.QueryData("id", guna2TextBoxEditIdInstructor.Text);
-                if(list.Count > 0)
-                {
-                    guna2TextBoxEditNameInstructor.Text = ((Instructor)list[0]).Name;
-                    guna2TextBoxEditBioInstructor.Text = ((Instructor)list[0]).Biography;
-                    guna2TextBoxEditUsernameInstructor.Text = ((Instructor)list[0]).Username;
-                    guna2TextBoxEditPasswordInstructor.Text = ((Instructor)list[0]).GetPass();
-                }
-                else
-                {
-                    MessageBox.Show("Data Tidak Ditemukan", "Error");
-                }
-            }
+
         }
 
         private void guna2ButtonEdit_Click(object sender, EventArgs e)
@@ -56,7 +35,7 @@ namespace Online_Course
                 MessageBox.Show("Data Berhasil Diubah", "Info");
                 guna2ButtonClear_Click(guna2ButtonEdit, e);
             }
-            catch(Exception error)
+            catch (Exception error)
             {
                 MessageBox.Show($"Data Gagal Diubah, Error : {error.Message}", "Error");
             }
@@ -70,6 +49,23 @@ namespace Online_Course
             guna2TextBoxEditBioInstructor.Clear();
             guna2TextBoxEditUsernameInstructor.Clear();
             guna2TextBoxEditPasswordInstructor.Clear();
+        }
+
+        private void FormEditInstructor_Load(object sender, EventArgs e)
+        {
+            list = instructor.QueryData("id", Session.Instance.Id);
+            if (list.Count > 0)
+            {
+                guna2TextBoxEditIdInstructor.Text = ((Instructor)list[0]).Id;
+                guna2TextBoxEditNameInstructor.Text = ((Instructor)list[0]).Name;
+                guna2TextBoxEditBioInstructor.Text = ((Instructor)list[0]).Biography;
+                guna2TextBoxEditUsernameInstructor.Text = ((Instructor)list[0]).Username;
+                guna2TextBoxEditPasswordInstructor.Text = ((Instructor)list[0]).GetPass();
+            }
+            else
+            {
+                MessageBox.Show("Data Tidak Ditemukan", "Error");
+            }
         }
     }
 }

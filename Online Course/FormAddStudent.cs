@@ -1,13 +1,5 @@
 ﻿using Database;
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Online_Course
@@ -39,7 +31,7 @@ namespace Online_Course
                 MessageBox.Show("Berhasil Menambahkan Data", "Info");
                 guna2ButtonClear_Click(guna2ButtonAdd, e);
             }
-            catch(Exception error)
+            catch (Exception error)
             {
                 MessageBox.Show($"Gagal Menambahkan Data, Error : {error.Message}", "Error");
             }

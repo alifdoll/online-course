@@ -232,6 +232,7 @@
             this.guna2TextBoxEditIdInstructor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBoxEditIdInstructor.DisabledState.Parent = this.guna2TextBoxEditIdInstructor;
             this.guna2TextBoxEditIdInstructor.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxEditIdInstructor.Enabled = false;
             this.guna2TextBoxEditIdInstructor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxEditIdInstructor.FocusedState.Parent = this.guna2TextBoxEditIdInstructor;
             this.guna2TextBoxEditIdInstructor.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -291,6 +292,7 @@
             this.Controls.Add(this.labelIdInstructor);
             this.Name = "FormEditInstructor";
             this.Text = "FormEditInstructor";
+            this.Load += new System.EventHandler(this.FormEditInstructor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

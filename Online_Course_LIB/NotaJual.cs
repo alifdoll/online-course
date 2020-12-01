@@ -4,9 +4,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Transactions;
 
 namespace Database
@@ -18,7 +15,7 @@ namespace Database
         private Student student;
         private NotaJualDetil notaJualDetil;
         private List<NotaJualDetil> listNotaDetil;
-        
+
 
         public string NoNota { get => noNota; set => noNota = value; }
         public DateTime Tanggal { get => tanggal; set => tanggal = value; }
@@ -44,7 +41,7 @@ namespace Database
 
         public void Insert()
         {
-           
+
             using (TransactionScope transaction = new TransactionScope())
             {
                 try
@@ -63,7 +60,7 @@ namespace Database
                     transaction.Complete();
 
                 }
-                catch(Exception error)
+                catch (Exception error)
                 {
                     transaction.Dispose();
                     throw new Exception(error.Message);
@@ -88,7 +85,7 @@ namespace Database
             }
             else
             {
-                sql = 
+                sql =
                     $"SELECT nota_jual.no_nota, nota_jual.tanggal, nota_jual.student_id, student.nama, nota_jual_detil.id_course, course.nama, nota_jual_detil.harga " +
                    $"FROM nota_jual " +
                    $"INNER JOIN nota_jual_detil ON nota_jual.no_nota = nota_jual_detil.no_nota " +
@@ -111,19 +108,19 @@ namespace Database
 
                 NotaJual nota = new NotaJual(noNota, tanggal, student);
 
-                Course course = new Course(result.GetString(4), result.GetString(5)) ;
+                Course course = new Course(result.GetString(4), result.GetString(5));
 
                 nota.TambahNotaDetil(course, result.GetDouble(6));
 
                 listNota.Add(nota);
             }
             return listNota;
-            
+
         }
 
         public List<Course> AvailableCourse(string studentId)
         {
-            string sql = 
+            string sql =
                         $"SELECT * " +
                         $"FROM course " +
                         $"WHERE course.id NOT IN (" +
@@ -133,7 +130,7 @@ namespace Database
                         $"INNER JOIN student ON enroll.id_student = student.id " +
                         $"WHERE student.id LIKE '%{studentId}%')";
 
-            
+
             MySqlDataReader result = Execute.Query(sql);
 
             List<Course> listCourse = new List<Course>();
@@ -143,7 +140,7 @@ namespace Database
                 Topic topic = new Topic();
                 Instructor instructor = new Instructor();
 
-                Course course = new Course(result.GetValue(0).ToString(), result.GetValue(1).ToString(), result.GetString(2), result.GetString(3), result.GetDouble(4),result.GetDateTime(5), topic, instructor);
+                Course course = new Course(result.GetValue(0).ToString(), result.GetValue(1).ToString(), result.GetString(2), result.GetString(3), result.GetDouble(4), result.GetDateTime(5), topic, instructor);
                 listCourse.Add(course);
             }
             return listCourse;
@@ -159,7 +156,7 @@ namespace Database
 
             if (result.Read())
             {
-                if(result.GetValue(0).ToString() != "")
+                if (result.GetValue(0).ToString() != "")
                 {
                     int noUrut = result.GetInt32(0) + 1;
                     hasilNota = DateTime.Now.Year +
@@ -169,7 +166,7 @@ namespace Database
                 }
                 else
                 {
-                    hasilNota = 
+                    hasilNota =
                            DateTime.Now.Year +
                            DateTime.Now.Month.ToString().PadLeft(2, '0') +
                            DateTime.Now.Day.ToString().PadLeft(2, '0') +
@@ -212,7 +209,7 @@ namespace Database
 
             foreach (NotaJual nota in listNota)
             {
-                file.Write(nota.NotaJualDetil.Course.Name.PadRight(30,' '));
+                file.Write(nota.NotaJualDetil.Course.Name.PadRight(30, ' '));
                 file.Write(nota.NotaJualDetil.Harga.ToString().PadRight(3, ' '));
                 double subTotal = nota.NotaJualDetil.Harga;
                 file.WriteLine("");
@@ -229,7 +226,7 @@ namespace Database
             Cetak c = new Cetak(namaFile, font, 20, 10, 10, 10);
             c.PrintFile("text");
         }
-        
-        
+
+
     }
 }
