@@ -35,6 +35,8 @@
             this.labelStudent = new System.Windows.Forms.Label();
             this.guna2ButtonExit = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ButtonLogin = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ButtonRegister = new Guna.UI2.WinForms.Guna2Button();
+            this.labelRegister = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelPassword
@@ -156,13 +158,44 @@
             this.guna2ButtonLogin.Text = "LOGIN";
             this.guna2ButtonLogin.Click += new System.EventHandler(this.guna2ButtonLogin_Click);
             // 
+            // guna2ButtonRegister
+            // 
+            this.guna2ButtonRegister.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ButtonRegister.BorderRadius = 22;
+            this.guna2ButtonRegister.CheckedState.Parent = this.guna2ButtonRegister;
+            this.guna2ButtonRegister.CustomImages.Parent = this.guna2ButtonRegister;
+            this.guna2ButtonRegister.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(211)))), ((int)(((byte)(246)))));
+            this.guna2ButtonRegister.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2ButtonRegister.ForeColor = System.Drawing.Color.White;
+            this.guna2ButtonRegister.HoverState.Parent = this.guna2ButtonRegister;
+            this.guna2ButtonRegister.Location = new System.Drawing.Point(45, 361);
+            this.guna2ButtonRegister.Name = "guna2ButtonRegister";
+            this.guna2ButtonRegister.ShadowDecoration.Parent = this.guna2ButtonRegister;
+            this.guna2ButtonRegister.Size = new System.Drawing.Size(237, 41);
+            this.guna2ButtonRegister.TabIndex = 38;
+            this.guna2ButtonRegister.Text = "REGISTER";
+            this.guna2ButtonRegister.Click += new System.EventHandler(this.guna2ButtonRegister_Click);
+            // 
+            // labelRegister
+            // 
+            this.labelRegister.AutoSize = true;
+            this.labelRegister.BackColor = System.Drawing.Color.Transparent;
+            this.labelRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRegister.Location = new System.Drawing.Point(42, 333);
+            this.labelRegister.Name = "labelRegister";
+            this.labelRegister.Size = new System.Drawing.Size(244, 13);
+            this.labelRegister.TabIndex = 39;
+            this.labelRegister.Text = "Don\'t have the account ? You can Register in here";
+            // 
             // FormLoginStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Online_Course.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(325, 351);
+            this.ClientSize = new System.Drawing.Size(325, 429);
+            this.Controls.Add(this.labelRegister);
+            this.Controls.Add(this.guna2ButtonRegister);
             this.Controls.Add(this.guna2ButtonExit);
             this.Controls.Add(this.guna2ButtonLogin);
             this.Controls.Add(this.labelPassword);
@@ -189,5 +222,7 @@
         private System.Windows.Forms.Label labelStudent;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonExit;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonLogin;
+        private Guna.UI2.WinForms.Guna2Button guna2ButtonRegister;
+        private System.Windows.Forms.Label labelRegister;
     }
 }

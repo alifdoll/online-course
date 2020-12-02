@@ -65,6 +65,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormRegistrasiInstructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegistrasiInstructor.Designer.cs">
+      <DependentUpon>FormRegistrasiInstructor.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAddCourse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +167,12 @@
     <Compile Include="FormMenu.Designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRegistrasiStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegistrasiStudent.Designer.cs">
+      <DependentUpon>FormRegistrasiStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRemoveCourse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,6 +264,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegistrasiInstructor.resx">
+      <DependentUpon>FormRegistrasiInstructor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegistrasiStudent.resx">
+      <DependentUpon>FormRegistrasiStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRemoveCourse.resx">
       <DependentUpon>FormRemoveCourse.cs</DependentUpon>

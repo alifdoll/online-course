@@ -22,6 +22,7 @@ namespace Online_Course
             panelInstructor.Visible = false;
             panelStudent.Visible = false;
             panelTopic.Visible = false;
+            panelTranscation.Visible = false;
         }
 
         private void HideMenu()
@@ -34,6 +35,8 @@ namespace Online_Course
                 panelStudent.Visible = false;
             if (panelTopic.Visible == true)
                 panelTopic.Visible = false;
+            if (panelTranscation.Visible == true)
+                panelTranscation.Visible = false;
         }
 
         private void ShowMenu(Panel subMenu)

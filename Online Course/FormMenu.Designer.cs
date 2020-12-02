@@ -53,9 +53,10 @@
             this.buttonAddCourse = new System.Windows.Forms.Button();
             this.buttonCourse = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.labelSebagai = new System.Windows.Forms.Label();
             this.labelLogin = new System.Windows.Forms.Label();
             this.panelChildForm = new System.Windows.Forms.Panel();
-            this.labelSebagai = new System.Windows.Forms.Label();
+            this.guna2ButtonLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.panelTranscation.SuspendLayout();
             this.panelStudent.SuspendLayout();
@@ -69,6 +70,7 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.guna2ButtonLogOut);
             this.panel1.Controls.Add(this.panelTranscation);
             this.panel1.Controls.Add(this.buttonTransaction);
             this.panel1.Controls.Add(this.panelStudent);
@@ -380,7 +382,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel2.Controls.Add(this.labelSebagai);
             this.panel2.Controls.Add(this.labelLogin);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -388,6 +390,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 92);
             this.panel2.TabIndex = 1;
+            // 
+            // labelSebagai
+            // 
+            this.labelSebagai.AutoSize = true;
+            this.labelSebagai.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSebagai.Location = new System.Drawing.Point(14, 54);
+            this.labelSebagai.Name = "labelSebagai";
+            this.labelSebagai.Size = new System.Drawing.Size(61, 17);
+            this.labelSebagai.TabIndex = 1;
+            this.labelSebagai.Text = "LOGIN ";
             // 
             // labelLogin
             // 
@@ -402,21 +414,30 @@
             // panelChildForm
             // 
             this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(211)))), ((int)(((byte)(246)))));
+            this.panelChildForm.BackgroundImage = global::Online_Course.Properties.Resources.ramadhan8;
+            this.panelChildForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(200, 0);
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(600, 957);
             this.panelChildForm.TabIndex = 1;
             // 
-            // labelSebagai
+            // guna2ButtonLogOut
             // 
-            this.labelSebagai.AutoSize = true;
-            this.labelSebagai.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSebagai.Location = new System.Drawing.Point(14, 54);
-            this.labelSebagai.Name = "labelSebagai";
-            this.labelSebagai.Size = new System.Drawing.Size(61, 17);
-            this.labelSebagai.TabIndex = 1;
-            this.labelSebagai.Text = "LOGIN ";
+            this.guna2ButtonLogOut.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ButtonLogOut.BorderRadius = 22;
+            this.guna2ButtonLogOut.CheckedState.Parent = this.guna2ButtonLogOut;
+            this.guna2ButtonLogOut.CustomImages.Parent = this.guna2ButtonLogOut;
+            this.guna2ButtonLogOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(211)))), ((int)(((byte)(246)))));
+            this.guna2ButtonLogOut.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2ButtonLogOut.ForeColor = System.Drawing.Color.White;
+            this.guna2ButtonLogOut.HoverState.Parent = this.guna2ButtonLogOut;
+            this.guna2ButtonLogOut.Location = new System.Drawing.Point(34, 890);
+            this.guna2ButtonLogOut.Name = "guna2ButtonLogOut";
+            this.guna2ButtonLogOut.ShadowDecoration.Parent = this.guna2ButtonLogOut;
+            this.guna2ButtonLogOut.Size = new System.Drawing.Size(116, 41);
+            this.guna2ButtonLogOut.TabIndex = 79;
+            this.guna2ButtonLogOut.Text = "LOG OUT";
             // 
             // FormMenu
             // 
@@ -472,5 +493,6 @@
         private System.Windows.Forms.Button buttonRemoveStudent;
         private System.Windows.Forms.Label labelLogin;
         private System.Windows.Forms.Label labelSebagai;
+        private Guna.UI2.WinForms.Guna2Button guna2ButtonLogOut;
     }
 }
