@@ -69,5 +69,19 @@ namespace Online_Course
             guna2TextBoxUsername.Text = "alifdoll";
             guna2TextBoxPassword.Text = "alif123321";
         }
+
+        private void guna2ButtonRegister_Click(object sender, EventArgs e)
+        {
+            FormRegistrasiStudent formRegistrasiStudent = new FormRegistrasiStudent();
+            formRegistrasiStudent.FormClosed += delegate
+            {
+                if (session.Name != "")
+                {
+                    Owner.Enabled = true;
+                    this.Close();
+                }
+            };
+            formRegistrasiStudent.ShowDialog();
+        }
     }
 }
