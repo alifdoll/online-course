@@ -7,7 +7,7 @@ namespace Database
         public static void DML(string query)
         {
             DbConnect connect = new DbConnect();
-            connect.ConnecTotDB();
+            connect.ConnectTotDB();
             MySqlCommand command = new MySqlCommand(query, connect.Connection);
             command.ExecuteNonQuery();
         }
@@ -15,7 +15,7 @@ namespace Database
         public static MySqlDataReader Query(string query)
         {
             DbConnect connect = new DbConnect();
-            connect.ConnecTotDB();
+            connect.ConnectTotDB();
             MySqlCommand command = new MySqlCommand(query, connect.Connection);
             MySqlDataReader result = command.ExecuteReader();
             return result;

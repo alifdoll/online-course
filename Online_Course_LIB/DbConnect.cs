@@ -15,7 +15,7 @@ namespace Database
 
             Connection.ConnectionString = ConfigurationManager.ConnectionStrings["database"].ConnectionString;
 
-            ConnecTotDB();
+            ConnectTotDB();
         }
 
         public DbConnect(string server, string database, string username, string password)
@@ -34,11 +34,11 @@ namespace Database
             {
                 ConnectionString = connection
             };
-            ConnecTotDB();
+            ConnectTotDB();
             UpdateAppConfig(connection);
         }
 
-        public void ConnecTotDB()
+        public void ConnectTotDB()
         {
             if (Connection.State == System.Data.ConnectionState.Open)
             {
@@ -46,6 +46,11 @@ namespace Database
             }
 
             Connection.Open();
+        }
+
+        public void CloseConnection()
+        {
+            Connection.Close();
         }
 
         public void UpdateAppConfig(string connection)
