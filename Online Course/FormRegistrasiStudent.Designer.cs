@@ -36,9 +36,7 @@
             this.guna2ButtonExit = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ButtonRegister = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TextBoxAddNameStudent = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBoxAddIdStudent = new Guna.UI2.WinForms.Guna2TextBox();
             this.labelNameStudent = new System.Windows.Forms.Label();
-            this.labelIdStudent = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelAddStudent
@@ -68,7 +66,7 @@
             this.guna2TextBoxAddPasswordStudent.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBoxAddPasswordStudent.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxAddPasswordStudent.HoverState.Parent = this.guna2TextBoxAddPasswordStudent;
-            this.guna2TextBoxAddPasswordStudent.Location = new System.Drawing.Point(92, 338);
+            this.guna2TextBoxAddPasswordStudent.Location = new System.Drawing.Point(92, 240);
             this.guna2TextBoxAddPasswordStudent.Name = "guna2TextBoxAddPasswordStudent";
             this.guna2TextBoxAddPasswordStudent.PasswordChar = '*';
             this.guna2TextBoxAddPasswordStudent.PlaceholderText = "";
@@ -93,7 +91,7 @@
             this.guna2TextBoxAddUsernameStudent.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBoxAddUsernameStudent.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxAddUsernameStudent.HoverState.Parent = this.guna2TextBoxAddUsernameStudent;
-            this.guna2TextBoxAddUsernameStudent.Location = new System.Drawing.Point(92, 253);
+            this.guna2TextBoxAddUsernameStudent.Location = new System.Drawing.Point(92, 155);
             this.guna2TextBoxAddUsernameStudent.Name = "guna2TextBoxAddUsernameStudent";
             this.guna2TextBoxAddUsernameStudent.PasswordChar = '\0';
             this.guna2TextBoxAddUsernameStudent.PlaceholderText = "";
@@ -106,7 +104,7 @@
             // 
             this.labelPasswordStudent.AutoSize = true;
             this.labelPasswordStudent.BackColor = System.Drawing.Color.Transparent;
-            this.labelPasswordStudent.Location = new System.Drawing.Point(107, 306);
+            this.labelPasswordStudent.Location = new System.Drawing.Point(107, 208);
             this.labelPasswordStudent.Name = "labelPasswordStudent";
             this.labelPasswordStudent.Size = new System.Drawing.Size(69, 17);
             this.labelPasswordStudent.TabIndex = 68;
@@ -116,7 +114,7 @@
             // 
             this.labelUsernameStudent.AutoSize = true;
             this.labelUsernameStudent.BackColor = System.Drawing.Color.Transparent;
-            this.labelUsernameStudent.Location = new System.Drawing.Point(107, 222);
+            this.labelUsernameStudent.Location = new System.Drawing.Point(107, 124);
             this.labelUsernameStudent.Name = "labelUsernameStudent";
             this.labelUsernameStudent.Size = new System.Drawing.Size(73, 17);
             this.labelUsernameStudent.TabIndex = 67;
@@ -132,7 +130,7 @@
             this.guna2ButtonExit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2ButtonExit.ForeColor = System.Drawing.Color.White;
             this.guna2ButtonExit.HoverState.Parent = this.guna2ButtonExit;
-            this.guna2ButtonExit.Location = new System.Drawing.Point(287, 501);
+            this.guna2ButtonExit.Location = new System.Drawing.Point(287, 426);
             this.guna2ButtonExit.Name = "guna2ButtonExit";
             this.guna2ButtonExit.ShadowDecoration.Parent = this.guna2ButtonExit;
             this.guna2ButtonExit.Size = new System.Drawing.Size(135, 41);
@@ -150,7 +148,7 @@
             this.guna2ButtonRegister.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2ButtonRegister.ForeColor = System.Drawing.Color.White;
             this.guna2ButtonRegister.HoverState.Parent = this.guna2ButtonRegister;
-            this.guna2ButtonRegister.Location = new System.Drawing.Point(92, 501);
+            this.guna2ButtonRegister.Location = new System.Drawing.Point(92, 426);
             this.guna2ButtonRegister.Name = "guna2ButtonRegister";
             this.guna2ButtonRegister.ShadowDecoration.Parent = this.guna2ButtonRegister;
             this.guna2ButtonRegister.Size = new System.Drawing.Size(139, 41);
@@ -174,7 +172,7 @@
             this.guna2TextBoxAddNameStudent.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBoxAddNameStudent.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxAddNameStudent.HoverState.Parent = this.guna2TextBoxAddNameStudent;
-            this.guna2TextBoxAddNameStudent.Location = new System.Drawing.Point(92, 419);
+            this.guna2TextBoxAddNameStudent.Location = new System.Drawing.Point(92, 321);
             this.guna2TextBoxAddNameStudent.Name = "guna2TextBoxAddNameStudent";
             this.guna2TextBoxAddNameStudent.PasswordChar = '\0';
             this.guna2TextBoxAddNameStudent.PlaceholderText = "";
@@ -183,57 +181,21 @@
             this.guna2TextBoxAddNameStudent.Size = new System.Drawing.Size(330, 36);
             this.guna2TextBoxAddNameStudent.TabIndex = 64;
             // 
-            // guna2TextBoxAddIdStudent
-            // 
-            this.guna2TextBoxAddIdStudent.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBoxAddIdStudent.BorderRadius = 22;
-            this.guna2TextBoxAddIdStudent.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBoxAddIdStudent.DefaultText = "";
-            this.guna2TextBoxAddIdStudent.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBoxAddIdStudent.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBoxAddIdStudent.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxAddIdStudent.DisabledState.Parent = this.guna2TextBoxAddIdStudent;
-            this.guna2TextBoxAddIdStudent.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxAddIdStudent.Enabled = false;
-            this.guna2TextBoxAddIdStudent.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxAddIdStudent.FocusedState.Parent = this.guna2TextBoxAddIdStudent;
-            this.guna2TextBoxAddIdStudent.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBoxAddIdStudent.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxAddIdStudent.HoverState.Parent = this.guna2TextBoxAddIdStudent;
-            this.guna2TextBoxAddIdStudent.Location = new System.Drawing.Point(92, 171);
-            this.guna2TextBoxAddIdStudent.Name = "guna2TextBoxAddIdStudent";
-            this.guna2TextBoxAddIdStudent.PasswordChar = '\0';
-            this.guna2TextBoxAddIdStudent.PlaceholderText = "";
-            this.guna2TextBoxAddIdStudent.SelectedText = "";
-            this.guna2TextBoxAddIdStudent.ShadowDecoration.Parent = this.guna2TextBoxAddIdStudent;
-            this.guna2TextBoxAddIdStudent.Size = new System.Drawing.Size(330, 36);
-            this.guna2TextBoxAddIdStudent.TabIndex = 63;
-            // 
             // labelNameStudent
             // 
             this.labelNameStudent.AutoSize = true;
             this.labelNameStudent.BackColor = System.Drawing.Color.Transparent;
-            this.labelNameStudent.Location = new System.Drawing.Point(107, 390);
+            this.labelNameStudent.Location = new System.Drawing.Point(107, 292);
             this.labelNameStudent.Name = "labelNameStudent";
             this.labelNameStudent.Size = new System.Drawing.Size(45, 17);
             this.labelNameStudent.TabIndex = 62;
             this.labelNameStudent.Text = "Name";
             // 
-            // labelIdStudent
-            // 
-            this.labelIdStudent.AutoSize = true;
-            this.labelIdStudent.BackColor = System.Drawing.Color.Transparent;
-            this.labelIdStudent.Location = new System.Drawing.Point(107, 141);
-            this.labelIdStudent.Name = "labelIdStudent";
-            this.labelIdStudent.Size = new System.Drawing.Size(19, 17);
-            this.labelIdStudent.TabIndex = 61;
-            this.labelIdStudent.Text = "Id";
-            // 
             // FormRegistrasiStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(515, 598);
+            this.ClientSize = new System.Drawing.Size(515, 529);
             this.Controls.Add(this.labelAddStudent);
             this.Controls.Add(this.guna2TextBoxAddPasswordStudent);
             this.Controls.Add(this.guna2TextBoxAddUsernameStudent);
@@ -242,11 +204,10 @@
             this.Controls.Add(this.guna2ButtonExit);
             this.Controls.Add(this.guna2ButtonRegister);
             this.Controls.Add(this.guna2TextBoxAddNameStudent);
-            this.Controls.Add(this.guna2TextBoxAddIdStudent);
             this.Controls.Add(this.labelNameStudent);
-            this.Controls.Add(this.labelIdStudent);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormRegistrasiStudent";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormRegistrasiStudent";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -263,8 +224,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2ButtonExit;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonRegister;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxAddNameStudent;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxAddIdStudent;
         private System.Windows.Forms.Label labelNameStudent;
-        private System.Windows.Forms.Label labelIdStudent;
     }
 }

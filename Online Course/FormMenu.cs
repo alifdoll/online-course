@@ -203,10 +203,9 @@ namespace Online_Course
             MaximizeBox = false;
             MinimizeBox = false;
 
-
-
             IsMdiContainer = true;
             Enabled = false;
+
 
             FormLogin form = new FormLogin();
             form.Owner = this;
