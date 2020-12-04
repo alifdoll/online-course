@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2ButtonLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.panelTranscation = new System.Windows.Forms.Panel();
             this.buttonAddTransaction = new System.Windows.Forms.Button();
             this.buttonTransaction = new System.Windows.Forms.Button();
@@ -56,7 +57,6 @@
             this.labelSebagai = new System.Windows.Forms.Label();
             this.labelLogin = new System.Windows.Forms.Label();
             this.panelChildForm = new System.Windows.Forms.Panel();
-            this.guna2ButtonLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.panelTranscation.SuspendLayout();
             this.panelStudent.SuspendLayout();
@@ -87,6 +87,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 957);
             this.panel1.TabIndex = 0;
+            // 
+            // guna2ButtonLogOut
+            // 
+            this.guna2ButtonLogOut.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ButtonLogOut.BorderRadius = 22;
+            this.guna2ButtonLogOut.CheckedState.Parent = this.guna2ButtonLogOut;
+            this.guna2ButtonLogOut.CustomImages.Parent = this.guna2ButtonLogOut;
+            this.guna2ButtonLogOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(211)))), ((int)(((byte)(246)))));
+            this.guna2ButtonLogOut.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2ButtonLogOut.ForeColor = System.Drawing.Color.White;
+            this.guna2ButtonLogOut.HoverState.Parent = this.guna2ButtonLogOut;
+            this.guna2ButtonLogOut.Location = new System.Drawing.Point(34, 890);
+            this.guna2ButtonLogOut.Name = "guna2ButtonLogOut";
+            this.guna2ButtonLogOut.ShadowDecoration.Parent = this.guna2ButtonLogOut;
+            this.guna2ButtonLogOut.Size = new System.Drawing.Size(116, 41);
+            this.guna2ButtonLogOut.TabIndex = 79;
+            this.guna2ButtonLogOut.Text = "LOG OUT";
             // 
             // panelTranscation
             // 
@@ -414,30 +431,13 @@
             // panelChildForm
             // 
             this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(211)))), ((int)(((byte)(246)))));
-            this.panelChildForm.BackgroundImage = global::Online_Course.Properties.Resources.ramadhan8;
+            this.panelChildForm.BackgroundImage = global::Online_Course.Properties.Resources.background;
             this.panelChildForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(200, 0);
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(600, 957);
             this.panelChildForm.TabIndex = 1;
-            // 
-            // guna2ButtonLogOut
-            // 
-            this.guna2ButtonLogOut.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ButtonLogOut.BorderRadius = 22;
-            this.guna2ButtonLogOut.CheckedState.Parent = this.guna2ButtonLogOut;
-            this.guna2ButtonLogOut.CustomImages.Parent = this.guna2ButtonLogOut;
-            this.guna2ButtonLogOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(211)))), ((int)(((byte)(246)))));
-            this.guna2ButtonLogOut.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2ButtonLogOut.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonLogOut.HoverState.Parent = this.guna2ButtonLogOut;
-            this.guna2ButtonLogOut.Location = new System.Drawing.Point(34, 890);
-            this.guna2ButtonLogOut.Name = "guna2ButtonLogOut";
-            this.guna2ButtonLogOut.ShadowDecoration.Parent = this.guna2ButtonLogOut;
-            this.guna2ButtonLogOut.Size = new System.Drawing.Size(116, 41);
-            this.guna2ButtonLogOut.TabIndex = 79;
-            this.guna2ButtonLogOut.Text = "LOG OUT";
             // 
             // FormMenu
             // 
