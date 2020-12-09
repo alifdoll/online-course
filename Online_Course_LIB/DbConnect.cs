@@ -30,10 +30,10 @@ namespace Database
                 connection = $"Server={server};Database={database};Uid={username};";
             }
 
-            Connection = new MySqlConnection
-            {
-                ConnectionString = connection
-            };
+            Connection = new MySqlConnection();
+
+            Connection.ConnectionString = connection;
+
             ConnectTotDB();
             UpdateAppConfig(connection);
         }
@@ -43,14 +43,23 @@ namespace Database
             if (Connection.State == System.Data.ConnectionState.Open)
             {
                 Connection.Close();
+                Connection.Open();
+            }
+            else
+            {
+                Connection.Open();
             }
 
-            Connection.Open();
         }
 
         public void CloseConnection()
         {
             Connection.Close();
+        }
+
+        public void Exit()
+        {
+            Connection.Dispose();
         }
 
         public void UpdateAppConfig(string connection)

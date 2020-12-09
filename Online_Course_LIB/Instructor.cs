@@ -87,7 +87,7 @@ namespace Database
 
                 list.Add(instructor);
             }
-
+            Execute.CloseReader();
             return list;
         }
 
@@ -107,7 +107,7 @@ namespace Database
             {
                 pKey = 1;
             }
-
+            Execute.CloseReader();
             return pKey.ToString().PadLeft(2, '0');
         }
 

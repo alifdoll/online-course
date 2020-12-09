@@ -25,9 +25,11 @@ namespace Online_Course
                 if (session.Name != "")
                 {
                     Owner.Enabled = true;
+
                     this.Close();
                 }
             };
+
             formStudent.ShowDialog();
         }
 

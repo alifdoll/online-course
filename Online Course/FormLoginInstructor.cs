@@ -65,14 +65,6 @@ namespace Online_Course
         private void guna2ButtonRegister_Click(object sender, EventArgs e)
         {
             FormRegistrasiInstructor formRegistrasiInstructor = new FormRegistrasiInstructor();
-            formRegistrasiInstructor.FormClosed += delegate
-            {
-                if (session.Name != "")
-                {
-                    Owner.Enabled = true;
-                    this.Close();
-                }
-            };
             formRegistrasiInstructor.ShowDialog();
         }
     }

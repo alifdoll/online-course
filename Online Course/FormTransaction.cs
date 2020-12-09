@@ -21,20 +21,25 @@ namespace Online_Course
             dataGridViewSearch.Rows.Clear();
             foreach (NotaJual nota in listNota)
             {
-                dataGridViewSearch.Rows.Add(
-                    nota.NoNota,
-                    nota.Tanggal,
-                    nota.NotaJualDetil.Course.Id,
-                    nota.NotaJualDetil.Course.Name,
-                    nota.NotaJualDetil.Harga);
+                foreach(NotaJualDetil notaDetil in nota.ListNotaDetil)
+                {
+                    dataGridViewSearch.Rows.Add(
+                   nota.NoNota,
+                   nota.Tanggal,
+                   notaDetil.Course.Id,
+                   notaDetil.Course.Name,
+                   notaDetil.Harga);
+                }
+               
             }
         }
 
         private void FormTransaction_Load_1(object sender, EventArgs e)
         {
+            
             try
             {
-                listNota = nota.QueryData(studentId: session.Id);
+                listNota = nota.QueryData(session.Id);
                 if (listNota.Count > 0)
                 {
                     AssignData();
@@ -80,7 +85,7 @@ namespace Online_Course
                             break;
                     }
 
-                    listNota = nota.QueryData(criteria, guna2TextBoxSearch.Text, session.Id);
+                    listNota = nota.QueryData(session.Id, criteria, guna2TextBoxSearch.Text);
                     if (listNota.Count > 0)
                     {
                         AssignData();

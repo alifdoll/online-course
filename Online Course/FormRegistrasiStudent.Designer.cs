@@ -47,7 +47,7 @@
             this.labelAddStudent.Location = new System.Drawing.Point(100, 54);
             this.labelAddStudent.Name = "labelAddStudent";
             this.labelAddStudent.Size = new System.Drawing.Size(317, 40);
-            this.labelAddStudent.TabIndex = 71;
+            this.labelAddStudent.TabIndex = 0;
             this.labelAddStudent.Text = "REGISTER STUDENT";
             // 
             // guna2TextBoxAddPasswordStudent
@@ -73,7 +73,7 @@
             this.guna2TextBoxAddPasswordStudent.SelectedText = "";
             this.guna2TextBoxAddPasswordStudent.ShadowDecoration.Parent = this.guna2TextBoxAddPasswordStudent;
             this.guna2TextBoxAddPasswordStudent.Size = new System.Drawing.Size(330, 36);
-            this.guna2TextBoxAddPasswordStudent.TabIndex = 70;
+            this.guna2TextBoxAddPasswordStudent.TabIndex = 4;
             // 
             // guna2TextBoxAddUsernameStudent
             // 
@@ -98,7 +98,7 @@
             this.guna2TextBoxAddUsernameStudent.SelectedText = "";
             this.guna2TextBoxAddUsernameStudent.ShadowDecoration.Parent = this.guna2TextBoxAddUsernameStudent;
             this.guna2TextBoxAddUsernameStudent.Size = new System.Drawing.Size(327, 36);
-            this.guna2TextBoxAddUsernameStudent.TabIndex = 69;
+            this.guna2TextBoxAddUsernameStudent.TabIndex = 2;
             // 
             // labelPasswordStudent
             // 
@@ -107,7 +107,7 @@
             this.labelPasswordStudent.Location = new System.Drawing.Point(107, 208);
             this.labelPasswordStudent.Name = "labelPasswordStudent";
             this.labelPasswordStudent.Size = new System.Drawing.Size(69, 17);
-            this.labelPasswordStudent.TabIndex = 68;
+            this.labelPasswordStudent.TabIndex = 3;
             this.labelPasswordStudent.Text = "Password";
             // 
             // labelUsernameStudent
@@ -117,7 +117,7 @@
             this.labelUsernameStudent.Location = new System.Drawing.Point(107, 124);
             this.labelUsernameStudent.Name = "labelUsernameStudent";
             this.labelUsernameStudent.Size = new System.Drawing.Size(73, 17);
-            this.labelUsernameStudent.TabIndex = 67;
+            this.labelUsernameStudent.TabIndex = 1;
             this.labelUsernameStudent.Text = "Username";
             // 
             // guna2ButtonExit
@@ -134,7 +134,7 @@
             this.guna2ButtonExit.Name = "guna2ButtonExit";
             this.guna2ButtonExit.ShadowDecoration.Parent = this.guna2ButtonExit;
             this.guna2ButtonExit.Size = new System.Drawing.Size(135, 41);
-            this.guna2ButtonExit.TabIndex = 66;
+            this.guna2ButtonExit.TabIndex = 8;
             this.guna2ButtonExit.Text = "EXIT";
             this.guna2ButtonExit.Click += new System.EventHandler(this.guna2ButtonExit_Click);
             // 
@@ -152,7 +152,7 @@
             this.guna2ButtonRegister.Name = "guna2ButtonRegister";
             this.guna2ButtonRegister.ShadowDecoration.Parent = this.guna2ButtonRegister;
             this.guna2ButtonRegister.Size = new System.Drawing.Size(139, 41);
-            this.guna2ButtonRegister.TabIndex = 65;
+            this.guna2ButtonRegister.TabIndex = 7;
             this.guna2ButtonRegister.Text = "REGISTER";
             this.guna2ButtonRegister.Click += new System.EventHandler(this.guna2ButtonRegister_Click);
             // 
@@ -179,7 +179,7 @@
             this.guna2TextBoxAddNameStudent.SelectedText = "";
             this.guna2TextBoxAddNameStudent.ShadowDecoration.Parent = this.guna2TextBoxAddNameStudent;
             this.guna2TextBoxAddNameStudent.Size = new System.Drawing.Size(330, 36);
-            this.guna2TextBoxAddNameStudent.TabIndex = 64;
+            this.guna2TextBoxAddNameStudent.TabIndex = 6;
             // 
             // labelNameStudent
             // 
@@ -188,7 +188,7 @@
             this.labelNameStudent.Location = new System.Drawing.Point(107, 292);
             this.labelNameStudent.Name = "labelNameStudent";
             this.labelNameStudent.Size = new System.Drawing.Size(45, 17);
-            this.labelNameStudent.TabIndex = 62;
+            this.labelNameStudent.TabIndex = 5;
             this.labelNameStudent.Text = "Name";
             // 
             // FormRegistrasiStudent

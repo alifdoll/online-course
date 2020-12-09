@@ -19,7 +19,20 @@ namespace Online_Course
 
         private void FormCourse_Load(object sender, EventArgs e)
         {
-            list = course.QueryData("instructor.id", session.Id);
+            if(session.User == "Instructor")
+            {
+                list = course.QueryData("instructor.id", session.Id);
+               
+            }
+            else if(session.User == "Student")
+            {
+                list = course.StudentCourse(session.Id);
+            }
+            else
+            {
+                list = course.QueryData();
+            }
+
             CustomGrid();
 
         }
@@ -56,27 +69,27 @@ namespace Online_Course
             switch (guna2ComboBoxSearch.Text)
             {
                 case "Course Id":
-                    list = course.QueryData("course.id", guna2TextBoxSearch.Text, session.Id);
+                    list = course.InstructorCourse("course.id", guna2TextBoxSearch.Text, session.Id);
                     break;
 
                 case "Course Name":
-                    list = course.QueryData("course.nama", guna2TextBoxSearch.Text, session.Id);
+                    list = course.InstructorCourse("course.nama", guna2TextBoxSearch.Text, session.Id);
                     break;
 
                 case "Language":
-                    list = course.QueryData("language", guna2TextBoxSearch.Text, session.Id);
+                    list = course.InstructorCourse("language", guna2TextBoxSearch.Text, session.Id);
                     break;
 
                 case "Price":
-                    list = course.QueryData("harga", guna2TextBoxSearch.Text, session.Id);
+                    list = course.InstructorCourse("harga", guna2TextBoxSearch.Text, session.Id);
                     break;
 
                 case "Topic Name":
-                    list = course.QueryData("topic.nama", guna2TextBoxSearch.Text, session.Id);
+                    list = course.InstructorCourse("topic.nama", guna2TextBoxSearch.Text, session.Id);
                     break;
 
                 default:
-                    list = course.QueryData("instructor.nama", guna2TextBoxSearch.Text, session.Id);
+                    list = course.InstructorCourse("instructor.nama", guna2TextBoxSearch.Text, session.Id);
                     break;
             }
 

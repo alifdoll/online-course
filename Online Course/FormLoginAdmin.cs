@@ -49,9 +49,10 @@ namespace Online_Course
             form.FormLogin_Load(guna2ButtonLogin, e);
         }
 
-        private void FormLoginAdmin_Load(object sender, EventArgs e)
+        private void FormLoginAdmin_Load_1(object sender, EventArgs e)
         {
-            StartPosition = FormStartPosition.CenterScreen;
+            guna2TextBoxUsername.Text = "o_course_admin";
+            guna2TextBoxPassword.Text = "admin";
         }
     }
 }

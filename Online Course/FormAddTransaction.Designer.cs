@@ -35,7 +35,7 @@
             this.labelCourse = new System.Windows.Forms.Label();
             this.labelDate = new System.Windows.Forms.Label();
             this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.guna2ButtonAdd = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ButtonSave = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TextBoxHarga = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewSearch = new System.Windows.Forms.DataGridView();
@@ -44,6 +44,8 @@
             this.id_course = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nama = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.harga = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guna2ButtonAdd = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ButtonPrint = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSearch)).BeginInit();
             this.SuspendLayout();
             // 
@@ -161,22 +163,22 @@
             this.guna2DateTimePicker1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.guna2DateTimePicker1.Value = new System.DateTime(2020, 11, 21, 23, 34, 28, 303);
             // 
-            // guna2ButtonAdd
+            // guna2ButtonSave
             // 
-            this.guna2ButtonAdd.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ButtonAdd.BorderRadius = 18;
-            this.guna2ButtonAdd.CheckedState.Parent = this.guna2ButtonAdd;
-            this.guna2ButtonAdd.CustomImages.Parent = this.guna2ButtonAdd;
-            this.guna2ButtonAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2ButtonAdd.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonAdd.HoverState.Parent = this.guna2ButtonAdd;
-            this.guna2ButtonAdd.Location = new System.Drawing.Point(210, 325);
-            this.guna2ButtonAdd.Name = "guna2ButtonAdd";
-            this.guna2ButtonAdd.ShadowDecoration.Parent = this.guna2ButtonAdd;
-            this.guna2ButtonAdd.Size = new System.Drawing.Size(180, 45);
-            this.guna2ButtonAdd.TabIndex = 100;
-            this.guna2ButtonAdd.Text = "ADD";
-            this.guna2ButtonAdd.Click += new System.EventHandler(this.guna2ButtonAdd_Click);
+            this.guna2ButtonSave.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ButtonSave.BorderRadius = 18;
+            this.guna2ButtonSave.CheckedState.Parent = this.guna2ButtonSave;
+            this.guna2ButtonSave.CustomImages.Parent = this.guna2ButtonSave;
+            this.guna2ButtonSave.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2ButtonSave.ForeColor = System.Drawing.Color.White;
+            this.guna2ButtonSave.HoverState.Parent = this.guna2ButtonSave;
+            this.guna2ButtonSave.Location = new System.Drawing.Point(366, 325);
+            this.guna2ButtonSave.Name = "guna2ButtonSave";
+            this.guna2ButtonSave.ShadowDecoration.Parent = this.guna2ButtonSave;
+            this.guna2ButtonSave.Size = new System.Drawing.Size(180, 45);
+            this.guna2ButtonSave.TabIndex = 100;
+            this.guna2ButtonSave.Text = "SAVE";
+            this.guna2ButtonSave.Click += new System.EventHandler(this.guna2ButtonAdd_Click);
             // 
             // guna2TextBoxHarga
             // 
@@ -266,17 +268,53 @@
             this.harga.Name = "harga";
             this.harga.Width = 125;
             // 
+            // guna2ButtonAdd
+            // 
+            this.guna2ButtonAdd.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ButtonAdd.BorderRadius = 18;
+            this.guna2ButtonAdd.CheckedState.Parent = this.guna2ButtonAdd;
+            this.guna2ButtonAdd.CustomImages.Parent = this.guna2ButtonAdd;
+            this.guna2ButtonAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2ButtonAdd.ForeColor = System.Drawing.Color.White;
+            this.guna2ButtonAdd.HoverState.Parent = this.guna2ButtonAdd;
+            this.guna2ButtonAdd.Location = new System.Drawing.Point(158, 325);
+            this.guna2ButtonAdd.Name = "guna2ButtonAdd";
+            this.guna2ButtonAdd.ShadowDecoration.Parent = this.guna2ButtonAdd;
+            this.guna2ButtonAdd.Size = new System.Drawing.Size(180, 45);
+            this.guna2ButtonAdd.TabIndex = 105;
+            this.guna2ButtonAdd.Text = "ADD";
+            this.guna2ButtonAdd.Click += new System.EventHandler(this.guna2ButtonAdd_Click_1);
+            // 
+            // guna2ButtonPrint
+            // 
+            this.guna2ButtonPrint.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ButtonPrint.BorderRadius = 18;
+            this.guna2ButtonPrint.CheckedState.Parent = this.guna2ButtonPrint;
+            this.guna2ButtonPrint.CustomImages.Parent = this.guna2ButtonPrint;
+            this.guna2ButtonPrint.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2ButtonPrint.ForeColor = System.Drawing.Color.White;
+            this.guna2ButtonPrint.HoverState.Parent = this.guna2ButtonPrint;
+            this.guna2ButtonPrint.Location = new System.Drawing.Point(229, 712);
+            this.guna2ButtonPrint.Name = "guna2ButtonPrint";
+            this.guna2ButtonPrint.ShadowDecoration.Parent = this.guna2ButtonPrint;
+            this.guna2ButtonPrint.Size = new System.Drawing.Size(180, 45);
+            this.guna2ButtonPrint.TabIndex = 106;
+            this.guna2ButtonPrint.Text = "PRINT";
+            this.guna2ButtonPrint.Click += new System.EventHandler(this.guna2ButtonPrint_Click);
+            // 
             // FormAddTransaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Online_Course.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(582, 706);
+            this.ClientSize = new System.Drawing.Size(582, 760);
+            this.Controls.Add(this.guna2ButtonPrint);
+            this.Controls.Add(this.guna2ButtonAdd);
             this.Controls.Add(this.dataGridViewSearch);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2TextBoxHarga);
-            this.Controls.Add(this.guna2ButtonAdd);
+            this.Controls.Add(this.guna2ButtonSave);
             this.Controls.Add(this.guna2DateTimePicker1);
             this.Controls.Add(this.labelDate);
             this.Controls.Add(this.guna2ComboBoxCourse);
@@ -301,7 +339,7 @@
         private System.Windows.Forms.Label labelCourse;
         private System.Windows.Forms.Label labelDate;
         private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
-        private Guna.UI2.WinForms.Guna2Button guna2ButtonAdd;
+        private Guna.UI2.WinForms.Guna2Button guna2ButtonSave;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxHarga;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridViewSearch;
@@ -310,5 +348,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn id_course;
         private System.Windows.Forms.DataGridViewTextBoxColumn nama;
         private System.Windows.Forms.DataGridViewTextBoxColumn harga;
+        private Guna.UI2.WinForms.Guna2Button guna2ButtonAdd;
+        private Guna.UI2.WinForms.Guna2Button guna2ButtonPrint;
     }
 }

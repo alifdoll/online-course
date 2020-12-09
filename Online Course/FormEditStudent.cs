@@ -16,20 +16,7 @@ namespace Online_Course
 
         private void guna2TextBoxEditIdStudent_TextChanged(object sender, EventArgs e)
         {
-            if (guna2TextBoxEditIdStudent.Text.Length <= 2)
-            {
-                list = student.QueryData("id", guna2TextBoxEditIdStudent.Text);
-                if (list.Count > 0)
-                {
-                    guna2TextBoxEditNameStudent.Text = ((Student)list[0]).Name;
-                    guna2TextBoxEditUsernameStudent.Text = ((Student)list[0]).Username;
-                    guna2TextBoxEditPasswordStudent.Text = ((Student)list[0]).GetPass();
-                }
-                else
-                {
-                    MessageBox.Show($"Data Tidak Ditemukan", "Error");
-                }
-            }
+           
         }
 
         private void guna2ButtonAdd_Click(object sender, EventArgs e)
@@ -59,6 +46,21 @@ namespace Online_Course
             guna2TextBoxEditUsernameStudent.Clear();
             guna2TextBoxEditPasswordStudent.Clear();
             guna2TextBoxEditNameStudent.Clear();
+        }
+
+        private void FormEditStudent_Load(object sender, EventArgs e)
+        {
+            list = student.QueryData("student.id", Session.Instance.Id);
+            if (list.Count > 0)
+            {
+                guna2TextBoxEditNameStudent.Text = ((Student)list[0]).Name;
+                guna2TextBoxEditUsernameStudent.Text = ((Student)list[0]).Username;
+                guna2TextBoxEditPasswordStudent.Text = ((Student)list[0]).GetPass();
+            }
+            else
+            {
+                MessageBox.Show($"Data Tidak Ditemukan", "Error");
+            }
         }
     }
 }
