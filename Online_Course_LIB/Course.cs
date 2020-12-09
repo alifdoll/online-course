@@ -134,7 +134,7 @@ namespace Database
                     "FROM course " +
                     "INNER JOIN topic on course.id_topic = topic.id " +
                     "INNER JOIN instructor on course.id_instructor = instructor.id " +
-                    $"WHERE {criteria} LIKE '%{value}%' AND instructor.id LIKE '%{value}%'";
+                    $"WHERE {criteria} LIKE '%{value}%' ";
             }
 
             MySqlDataReader result = Execute.Query(command);
@@ -159,11 +159,11 @@ namespace Database
 
                 list.Add(course);
             }
-
+            Execute.CloseReader();
             return list;
         }
 
-        public ArrayList QueryData(string criteria = "", string value = "", string instructorId = "")
+        public ArrayList InstructorCourse(string criteria = "", string value = "", string instructorId = "")
         {
             string command =
                     "SELECT course.id, course.nama, course.description, course.language, course.harga, course.release_date, course.id_topic, topic.nama, course.id_instructor, instructor.nama " +
@@ -195,7 +195,45 @@ namespace Database
 
                 list.Add(course);
             }
+            Execute.CloseReader();
+            return list;
+        }
 
+        public ArrayList StudentCourse(string studentId = "")
+        {
+            string command =
+                    "SELECT course.id, course.nama, course.description, course.language, course.harga, course.release_date, course.id_topic, topic.nama, course.id_instructor, instructor.nama " +
+                    "FROM course " +
+                    "INNER JOIN topic on course.id_topic = topic.id " +
+                    "INNER JOIN instructor on course.id_instructor = instructor.id " +
+                    "INNER JOIN enroll on course.id = enroll.id_course " +
+                    "INNER JOIN student on enroll.id_student = student.id " +
+                    $"WHERE student.id LIKE '%{studentId}%' ";
+           
+
+            MySqlDataReader result = Execute.Query(command);
+
+            ArrayList list = new ArrayList();
+
+            while (result.Read() == true)
+            {
+                Topic topic = new Topic(result.GetValue(6).ToString(), result.GetValue(7).ToString());
+
+                Instructor instructor = new Instructor(result.GetValue(8).ToString(), result.GetValue(9).ToString());
+
+                Course course = new Course(
+                    result.GetValue(0).ToString(),
+                    result.GetValue(1).ToString(),
+                    result.GetValue(2).ToString(),
+                    result.GetValue(3).ToString(),
+                    result.GetDouble(4),
+                    result.GetDateTime(5),
+                    topic,
+                    instructor);
+
+                list.Add(course);
+            }
+            Execute.CloseReader();
             return list;
         }
 

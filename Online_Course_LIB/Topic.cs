@@ -74,7 +74,7 @@ namespace Database
                 Topic topic = new Topic(result.GetValue(0).ToString(), result.GetValue(1).ToString());
                 list.Add(topic);
             }
-
+            Execute.CloseReader();
             return list;
         }
 
@@ -96,6 +96,7 @@ namespace Database
                 pKey = 1;
             }
             string newId = pKey.ToString().PadLeft(2, '0');
+            Execute.CloseReader();
             return newId;
         }
         #endregion

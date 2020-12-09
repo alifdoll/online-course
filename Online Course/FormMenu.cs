@@ -37,6 +37,7 @@ namespace Online_Course
                 panelTopic.Visible = false;
             if (panelTranscation.Visible == true)
                 panelTranscation.Visible = false;
+
         }
 
         private void ShowMenu(Panel subMenu)
@@ -198,7 +199,7 @@ namespace Online_Course
 
         private void FormMenu_Load(object sender, EventArgs e)
         {
-
+            panelChildForm.Refresh();
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             MinimizeBox = false;
@@ -214,27 +215,51 @@ namespace Online_Course
 
         private void FormMenu_EnabledChanged(object sender, EventArgs e)
         {
+            
+            string name = session.Name;
+            if(name.Length > 11)
+            {
+                name = name.Substring(0, 11);
+            }
+
             if (session.User == "Student")
             {
-                buttonCourse.Enabled = false;
-                buttonInstructor.Enabled = false;
+                buttonStudent_Click(this, e);
                 buttonTopic.Enabled = false;
+                buttonInstructor.Enabled = false;
+
+                buttonStudent.Enabled = true;
                 buttonRemoveStudent.Enabled = false;
-                buttonEditStudent.Enabled = false;
-                labelLogin.Text = $"{session.Name.Substring(0, 11)}";
+                buttonAddStudent.Enabled = false;
+
+                buttonAddCourse.Enabled = false;
+                buttonEditCourse.Enabled = false;
+                buttonRemoveCourse.Enabled = false;
+                buttonTransaction.Enabled = true;
+                labelLogin.Text = name;
                 labelSebagai.Text = $"{session.User}";
             }
             else if (session.User == "Instructor")
             {
+                buttonInstructor_Click(this, e);
+                
                 buttonCourse.Enabled = true;
+                buttonAddCourse.Enabled = true;
+                buttonEditCourse.Enabled = true;
+                buttonRemoveCourse.Enabled = true;
+
                 buttonInstructor.Enabled = true;
                 buttonRemoveInstructor.Enabled = false;
+
                 buttonStudent.Enabled = false;
+
                 buttonTransaction.Enabled = false;
                 buttonAddTransaction.Enabled = false;
+                
                 buttonTopic.Enabled = false;
+                
                 buttonAddInstructor.Enabled = false;
-                labelLogin.Text = $"{session.Name.Substring(0, 5)}";
+                labelLogin.Text = name;
                 labelSebagai.Text = $"{session.User}";
             }
             else
@@ -242,6 +267,13 @@ namespace Online_Course
                 labelLogin.Text = $"{session.Name}";
                 labelSebagai.Text = $"{session.User}";
             }
+        }
+
+        private void buttonLogOut_Click(object sender, EventArgs e)
+        {
+            Login.CloseConnection();
+            Session.Instance.SessionClear();
+            FormMenu_Load(buttonLogOut, e);
         }
     }
 }

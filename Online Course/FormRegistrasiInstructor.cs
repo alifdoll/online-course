@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,37 @@ namespace Online_Course
         private void guna2ButtonExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void guna2ButtonRegister_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Login.AdminLogin();
+
+                Instructor instructor = new Instructor(
+                    "",
+                    guna2TextBoxAddNameInstructor.Text,
+                    guna2TextBoxAddBioInstructor.Text,
+                    guna2TextBoxAddUsernameInstructor.Text,
+                    guna2TextBoxAddPasswordInstructor.Text);
+
+                string id = instructor.GeneratePrimaryKey();
+
+                instructor.Id = id;
+
+                instructor.Insert();
+
+                Login.CloseConnection();
+
+                MessageBox.Show("Berhasil Registrasi", "Info");
+
+                this.Close();
+            }
+            catch(Exception error)
+            {
+                MessageBox.Show($"Gagal Regsitrasi, Error : {error.Message}", "Error");
+            }
         }
     }
 }

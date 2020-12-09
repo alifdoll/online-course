@@ -173,6 +173,7 @@
             this.Name = "FormLoginAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLoginAdmin";
+            this.Load += new System.EventHandler(this.FormLoginAdmin_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

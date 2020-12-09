@@ -6,7 +6,7 @@ namespace Database
     {
         void Insert();
 
-        ArrayList QueryData(string criteria = "", string value1 = "", string value2 = "");
+        ArrayList QueryData(string studentId, string criteria = "", string value = "");
 
         string GenerateNoNota(string id);
 
