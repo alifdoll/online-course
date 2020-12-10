@@ -31,7 +31,7 @@ namespace Database
 
         public static string InstructorLogin(string username, string password)
         {
-            DbConnect dbConnect = new DbConnect("127.0.0.1", "online_course", "o_course_instructor", "instructor");
+            DbConnect dbConnect = new DbConnect("127.0.0.1", "online_course", "o_course_instruc", "instructor");
             string instruct = "";
 
             string command = $"SELECT * FROM Instructor WHERE username='{username}' AND password='{password}'";
@@ -64,7 +64,7 @@ namespace Database
 
             if(connect.Connection.State == System.Data.ConnectionState.Open)
             {
-                connect.CloseConnection();
+                //connect.CloseConnection();
                 connect.Exit();
             }
 
