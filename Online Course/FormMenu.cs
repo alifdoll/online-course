@@ -229,6 +229,7 @@ namespace Online_Course
                 buttonInstructor.Enabled = false;
 
                 buttonStudent.Enabled = true;
+                buttonEditStudent.Enabled = true;
                 buttonRemoveStudent.Enabled = false;
                 buttonAddStudent.Enabled = false;
 
@@ -266,6 +267,26 @@ namespace Online_Course
             {
                 labelLogin.Text = $"{session.Name}";
                 labelSebagai.Text = $"{session.User}";
+
+                buttonCourse.Enabled = true;
+                buttonAddCourse.Enabled = false;
+                buttonEditCourse.Enabled = false;
+                buttonRemoveCourse.Enabled = false;
+
+                buttonStudent.Enabled = true;
+                buttonAddStudent.Enabled = false;
+                buttonEditStudent.Enabled = false;
+                buttonRemoveStudent.Enabled = false;
+
+                buttonTopic.Enabled = true;
+
+                buttonInstructor.Enabled = true;
+                buttonAddInstructor.Enabled = false;
+                buttonEditInstructor.Enabled = false;
+                buttonRemoveInstructor.Enabled = false;
+
+                buttonTransaction.Enabled = false;
+                buttonAddTransaction.Enabled = false;
             }
         }
 

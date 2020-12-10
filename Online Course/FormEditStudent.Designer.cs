@@ -36,9 +36,7 @@
             this.guna2ButtonClear = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ButtonAdd = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TextBoxEditNameStudent = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBoxEditIdStudent = new Guna.UI2.WinForms.Guna2TextBox();
             this.labelNameStudent = new System.Windows.Forms.Label();
-            this.labelIdStudent = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelEditStudent
@@ -68,7 +66,7 @@
             this.guna2TextBoxEditPasswordStudent.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBoxEditPasswordStudent.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxEditPasswordStudent.HoverState.Parent = this.guna2TextBoxEditPasswordStudent;
-            this.guna2TextBoxEditPasswordStudent.Location = new System.Drawing.Point(129, 318);
+            this.guna2TextBoxEditPasswordStudent.Location = new System.Drawing.Point(135, 246);
             this.guna2TextBoxEditPasswordStudent.Name = "guna2TextBoxEditPasswordStudent";
             this.guna2TextBoxEditPasswordStudent.PasswordChar = '*';
             this.guna2TextBoxEditPasswordStudent.PlaceholderText = "";
@@ -93,7 +91,7 @@
             this.guna2TextBoxEditUsernameStudent.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBoxEditUsernameStudent.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxEditUsernameStudent.HoverState.Parent = this.guna2TextBoxEditUsernameStudent;
-            this.guna2TextBoxEditUsernameStudent.Location = new System.Drawing.Point(129, 233);
+            this.guna2TextBoxEditUsernameStudent.Location = new System.Drawing.Point(135, 161);
             this.guna2TextBoxEditUsernameStudent.Name = "guna2TextBoxEditUsernameStudent";
             this.guna2TextBoxEditUsernameStudent.PasswordChar = '\0';
             this.guna2TextBoxEditUsernameStudent.PlaceholderText = "";
@@ -106,7 +104,7 @@
             // 
             this.labelPasswordStudent.AutoSize = true;
             this.labelPasswordStudent.BackColor = System.Drawing.Color.Transparent;
-            this.labelPasswordStudent.Location = new System.Drawing.Point(144, 286);
+            this.labelPasswordStudent.Location = new System.Drawing.Point(150, 214);
             this.labelPasswordStudent.Name = "labelPasswordStudent";
             this.labelPasswordStudent.Size = new System.Drawing.Size(69, 17);
             this.labelPasswordStudent.TabIndex = 69;
@@ -116,7 +114,7 @@
             // 
             this.labelUsernameStudent.AutoSize = true;
             this.labelUsernameStudent.BackColor = System.Drawing.Color.Transparent;
-            this.labelUsernameStudent.Location = new System.Drawing.Point(144, 202);
+            this.labelUsernameStudent.Location = new System.Drawing.Point(150, 130);
             this.labelUsernameStudent.Name = "labelUsernameStudent";
             this.labelUsernameStudent.Size = new System.Drawing.Size(73, 17);
             this.labelUsernameStudent.TabIndex = 68;
@@ -132,7 +130,7 @@
             this.guna2ButtonClear.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2ButtonClear.ForeColor = System.Drawing.Color.White;
             this.guna2ButtonClear.HoverState.Parent = this.guna2ButtonClear;
-            this.guna2ButtonClear.Location = new System.Drawing.Point(372, 466);
+            this.guna2ButtonClear.Location = new System.Drawing.Point(378, 394);
             this.guna2ButtonClear.Name = "guna2ButtonClear";
             this.guna2ButtonClear.ShadowDecoration.Parent = this.guna2ButtonClear;
             this.guna2ButtonClear.Size = new System.Drawing.Size(84, 41);
@@ -150,7 +148,7 @@
             this.guna2ButtonAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2ButtonAdd.ForeColor = System.Drawing.Color.White;
             this.guna2ButtonAdd.HoverState.Parent = this.guna2ButtonAdd;
-            this.guna2ButtonAdd.Location = new System.Drawing.Point(129, 466);
+            this.guna2ButtonAdd.Location = new System.Drawing.Point(135, 394);
             this.guna2ButtonAdd.Name = "guna2ButtonAdd";
             this.guna2ButtonAdd.ShadowDecoration.Parent = this.guna2ButtonAdd;
             this.guna2ButtonAdd.Size = new System.Drawing.Size(84, 41);
@@ -174,7 +172,7 @@
             this.guna2TextBoxEditNameStudent.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBoxEditNameStudent.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxEditNameStudent.HoverState.Parent = this.guna2TextBoxEditNameStudent;
-            this.guna2TextBoxEditNameStudent.Location = new System.Drawing.Point(129, 399);
+            this.guna2TextBoxEditNameStudent.Location = new System.Drawing.Point(135, 327);
             this.guna2TextBoxEditNameStudent.Name = "guna2TextBoxEditNameStudent";
             this.guna2TextBoxEditNameStudent.PasswordChar = '\0';
             this.guna2TextBoxEditNameStudent.PlaceholderText = "";
@@ -183,53 +181,15 @@
             this.guna2TextBoxEditNameStudent.Size = new System.Drawing.Size(330, 36);
             this.guna2TextBoxEditNameStudent.TabIndex = 65;
             // 
-            // guna2TextBoxEditIdStudent
-            // 
-            this.guna2TextBoxEditIdStudent.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBoxEditIdStudent.BorderRadius = 22;
-            this.guna2TextBoxEditIdStudent.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBoxEditIdStudent.DefaultText = "";
-            this.guna2TextBoxEditIdStudent.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBoxEditIdStudent.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBoxEditIdStudent.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxEditIdStudent.DisabledState.Parent = this.guna2TextBoxEditIdStudent;
-            this.guna2TextBoxEditIdStudent.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxEditIdStudent.Enabled = false;
-            this.guna2TextBoxEditIdStudent.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxEditIdStudent.FocusedState.Parent = this.guna2TextBoxEditIdStudent;
-            this.guna2TextBoxEditIdStudent.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBoxEditIdStudent.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxEditIdStudent.HoverState.Parent = this.guna2TextBoxEditIdStudent;
-            this.guna2TextBoxEditIdStudent.Location = new System.Drawing.Point(129, 151);
-            this.guna2TextBoxEditIdStudent.MaxLength = 2;
-            this.guna2TextBoxEditIdStudent.Name = "guna2TextBoxEditIdStudent";
-            this.guna2TextBoxEditIdStudent.PasswordChar = '\0';
-            this.guna2TextBoxEditIdStudent.PlaceholderText = "";
-            this.guna2TextBoxEditIdStudent.SelectedText = "";
-            this.guna2TextBoxEditIdStudent.ShadowDecoration.Parent = this.guna2TextBoxEditIdStudent;
-            this.guna2TextBoxEditIdStudent.Size = new System.Drawing.Size(330, 36);
-            this.guna2TextBoxEditIdStudent.TabIndex = 64;
-            this.guna2TextBoxEditIdStudent.TextChanged += new System.EventHandler(this.guna2TextBoxEditIdStudent_TextChanged);
-            // 
             // labelNameStudent
             // 
             this.labelNameStudent.AutoSize = true;
             this.labelNameStudent.BackColor = System.Drawing.Color.Transparent;
-            this.labelNameStudent.Location = new System.Drawing.Point(144, 370);
+            this.labelNameStudent.Location = new System.Drawing.Point(150, 298);
             this.labelNameStudent.Name = "labelNameStudent";
             this.labelNameStudent.Size = new System.Drawing.Size(45, 17);
             this.labelNameStudent.TabIndex = 63;
             this.labelNameStudent.Text = "Name";
-            // 
-            // labelIdStudent
-            // 
-            this.labelIdStudent.AutoSize = true;
-            this.labelIdStudent.BackColor = System.Drawing.Color.Transparent;
-            this.labelIdStudent.Location = new System.Drawing.Point(144, 121);
-            this.labelIdStudent.Name = "labelIdStudent";
-            this.labelIdStudent.Size = new System.Drawing.Size(19, 17);
-            this.labelIdStudent.TabIndex = 62;
-            this.labelIdStudent.Text = "Id";
             // 
             // FormEditStudent
             // 
@@ -247,9 +207,7 @@
             this.Controls.Add(this.guna2ButtonClear);
             this.Controls.Add(this.guna2ButtonAdd);
             this.Controls.Add(this.guna2TextBoxEditNameStudent);
-            this.Controls.Add(this.guna2TextBoxEditIdStudent);
             this.Controls.Add(this.labelNameStudent);
-            this.Controls.Add(this.labelIdStudent);
             this.Name = "FormEditStudent";
             this.Text = "FormEditStudent";
             this.Load += new System.EventHandler(this.FormEditStudent_Load);
@@ -267,8 +225,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2ButtonClear;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonAdd;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxEditNameStudent;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxEditIdStudent;
         private System.Windows.Forms.Label labelNameStudent;
-        private System.Windows.Forms.Label labelIdStudent;
     }
 }

@@ -24,7 +24,7 @@ namespace Online_Course
             try
             {
                 Student newStu = new Student(
-                    guna2TextBoxEditIdStudent.Text,
+                    Session.Instance.Id,
                     guna2TextBoxEditNameStudent.Text,
                     guna2TextBoxEditUsernameStudent.Text,
                     guna2TextBoxEditPasswordStudent.Text);
@@ -41,8 +41,6 @@ namespace Online_Course
 
         private void guna2ButtonClear_Click(object sender, EventArgs e)
         {
-            guna2TextBoxEditIdStudent.Clear();
-            guna2TextBoxEditIdStudent.Focus();
             guna2TextBoxEditUsernameStudent.Clear();
             guna2TextBoxEditPasswordStudent.Clear();
             guna2TextBoxEditNameStudent.Clear();
