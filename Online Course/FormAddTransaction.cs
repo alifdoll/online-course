@@ -75,10 +75,11 @@ namespace Online_Course
                 }
 
                 notaJual.Insert();
-
+                MessageBox.Show("Berhasil Membeli", "Info");
                 courseIdx = guna2ComboBoxCourse.SelectedIndex;
                 availableCourse.RemoveAt(courseIdx);
 
+                /*
                 DialogResult printYes = MessageBox.Show("Cetak Nota ?", "Info", MessageBoxButtons.YesNo);
                 if(printYes == DialogResult.Yes)
                 {
@@ -86,9 +87,9 @@ namespace Online_Course
                 }
                 else
                 {
-                    MessageBox.Show("Berhasil Membeli", "Info");    
+                     
                 }
-
+                */
                 FormAddTransaction_Load(guna2ButtonSave, e);
             }
             catch (Exception error)

@@ -9,15 +9,6 @@ namespace Database
 
         public MySqlConnection Connection { get => connection; set => connection = value; }
 
-        public DbConnect()
-        {
-            Connection = new MySqlConnection();
-
-            Connection.ConnectionString = ConfigurationManager.ConnectionStrings["database"].ConnectionString;
-
-            ConnectTotDB();
-        }
-
         public DbConnect(string server, string database, string username, string password)
         {
             string connection;
@@ -36,6 +27,15 @@ namespace Database
 
             ConnectTotDB();
             UpdateAppConfig(connection);
+        }
+
+        public DbConnect()
+        {
+            Connection = new MySqlConnection();
+
+            Connection.ConnectionString = ConfigurationManager.ConnectionStrings["online_course"].ConnectionString;
+
+            ConnectTotDB();
         }
 
         public void ConnectTotDB()
@@ -65,7 +65,7 @@ namespace Database
         public void UpdateAppConfig(string connection)
         {
             Configuration configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-            configuration.ConnectionStrings.ConnectionStrings["database"].ConnectionString = connection;
+            configuration.ConnectionStrings.ConnectionStrings["online_course"].ConnectionString = connection;
             configuration.Save(ConfigurationSaveMode.Modified, true);
             ConfigurationManager.RefreshSection("connectionStrings");
         }

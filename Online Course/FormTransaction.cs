@@ -9,7 +9,7 @@ namespace Online_Course
     public partial class FormTransaction : Form
     {
         NotaJual nota = new NotaJual();
-        ArrayList listNota;
+        ArrayList listNota = new ArrayList();
         Session session = Session.Instance;
         public FormTransaction()
         {
@@ -39,6 +39,7 @@ namespace Online_Course
             
             try
             {
+                listNota.Clear();
                 listNota = nota.QueryData(session.Id);
                 if (listNota.Count > 0)
                 {
