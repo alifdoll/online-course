@@ -14,7 +14,8 @@ namespace Database
             connect.ConnectTotDB();
             MySqlCommand command = new MySqlCommand(query, connect.Connection);
             command.ExecuteNonQuery();
-            command.Dispose();
+            connect.CloseConnection();
+            //command.Dispose();
         }
 
         public static MySqlDataReader Query(string query)

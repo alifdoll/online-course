@@ -32,7 +32,7 @@ namespace Database
             NoNota = noNota;
             Tanggal = tanggal;
             Student = student;
-            NotaJualDetil = null;
+            NotaJualDetil = new NotaJualDetil();
             ListNotaDetil = new List<NotaJualDetil>();
         }
 
@@ -86,7 +86,8 @@ namespace Database
 
             if(criteria == "")
             {
-                sql = $"SELECT nota_jual.no_nota, nota_jual.tanggal, nota_jual.student_id " +
+                sql = 
+                    $"SELECT nota_jual.no_nota, nota_jual.tanggal, nota_jual.student_id " +
                     $"FROM nota_jual " +
                     $"INNER JOIN student ON nota_jual.student_id = student.id " +
                     $"WHERE student_id LIKE '%{studentId}%' ";
@@ -122,7 +123,7 @@ namespace Database
 
                 MySqlDataReader resDetil = Execute.Query(sqlDetil);
 
-                while (resDetil.Read())
+                 while (resDetil.Read() == true)
                 {
                     Course course = new Course();
 
@@ -134,7 +135,6 @@ namespace Database
                 }
 
                 list.Add(notaJual);
-                resDetil.Close();
             }
 
             result.Close();

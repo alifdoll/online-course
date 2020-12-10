@@ -24,21 +24,36 @@ namespace Online_Course
 
         private void FormAddTransaction_Load(object sender, EventArgs e)
         {
-            availableCourse = nota.AvailableCourse(session.Id);
-            if (availableCourse.Count > 0)
+            try
             {
-                guna2DateTimePicker1.Value = DateTime.Now;
-                guna2TextBoxNota.Text = nota.GenerateNoNota(session.Id);
-                guna2ComboBoxCourse.DataSource = availableCourse;
-                guna2ComboBoxCourse.DisplayMember = "Name";
+                availableCourse = nota.AvailableCourse(session.Id);
+                if (availableCourse.Count > 0)
+                {
+                    AssignData(availableCourse);
+                }
+                else
+                {
+                    ClearFocus();
+                    MessageBox.Show("No Available Course", "Information");
+                }
+            }
+            catch(Exception error)
+            {
+                MessageBox.Show($"Error : {error.Message}", "Warning");
+            }
+          
+            
+           
+        }
 
-                guna2TextBoxHarga.Text = availableCourse[guna2ComboBoxCourse.SelectedIndex].Price.ToString();
-            }
-            else
-            {
-                ClearFocus();
-                MessageBox.Show("No Available Course", "Information");
-            }
+        private void AssignData(List<Course> courses)
+        {
+            guna2DateTimePicker1.Value = DateTime.Now;
+            guna2TextBoxNota.Text = nota.GenerateNoNota(session.Id);
+            guna2ComboBoxCourse.DataSource = courses;
+            guna2ComboBoxCourse.DisplayMember = "Name";
+
+            guna2TextBoxHarga.Text = courses[guna2ComboBoxCourse.SelectedIndex].Price.ToString();
         }
 
         private void guna2ComboBoxCourse_SelectedIndexChanged(object sender, EventArgs e)
@@ -49,7 +64,55 @@ namespace Online_Course
             }
         }
 
-        private void guna2ButtonAdd_Click(object sender, EventArgs e)
+
+        private void ClearFocus()
+        {
+            guna2DateTimePicker1.Value = DateTime.Now;
+            guna2ComboBoxCourse.DataSource = null;
+            guna2TextBoxNota.Text = "";
+            guna2TextBoxHarga.Text = "0";
+            guna2TextBoxNota.Text = "";
+
+        }
+
+        private void guna2ButtonAdd_Click_1(object sender, EventArgs e)
+        {
+            Course course = (Course)guna2ComboBoxCourse.SelectedItem;
+            int idx = guna2ComboBoxCourse.SelectedIndex;
+
+            dataGridViewSearch.Rows.Add(
+                guna2TextBoxNota.Text,
+                guna2DateTimePicker1.Value,
+                course.Id,
+                course.Name,
+                course.Price);
+
+            availableCourse.RemoveAt(guna2ComboBoxCourse.SelectedIndex);
+            List<Course> courses = new List<Course>();
+
+            foreach(Course cour in availableCourse)
+            {
+                courses.Add(cour);
+            }
+
+            AssignData(courses);
+
+        }
+
+        private void guna2ButtonPrint_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                NotaJual.CetakNota(new Font("Courier New", 12), criteria: "nota_jual.no_nota",value1: noNota, studentId: session.Id, namaFile: "nota_jual_recent.txt");
+                MessageBox.Show("Nota Berhasil Dicetak", "Info");
+            }
+            catch(Exception error)
+            {
+                MessageBox.Show($"Gagal Mencetak Nota, Error : {error.Message}", "Warning");
+            }
+        }
+
+        private void guna2ButtonBuy_Click(object sender, EventArgs e)
         {
 
             try
@@ -69,7 +132,7 @@ namespace Online_Course
                     listCourse = course.QueryData("course.id", id);
 
                     double harga = double.Parse(dataGridViewSearch.Rows[i].Cells[4].Value.ToString());
-                   
+
                     notaJual.TambahDetil((Course)listCourse[0], harga);
 
                 }
@@ -77,58 +140,24 @@ namespace Online_Course
                 notaJual.Insert();
 
                 courseIdx = guna2ComboBoxCourse.SelectedIndex;
+
                 availableCourse.RemoveAt(courseIdx);
 
                 DialogResult printYes = MessageBox.Show("Cetak Nota ?", "Info", MessageBoxButtons.YesNo);
-                if(printYes == DialogResult.Yes)
+                if (printYes == DialogResult.Yes)
                 {
                     NotaJual.CetakNota(new Font("Courier New", 12), "nota_jual.no_nota", no_nota, Session.Instance.Id, "nota_current.txt");
                 }
                 else
                 {
-                    MessageBox.Show("Berhasil Membeli", "Info");    
+                    MessageBox.Show("Berhasil Membeli", "Info");
                 }
 
-                FormAddTransaction_Load(guna2ButtonSave, e);
+                FormAddTransaction_Load(guna2ButtonBuy, e);
             }
             catch (Exception error)
             {
                 MessageBox.Show($"Gagal Menyimpan, Error : {error.Message}", "Warning");
-            }
-        }
-
-        private void ClearFocus()
-        {
-            guna2DateTimePicker1.Value = DateTime.Now;
-            guna2ComboBoxCourse.DataSource = null;
-            guna2TextBoxNota.Text = "";
-            guna2TextBoxHarga.Text = "0";
-            guna2TextBoxNota.Text = "";
-
-        }
-
-        private void guna2ButtonAdd_Click_1(object sender, EventArgs e)
-        {
-            Course course = (Course)guna2ComboBoxCourse.SelectedItem;
-
-            dataGridViewSearch.Rows.Add(
-                guna2TextBoxNota.Text,
-                guna2DateTimePicker1.Value,
-                course.Id,
-                course.Name,
-                course.Price);
-        }
-
-        private void guna2ButtonPrint_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                NotaJual.CetakNota(new Font("Courier New", 12), criteria: "nota_jual.no_nota",value1: noNota, studentId: session.Id, namaFile: "nota_jual_recent.txt");
-                MessageBox.Show("Nota Berhasil Dicetak", "Info");
-            }
-            catch(Exception error)
-            {
-                MessageBox.Show($"Gagal Mencetak Nota, Error : {error.Message}", "Warning");
             }
         }
     }

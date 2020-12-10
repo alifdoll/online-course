@@ -13,5 +13,11 @@
             Course = course;
             Harga = harga;
         }
+
+        public NotaJualDetil()
+        {
+            Course = new Course();
+            Harga = 0;
+        }
     }
 }
