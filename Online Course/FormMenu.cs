@@ -237,6 +237,7 @@ namespace Online_Course
                 buttonEditCourse.Enabled = false;
                 buttonRemoveCourse.Enabled = false;
                 buttonTransaction.Enabled = true;
+                buttonAddTransaction.Enabled = true;
                 labelLogin.Text = name;
                 labelSebagai.Text = $"{session.User}";
             }
