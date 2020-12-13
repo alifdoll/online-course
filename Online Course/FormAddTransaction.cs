@@ -2,8 +2,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Windows.Forms;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace Online_Course
 {
@@ -11,12 +11,10 @@ namespace Online_Course
     {
         Session session = Session.Instance;
         NotaJual nota = new NotaJual();
-       
+
         List<Course> availableCourse = new List<Course>();
         ArrayList listCourse = new ArrayList();
-        
-        int courseIdx;
-        string noNota;
+
         public FormAddTransaction()
         {
             InitializeComponent();
@@ -37,38 +35,13 @@ namespace Online_Course
                     MessageBox.Show("No Available Course", "Information");
                 }
             }
-            catch(Exception error)
+            catch (Exception error)
             {
                 MessageBox.Show($"Error : {error.Message}", "Warning");
             }
-          
-            
-           
-        }
 
-        private void AssignData(List<Course> courses)
-        {
-            if(courses.Count > 0)
-            {
-                guna2DateTimePicker1.Value = DateTime.Now;
-                guna2TextBoxNota.Text = nota.GenerateNoNota(session.Id);
-                guna2ComboBoxCourse.DataSource = courses;
-                guna2ComboBoxCourse.DisplayMember = "Name";
 
-                guna2TextBoxHarga.Text = courses[guna2ComboBoxCourse.SelectedIndex].Price.ToString();
-                guna2ButtonBuy.Enabled = true;
-                guna2ButtonAdd.Enabled = true;
-            }
-            else
-            {
-                guna2DateTimePicker1.Value = DateTime.Now;
-                guna2TextBoxNota.Text = nota.GenerateNoNota(session.Id);
-                guna2TextBoxHarga.Text = "0";
-                guna2ComboBoxCourse.DataSource = null;
-                guna2ButtonBuy.Enabled = false;
-                guna2ButtonAdd.Enabled = false;
-            }
-            
+
         }
 
         private void guna2ComboBoxCourse_SelectedIndexChanged(object sender, EventArgs e)
@@ -77,17 +50,6 @@ namespace Online_Course
             {
                 guna2TextBoxHarga.Text = availableCourse[guna2ComboBoxCourse.SelectedIndex].Price.ToString();
             }
-        }
-
-
-        private void ClearFocus()
-        {
-            guna2DateTimePicker1.Value = DateTime.Now;
-            guna2ComboBoxCourse.DataSource = null;
-            guna2TextBoxNota.Text = "";
-            guna2TextBoxHarga.Text = "0";
-            guna2TextBoxNota.Text = "";
-
         }
 
         private void guna2ButtonAdd_Click_1(object sender, EventArgs e)
@@ -105,26 +67,13 @@ namespace Online_Course
             availableCourse.RemoveAt(idx);
             List<Course> courses = new List<Course>();
 
-            foreach(Course cour in availableCourse)
+            foreach (Course cour in availableCourse)
             {
                 courses.Add(cour);
             }
 
             AssignData(courses);
 
-        }
-
-        private void guna2ButtonPrint_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                NotaJual.CetakNota(new Font("Courier New", 12), criteria: "nota_jual.no_nota",value1: noNota, studentId: session.Id, namaFile: "nota_jual_recent.txt");
-                MessageBox.Show("Nota Berhasil Dicetak", "Info");
-            }
-            catch(Exception error)
-            {
-                MessageBox.Show($"Gagal Mencetak Nota, Error : {error.Message}", "Warning");
-            }
         }
 
         private void guna2ButtonBuy_Click(object sender, EventArgs e)
@@ -170,6 +119,39 @@ namespace Online_Course
             {
                 MessageBox.Show($"Gagal Menyimpan, Error : {error.Message}", "Warning");
             }
+        }
+        private void AssignData(List<Course> courses)
+        {
+            if (courses.Count > 0)
+            {
+                guna2DateTimePicker1.Value = DateTime.Now;
+                guna2TextBoxNota.Text = nota.GenerateNoNota(session.Id);
+                guna2ComboBoxCourse.DataSource = courses;
+                guna2ComboBoxCourse.DisplayMember = "Name";
+
+                guna2TextBoxHarga.Text = courses[guna2ComboBoxCourse.SelectedIndex].Price.ToString();
+                guna2ButtonBuy.Enabled = true;
+                guna2ButtonAdd.Enabled = true;
+            }
+            else
+            {
+                guna2DateTimePicker1.Value = DateTime.Now;
+                guna2TextBoxNota.Text = nota.GenerateNoNota(session.Id);
+                guna2TextBoxHarga.Text = "0";
+                guna2ComboBoxCourse.DataSource = null;
+                guna2ButtonBuy.Enabled = false;
+                guna2ButtonAdd.Enabled = false;
+            }
+
+        }
+        private void ClearFocus()
+        {
+            guna2DateTimePicker1.Value = DateTime.Now;
+            guna2ComboBoxCourse.DataSource = null;
+            guna2TextBoxNota.Text = "";
+            guna2TextBoxHarga.Text = "0";
+            guna2TextBoxNota.Text = "";
+
         }
     }
 }

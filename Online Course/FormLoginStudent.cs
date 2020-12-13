@@ -75,7 +75,7 @@ namespace Online_Course
             FormRegistrasiStudent formRegistrasiStudent = new FormRegistrasiStudent();
             //formRegistrasiStudent.Owner = this;
 
-           
+
             formRegistrasiStudent.ShowDialog();
         }
     }

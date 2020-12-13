@@ -16,7 +16,7 @@ namespace Online_Course
 
         private void guna2TextBoxEditIdStudent_TextChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void guna2ButtonAdd_Click(object sender, EventArgs e)

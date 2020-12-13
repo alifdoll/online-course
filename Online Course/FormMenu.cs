@@ -215,9 +215,9 @@ namespace Online_Course
 
         private void FormMenu_EnabledChanged(object sender, EventArgs e)
         {
-            
+
             string name = session.Name;
-            if(name.Length > 11)
+            if (name.Length > 11)
             {
                 name = name.Substring(0, 11);
             }
@@ -244,7 +244,7 @@ namespace Online_Course
             else if (session.User == "Instructor")
             {
                 buttonInstructor_Click(this, e);
-                
+
                 buttonCourse.Enabled = true;
                 buttonAddCourse.Enabled = true;
                 buttonEditCourse.Enabled = true;
@@ -257,9 +257,9 @@ namespace Online_Course
 
                 buttonTransaction.Enabled = false;
                 buttonAddTransaction.Enabled = false;
-                
+
                 buttonTopic.Enabled = false;
-                
+
                 buttonAddInstructor.Enabled = false;
                 labelLogin.Text = name;
                 labelSebagai.Text = $"{session.User}";

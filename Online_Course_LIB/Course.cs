@@ -209,7 +209,7 @@ namespace Database
                     "INNER JOIN enroll on course.id = enroll.id_course " +
                     "INNER JOIN student on enroll.id_student = student.id " +
                     $"WHERE student.id LIKE '%{studentId}%' ";
-           
+
 
             MySqlDataReader result = Execute.Query(command);
 

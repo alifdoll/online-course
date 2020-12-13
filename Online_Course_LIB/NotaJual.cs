@@ -59,7 +59,7 @@ namespace Database
                     string sql = $"INSERT INTO nota_jual(no_nota, tanggal, student_id) VALUES ('{NoNota}', '{Tanggal:yyy-MM-dd hh:mm:ss}', '{Student.Id}')";
                     Execute.DML(sql);
 
-                    foreach(NotaJualDetil notaDetil in ListNotaDetil)
+                    foreach (NotaJualDetil notaDetil in ListNotaDetil)
                     {
                         string sql_detil = $"INSERT INTO nota_jual_detil(no_nota, id_course, harga) VALUES ('{NoNota}', '{notaDetil.Course.Id}', '{notaDetil.Course.Price}')";
                         Execute.DML(sql_detil);
@@ -84,9 +84,9 @@ namespace Database
         {
             string sql;
 
-            if(criteria == "")
+            if (criteria == "")
             {
-                sql = 
+                sql =
                     $"SELECT nota_jual.no_nota, nota_jual.tanggal, nota_jual.student_id " +
                     $"FROM nota_jual " +
                     $"INNER JOIN student ON nota_jual.student_id = student.id " +
@@ -94,7 +94,7 @@ namespace Database
             }
             else
             {
-                sql = 
+                sql =
                     $"SELECT nota_jual.no_nota, nota_jual.tanggal, nota_jual.student_id " +
                     $"FROM nota_jual " +
                     $"INNER JOIN student ON nota_jual.student_id = student.id " +
@@ -123,7 +123,7 @@ namespace Database
 
                 MySqlDataReader resDetil = Execute.Query(sqlDetil);
 
-                 while (resDetil.Read() == true)
+                while (resDetil.Read() == true)
                 {
                     Course course = new Course();
 
@@ -226,7 +226,7 @@ namespace Database
 
             StreamWriter file = new StreamWriter(namaFile);
 
-           
+
             foreach (NotaJual nota in listNota)
             {
                 double grandTotal = 0;
@@ -247,14 +247,14 @@ namespace Database
                     file.WriteLine("");
                     grandTotal += subTotal;
                 }
-               
+
                 file.WriteLine("=".PadRight(60, '='));
                 file.WriteLine($"Total          : {grandTotal:#,##}");
                 file.WriteLine("Thank You For Your Purchases");
                 file.WriteLine("");
             }
 
-          
+
             file.Close();
 
             Cetak c = new Cetak(namaFile, font, 20, 10, 10, 10);

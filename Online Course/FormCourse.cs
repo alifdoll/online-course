@@ -19,12 +19,12 @@ namespace Online_Course
 
         private void FormCourse_Load(object sender, EventArgs e)
         {
-            if(session.User == "Instructor")
+            if (session.User == "Instructor")
             {
                 list = course.QueryData("instructor.id", session.Id);
-               
+
             }
-            else if(session.User == "Student")
+            else if (session.User == "Student")
             {
                 list = course.StudentCourse(session.Id);
             }

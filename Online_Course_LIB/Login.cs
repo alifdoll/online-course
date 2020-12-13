@@ -62,7 +62,7 @@ namespace Database
         {
             DbConnect connect = new DbConnect();
 
-            if(connect.Connection.State == System.Data.ConnectionState.Open)
+            if (connect.Connection.State == System.Data.ConnectionState.Open)
             {
                 //connect.CloseConnection();
                 connect.Exit();

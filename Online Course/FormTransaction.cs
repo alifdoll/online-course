@@ -17,27 +17,9 @@ namespace Online_Course
             InitializeComponent();
         }
 
-        private void AssignData(ArrayList lists)
-        {
-            dataGridViewSearch.Rows.Clear();
-            foreach (NotaJual nota in lists)
-            {
-                foreach(NotaJualDetil notaDetil in nota.ListNotaDetil)
-                {
-                    dataGridViewSearch.Rows.Add(
-                   nota.NoNota,
-                   nota.Tanggal,
-                   notaDetil.Course.Id,
-                   notaDetil.Course.Name,
-                   notaDetil.Harga);
-                }
-               
-            }
-        }
-
         private void FormTransaction_Load_1(object sender, EventArgs e)
         {
-            
+
             try
             {
                 listNota.Clear();
@@ -86,7 +68,7 @@ namespace Online_Course
                     }
 
 
-                    if(guna2TextBoxSearch.Text == "")
+                    if (guna2TextBoxSearch.Text == "")
                     {
                         AssignData(listNota);
                     }
@@ -111,7 +93,7 @@ namespace Online_Course
             {
                 if (listNota.Count > 0)
                 {
-                    if(guna2TextBoxSearch.Text == "")
+                    if (guna2TextBoxSearch.Text == "")
                     {
                         NotaJual.CetakNota(new Font("Courier New", 12), studentId: session.Id, namaFile: "nota_jual.txt");
                         MessageBox.Show("Nota Berhasil Di Cetak");
@@ -120,7 +102,7 @@ namespace Online_Course
                     {
                         NotaJual.CetakNota(new Font("Courier New", 12), criteria, guna2TextBoxSearch.Text, session.Id, "nota_jual.txt");
                     }
-                    
+
                 }
             }
             catch (Exception error)
@@ -128,6 +110,24 @@ namespace Online_Course
                 MessageBox.Show($"Gagal Mencetak, Error : {error.Message}");
             }
 
+        }
+
+        private void AssignData(ArrayList lists)
+        {
+            dataGridViewSearch.Rows.Clear();
+            foreach (NotaJual nota in lists)
+            {
+                foreach (NotaJualDetil notaDetil in nota.ListNotaDetil)
+                {
+                    dataGridViewSearch.Rows.Add(
+                   nota.NoNota,
+                   nota.Tanggal,
+                   notaDetil.Course.Id,
+                   notaDetil.Course.Name,
+                   notaDetil.Harga);
+                }
+
+            }
         }
     }
 }
