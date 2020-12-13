@@ -11,15 +11,16 @@ namespace Online_Course
         NotaJual nota = new NotaJual();
         ArrayList listNota = new ArrayList();
         Session session = Session.Instance;
+        string criteria;
         public FormTransaction()
         {
             InitializeComponent();
         }
 
-        private void AssignData()
+        private void AssignData(ArrayList lists)
         {
             dataGridViewSearch.Rows.Clear();
-            foreach (NotaJual nota in listNota)
+            foreach (NotaJual nota in lists)
             {
                 foreach(NotaJualDetil notaDetil in nota.ListNotaDetil)
                 {
@@ -43,7 +44,7 @@ namespace Online_Course
                 listNota = nota.QueryData(session.Id);
                 if (listNota.Count > 0)
                 {
-                    AssignData();
+                    AssignData(listNota);
                 }
 
             }
@@ -61,8 +62,6 @@ namespace Online_Course
             {
                 if (e.KeyCode == Keys.Enter)
                 {
-                    string criteria;
-
                     switch (guna2ComboBoxSearch.Text)
                     {
                         default:
@@ -86,10 +85,15 @@ namespace Online_Course
                             break;
                     }
 
-                    listNota = nota.QueryData(session.Id, criteria, guna2TextBoxSearch.Text);
-                    if (listNota.Count > 0)
+
+                    if(guna2TextBoxSearch.Text == "")
                     {
-                        AssignData();
+                        AssignData(listNota);
+                    }
+                    else
+                    {
+                        ArrayList listSearch = nota.QueryData(session.Id, criteria, guna2TextBoxSearch.Text);
+                        AssignData(listSearch);
                     }
                 }
             }
@@ -107,8 +111,16 @@ namespace Online_Course
             {
                 if (listNota.Count > 0)
                 {
-                    NotaJual.CetakNota(new Font("Courier New", 12), studentId: session.Id, namaFile: "nota_jual.txt");
-                    MessageBox.Show("Nota Berhasil Di Cetak");
+                    if(guna2TextBoxSearch.Text == "")
+                    {
+                        NotaJual.CetakNota(new Font("Courier New", 12), studentId: session.Id, namaFile: "nota_jual.txt");
+                        MessageBox.Show("Nota Berhasil Di Cetak");
+                    }
+                    else
+                    {
+                        NotaJual.CetakNota(new Font("Courier New", 12), criteria, guna2TextBoxSearch.Text, session.Id, "nota_jual.txt");
+                    }
+                    
                 }
             }
             catch (Exception error)

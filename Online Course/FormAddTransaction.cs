@@ -48,12 +48,27 @@ namespace Online_Course
 
         private void AssignData(List<Course> courses)
         {
-            guna2DateTimePicker1.Value = DateTime.Now;
-            guna2TextBoxNota.Text = nota.GenerateNoNota(session.Id);
-            guna2ComboBoxCourse.DataSource = courses;
-            guna2ComboBoxCourse.DisplayMember = "Name";
+            if(courses.Count > 0)
+            {
+                guna2DateTimePicker1.Value = DateTime.Now;
+                guna2TextBoxNota.Text = nota.GenerateNoNota(session.Id);
+                guna2ComboBoxCourse.DataSource = courses;
+                guna2ComboBoxCourse.DisplayMember = "Name";
 
-            guna2TextBoxHarga.Text = courses[guna2ComboBoxCourse.SelectedIndex].Price.ToString();
+                guna2TextBoxHarga.Text = courses[guna2ComboBoxCourse.SelectedIndex].Price.ToString();
+                guna2ButtonBuy.Enabled = true;
+                guna2ButtonAdd.Enabled = true;
+            }
+            else
+            {
+                guna2DateTimePicker1.Value = DateTime.Now;
+                guna2TextBoxNota.Text = nota.GenerateNoNota(session.Id);
+                guna2TextBoxHarga.Text = "0";
+                guna2ComboBoxCourse.DataSource = null;
+                guna2ButtonBuy.Enabled = false;
+                guna2ButtonAdd.Enabled = false;
+            }
+            
         }
 
         private void guna2ComboBoxCourse_SelectedIndexChanged(object sender, EventArgs e)
@@ -87,7 +102,7 @@ namespace Online_Course
                 course.Name,
                 course.Price);
 
-            availableCourse.RemoveAt(guna2ComboBoxCourse.SelectedIndex);
+            availableCourse.RemoveAt(idx);
             List<Course> courses = new List<Course>();
 
             foreach(Course cour in availableCourse)
@@ -139,10 +154,6 @@ namespace Online_Course
 
                 notaJual.Insert();
 
-                courseIdx = guna2ComboBoxCourse.SelectedIndex;
-
-                availableCourse.RemoveAt(courseIdx);
-
                 DialogResult printYes = MessageBox.Show("Cetak Nota ?", "Info", MessageBoxButtons.YesNo);
                 if (printYes == DialogResult.Yes)
                 {
@@ -153,7 +164,7 @@ namespace Online_Course
                     MessageBox.Show("Berhasil Membeli", "Info");
                 }
 
-                FormAddTransaction_Load(guna2ButtonBuy, e);
+                //FormAddTransaction_Load(guna2ButtonBuy, e);
             }
             catch (Exception error)
             {
