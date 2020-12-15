@@ -107,7 +107,7 @@
             this.guna2ButtonInstructor.ShadowDecoration.Parent = this.guna2ButtonInstructor;
             this.guna2ButtonInstructor.Size = new System.Drawing.Size(129, 41);
             this.guna2ButtonInstructor.TabIndex = 9;
-            this.guna2ButtonInstructor.Text = "instructor";
+            this.guna2ButtonInstructor.Text = "Instructor";
             this.guna2ButtonInstructor.Click += new System.EventHandler(this.guna2ButtonInstructor_Click);
             // 
             // guna2ButtonAdmin

@@ -25,3 +25,6 @@ GRANT ALL PRIVILEGES ON online_course.* TO 'o_course_admin'@'localhost' WITH GRA
 
 
 file no_transaction berisi data biasa namun belum dilakukan transaksi
+
+apabila ada windows activation failed pada saat mengakses form di visual studio, langsung close windows activation
+failednya
