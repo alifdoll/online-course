@@ -1,4 +1,4 @@
-KALO UDAH ADA DATABASE online_course
+KALO DATABASE online_course SUDAH ADA DI MYSQL
 HAPUS DULU TERUS IMPORT ULANG YANG ADA DI FOLDER REFERENCES
 
 LALU MASUKKAN COMMAND BERIKUT:
@@ -22,3 +22,6 @@ ADMIN 		:
 CREATE USER 'o_course_admin'@'localhost' IDENTIFIED BY 'admin'
 
 GRANT ALL PRIVILEGES ON online_course.* TO 'o_course_admin'@'localhost' WITH GRANT OPTION
+
+
+file no_transaction berisi data biasa namun belum dilakukan transaksi

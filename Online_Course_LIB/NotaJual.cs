@@ -94,11 +94,9 @@ namespace Database
             }
             else
             {
-                sql =
-                    $"SELECT nota_jual.no_nota, nota_jual.tanggal, nota_jual.student_id " +
-                    $"FROM nota_jual " +
-                    $"INNER JOIN student ON nota_jual.student_id = student.id " +
-                    $"WHERE student_id LIKE '%{studentId}%' AND {criteria} LIKE '%{value}%' ";
+                sql = $"SELECT DISTINCT nota_jual.no_nota, nota_jual.tanggal, nota_jual.student_id FROM nota_jual INNER JOIN student ON nota_jual.student_id = student.id INNER JOIN nota_jual_detil ON nota_jual.no_nota = nota_jual_detil.no_nota INNER JOIN course ON nota_jual_detil.id_course = course.id WHERE student_id = '{studentId}' AND {criteria} LIKE '%{value}%' ";
+            
+            
             }
 
             MySqlDataReader result = Execute.Query(sql);

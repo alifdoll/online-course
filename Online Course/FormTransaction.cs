@@ -12,6 +12,7 @@ namespace Online_Course
         ArrayList listNota = new ArrayList();
         Session session = Session.Instance;
         string criteria;
+
         public FormTransaction()
         {
             InitializeComponent();
@@ -38,71 +39,15 @@ namespace Online_Course
 
         }
 
-        private void guna2TextBoxSearch_KeyDown(object sender, KeyEventArgs e)
-        {
-            try
-            {
-                if (e.KeyCode == Keys.Enter)
-                {
-                    switch (guna2ComboBoxSearch.Text)
-                    {
-                        default:
-                            criteria = "nota_jual.no_nota";
-                            break;
-
-                        case "Tanggal":
-                            criteria = "tanggal";
-                            break;
-
-                        case "Id Course":
-                            criteria = "course.id";
-                            break;
-
-                        case "Nama Course":
-                            criteria = "course.nama";
-                            break;
-
-                        case "Harga":
-                            criteria = "course.harga";
-                            break;
-                    }
-
-
-                    if (guna2TextBoxSearch.Text == "")
-                    {
-                        AssignData(listNota);
-                    }
-                    else
-                    {
-                        ArrayList listSearch = nota.QueryData(session.Id, criteria, guna2TextBoxSearch.Text);
-                        AssignData(listSearch);
-                    }
-                }
-            }
-            catch (Exception error)
-            {
-                MessageBox.Show($"Error : {error.Message}", "Warning");
-            }
-
-
-        }
-
         private void guna2ButtonPrint_Click(object sender, EventArgs e)
         {
             try
             {
                 if (listNota.Count > 0)
                 {
-                    if (guna2TextBoxSearch.Text == "")
-                    {
-                        NotaJual.CetakNota(new Font("Courier New", 12), studentId: session.Id, namaFile: "nota_jual.txt");
-                        MessageBox.Show("Nota Berhasil Di Cetak");
-                    }
-                    else
-                    {
-                        NotaJual.CetakNota(new Font("Courier New", 12), criteria, guna2TextBoxSearch.Text, session.Id, "nota_jual.txt");
-                    }
 
+                    NotaJual.CetakNota(new Font("Courier New", 12), studentId: session.Id, namaFile: "nota_jual.txt");
+                    MessageBox.Show("Nota Berhasil Di Cetak");
                 }
             }
             catch (Exception error)
@@ -129,5 +74,6 @@ namespace Online_Course
 
             }
         }
+
     }
 }

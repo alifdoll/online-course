@@ -227,6 +227,7 @@ namespace Online_Course
                 buttonStudent_Click(this, e);
                 buttonTopic.Enabled = false;
                 buttonInstructor.Enabled = false;
+                
 
                 buttonStudent.Enabled = true;
                 buttonEditStudent.Enabled = true;
@@ -261,6 +262,7 @@ namespace Online_Course
                 buttonTopic.Enabled = false;
 
                 buttonAddInstructor.Enabled = false;
+                buttonEditInstructor.Enabled = true;
                 labelLogin.Text = name;
                 labelSebagai.Text = $"{session.User}";
             }
